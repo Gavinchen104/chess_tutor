@@ -3,7 +3,14 @@ from __future__ import annotations
 import chess
 import streamlit as st
 
-from app.core.board import START_FEN, export_pgn_from_moves, load_board, parse_move_text, render_board_svg
+from app.core.board import (
+    START_FEN,
+    export_pgn_from_moves,
+    extract_pgn_movetext,
+    load_board,
+    parse_move_text,
+    render_board_svg,
+)
 from app.core.levels import LEVELS, get_level
 from app.core.tutor import ChessTutor
 
@@ -212,7 +219,9 @@ def render_play_mode(tutor: ChessTutor, level) -> None:
     if review.next_steps:
         st.caption("What To Work On Next: " + "; ".join(review.next_steps))
     st.caption(review.summary)
-    st.text_area("PGN", value=review.pgn, height=180)
+    movetext = extract_pgn_movetext(review.pgn)
+    st.code("Moves: " + (movetext or "(no moves yet)"))
+    st.text_area("Full PGN", value=review.pgn, height=260)
 
 
 def submit_player_move(tutor: ChessTutor, level, move_text: str) -> None:
@@ -241,6 +250,7 @@ def submit_player_move(tutor: ChessTutor, level, move_text: str) -> None:
     )
 
     if board.is_game_over():
+        st.rerun()
         return
 
     bot_move = tutor.choose_bot_move(board, level)
@@ -252,6 +262,7 @@ def submit_player_move(tutor: ChessTutor, level, move_text: str) -> None:
     st.session_state.bot_commentary.append(
         f"Bot replies with {bot_move.san}: {bot_move.player_friendly_explanation}"
     )
+    st.rerun()
 
 
 def maybe_make_opening_bot_move(tutor: ChessTutor, level) -> None:

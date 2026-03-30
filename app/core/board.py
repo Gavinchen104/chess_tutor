@@ -71,3 +71,10 @@ def export_pgn_from_moves(moves: list[chess.Move], headers: dict[str, str] | Non
         node = node.add_variation(move)
         board.push(move)
     return str(game)
+
+
+def extract_pgn_movetext(pgn_text: str) -> str:
+    parts = pgn_text.strip().split("\n\n", 1)
+    if len(parts) == 2:
+        return parts[1].strip()
+    return ""
