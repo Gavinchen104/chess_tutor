@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 from app.core.levels import LevelProfile
-from app.core.move_engine import MoveInsight, PositionAnalysis
+from app.core.reports import CandidateMove, PositionAnalysisReport
 
 
 def format_cp(score_cp: int) -> str:
@@ -10,11 +10,11 @@ def format_cp(score_cp: int) -> str:
     return f"{score_cp / 100:.1f}"
 
 
-def build_position_summary(analysis: PositionAnalysis, level: LevelProfile) -> str:
+def build_position_summary(analysis: PositionAnalysisReport, level: LevelProfile) -> str:
     tutor = analysis.tutor_move
-    best = analysis.best_move
+    best = analysis.engine_best_move
     needs_text = ", ".join(priority.replace("_", " ") for priority in analysis.position_needs[:2])
-    if tutor.move == best.move:
+    if tutor.uci == best.uci:
         return (
             f"For {level.label}, `{tutor.san}` is both the strongest move I found and the cleanest teaching move. "
             f"It keeps the position around {format_cp(tutor.score_cp)} and leans on "
@@ -29,29 +29,28 @@ def build_position_summary(analysis: PositionAnalysis, level: LevelProfile) -> s
     )
 
 
-def build_move_explanation(move: MoveInsight, level: LevelProfile) -> str:
-    reasons = " ".join(reason.capitalize() for reason in move.reasons[:2])
-    if not reasons:
-        reasons = "It keeps your pieces coordinated and avoids unnecessary risk."
-    priorities = ""
+def build_move_explanation(move: CandidateMove, level: LevelProfile) -> str:
+    theme_text = ""
     if move.priorities_addressed:
         readable = ", ".join(priority.replace("_", " ") for priority in move.priorities_addressed[:2])
-        priorities = f" It directly addresses {readable}."
+        theme_text = f" Main teaching themes: {readable}."
+    elif move.tags:
+        readable = ", ".join(tag.replace("_", " ") for tag in move.tags[:2])
+        theme_text = f" Main teaching themes: {readable}."
     complexity = (
         "This is an easy-to-execute move for this level."
         if move.difficulty < 1.2
         else "It asks for some calculation, but the idea is still practical."
         if move.difficulty < 2.0
-        else "This is stronger tactically, but it may be harder to execute consistently."
+        else "This is sharper and harder to execute accurately."
     )
-    warning = f" Watch out: {move.warnings[0]}" if move.warnings else ""
-    return f"{reasons}{priorities} {complexity} {move.plan} {level.commentary_style}{warning}"
+    return f"{move.player_friendly_explanation}{theme_text} {complexity} {level.commentary_style}"
 
 
-def build_engine_vs_tutor_story(analysis: PositionAnalysis, level: LevelProfile) -> str:
+def build_engine_vs_tutor_story(analysis: PositionAnalysisReport, level: LevelProfile) -> str:
     tutor = analysis.tutor_move
-    best = analysis.best_move
-    if tutor.move == best.move:
+    best = analysis.engine_best_move
+    if tutor.uci == best.uci:
         return (
             "In this position the tutor and engine agree, which is useful evidence that the tutoring layer "
             "is not inventing weaker moves just to sound friendly."

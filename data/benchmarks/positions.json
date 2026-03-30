@@ -1,0 +1,92 @@
+[
+  {
+    "label": "Opening Development 600",
+    "theme": "development",
+    "level_key": "600",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  },
+  {
+    "label": "Opening Development 1000",
+    "theme": "development",
+    "level_key": "1000",
+    "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
+  },
+  {
+    "label": "Simple Tactics 600",
+    "theme": "safety",
+    "level_key": "600",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4"
+  },
+  {
+    "label": "Simple Tactics 1000",
+    "theme": "initiative",
+    "level_key": "1000",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4"
+  },
+  {
+    "label": "Simple Tactics 1400",
+    "theme": "initiative",
+    "level_key": "1400",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4"
+  },
+  {
+    "label": "Castling Lesson 600",
+    "theme": "king_safety",
+    "level_key": "600",
+    "fen": "r1bq1rk1/pppp1ppp/2n2n2/4p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 6"
+  },
+  {
+    "label": "Castling Lesson 1000",
+    "theme": "king_safety",
+    "level_key": "1000",
+    "fen": "r1bq1rk1/pppp1ppp/2n2n2/4p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 6"
+  },
+  {
+    "label": "Center And Activity 1000",
+    "theme": "center",
+    "level_key": "1000",
+    "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3"
+  },
+  {
+    "label": "Center And Activity 1400",
+    "theme": "center",
+    "level_key": "1400",
+    "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3"
+  },
+  {
+    "label": "Safety Under Pressure 600",
+    "theme": "safety",
+    "level_key": "600",
+    "fen": "4k3/8/8/8/4q3/8/4R2P/4K3 w - - 0 1"
+  },
+  {
+    "label": "Safety Under Pressure 1000",
+    "theme": "safety",
+    "level_key": "1000",
+    "fen": "4k3/8/8/8/4q3/8/4R2P/4K3 w - - 0 1"
+  },
+  {
+    "label": "Endgame Conversion 1000",
+    "theme": "conversion",
+    "level_key": "1000",
+    "fen": "8/5pk1/3p2p1/2pP4/2P1P3/6P1/5P1P/6K1 w - - 0 1"
+  },
+  {
+    "label": "Endgame Conversion 1400",
+    "theme": "conversion",
+    "level_key": "1400",
+    "fen": "8/5pk1/3p2p1/2pP4/2P1P3/6P1/5P1P/6K1 w - - 0 1"
+  },
+  {
+    "label": "Endgame Conversion 1800",
+    "theme": "conversion",
+    "level_key": "1800",
+    "fen": "8/5pk1/3p2p1/2pP4/2P1P3/6P1/5P1P/6K1 w - - 0 1"
+  },
+  {
+    "label": "Initiative Tradeoff 1800",
+    "theme": "initiative",
+    "level_key": "1800",
+    "fen": "r1bq1rk1/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 7"
+  }
+]

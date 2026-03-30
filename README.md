@@ -4,9 +4,16 @@ Teammate: Zhihan Chen
 
 ## Overview
 
-This repository contains an interactive chess tutor prototype designed around the project brief shown in class: build a chess teacher that is more helpful for novice-to-intermediate players than a raw chess engine.
+This repository contains an interactive chess tutor backend and demo app designed around the project brief shown in class: build a chess teacher that is more helpful for novice-to-intermediate players than a raw chess engine.
 
-The current implementation is a working end-to-end prototype with a web interface, position analysis, a play-against-bot mode, live commentary, and a post-game review. The system is designed around a simple but important idea:
+The current implementation is no longer just a UI prototype. It now includes a structured backend for:
+
+- position analysis
+- move-by-move coaching
+- post-game review
+- benchmark-style evaluation
+
+The system is designed around a simple but important idea:
 
 - a strong engine answers "what is best?"
 - a tutor should also answer "what is most useful for this player's level?"
@@ -14,8 +21,10 @@ The current implementation is a working end-to-end prototype with a web interfac
 This project therefore separates:
 
 - chess rules and board state
-- move evaluation and ranking
+- engine-backed move evaluation and candidate generation
+- tactical/strategic diagnostics
 - tutoring commentary and skill-aware feedback
+- review and evaluation reporting
 
 That separation makes the code easier to understand, easier to test, and easier to improve later.
 
@@ -28,23 +37,27 @@ The goal of this project is not just to recommend the strongest move. It is to p
 - actionable during analysis or play
 - easier to learn from than a stock engine line dump
 
-To support that goal, the tutor ranks moves in two ways:
+To support that goal, the tutor ranks moves in multiple ways:
 
 - `engine strength`: how good the move is in centipawn terms
 - `tutor fit`: how appropriate the move is for a selected rating band
+- `tactical risk`: how likely the move is to create immediate practical problems
+- `human plausibility`: how realistic and teachable the move is for the target player
 
 This allows the app to sometimes recommend a move that is slightly weaker than the top engine move if it is much easier to understand and execute for the chosen skill level.
 
 ## Implemented Features
 
-This repo now contains a minimal end-to-end chess tutor prototype aimed at the A+ rubric in the project brief:
+This repo now contains an end-to-end chess tutor system aimed at the A+ rubric in the project brief:
 
 - Position analyzer where a user can load a FEN and choose a target ELO.
 - Play-against-bot mode with live commentary and a post-game review.
 - Level-aware move suggestions that are not limited to raw best-engine moves.
 - A built-in "engine vs tutor" explanation so you can argue that the tutor is more useful for novice-to-intermediate players.
+- Structured tactical and strategic detectors for move feedback.
+- A local benchmark/evaluation harness for comparing tutor behavior across positions and games.
 
-The app uses `python-chess` for rules, board state, SVG board rendering, PGN export, and optional UCI engine integration. If a Stockfish binary is available through `STOCKFISH_EXECUTABLE` or on the system path, the tutor will use it as the tactical truth layer. If not, it falls back to a heuristic evaluator so the demo still runs cleanly.
+The app uses `python-chess` for rules, board state, SVG board rendering, PGN export, and UCI engine integration. If a Stockfish binary is available through `STOCKFISH_EXECUTABLE` or on the system path, the tutor uses it as the tactical truth layer by default. If not, it falls back to a heuristic evaluator so the demo still runs cleanly.
 
 ## Why This Is More Than A Raw Engine
 
@@ -60,8 +73,9 @@ This tutor adds a second layer on top of evaluation:
 
 - it rewards safe, teachable moves at lower ratings
 - it penalizes overly difficult moves for lower ratings
-- it explains moves using themes like development, king safety, center control, and hanging-piece awareness
-- it gives a short judgment on user moves such as `Excellent`, `Good practical move`, `Inaccuracy`, or `Blunder risk`
+- it explicitly diagnoses issues like hanging pieces, missed free captures, king-safety neglect, development neglect, and complexity mismatch
+- it explains moves using themes like development, king safety, center control, safety, initiative, and conversion
+- it produces structured coaching outputs instead of only raw move suggestions
 
 This is the main argument for the report: the tutor does not replace tactical truth, it translates tactical truth into more practical coaching.
 
@@ -70,7 +84,7 @@ This is the main argument for the report: the tutor does not replace tactical tr
 - `Python`
 - `Streamlit` for the web interface
 - `python-chess` for board state, move legality, FEN parsing, SAN/UCI parsing, SVG board rendering, and PGN export
-- optional `Stockfish` integration through UCI
+- `Stockfish` integration through UCI when available
 - `pytest` for basic testing
 
 ## Installation
@@ -102,7 +116,7 @@ http://localhost:8501
 
 Open that in your browser.
 
-### 4. Optional: connect Stockfish
+### 4. Optional but recommended: connect Stockfish
 
 If you have a Stockfish binary installed, you can point the app to it:
 
@@ -111,7 +125,7 @@ export STOCKFISH_EXECUTABLE=/path/to/stockfish
 python3 -m streamlit run app/main.py
 ```
 
-If no Stockfish binary is found, the app still works by using the built-in heuristic evaluator.
+If no Stockfish binary is found, the app still works by using the built-in heuristic evaluator, but Stockfish is the preferred analysis source for stronger tactical truth.
 
 ## Quick Start Demo
 
@@ -150,7 +164,7 @@ What the app shows:
 - the tutor's recommended move
 - the strongest move found
 - a short educational explanation
-- a candidate move table with score, difficulty, and themes
+- a candidate move table with score, difficulty, mistake class, primary theme, and human-plausibility score
 - a short "engine vs tutor" explanation
 
 ### 2. Play Against Bot
@@ -170,7 +184,7 @@ What the app shows:
 - move history
 - live commentary after your move
 - a bot reply chosen from practical candidate moves
-- a post-game review
+- a post-game review with critical moments, recurring patterns, strengths, and next steps
 - PGN output for the game
 
 ### 3. Evaluation Story
@@ -224,12 +238,14 @@ Responsibilities:
 - render the board as SVG
 - export PGN from played moves
 
-### 2. Decision-Making And Move Ranking
+### 2. Decision-Making, Diagnostics, And Move Ranking
 
 Files:
 
 - `app/core/move_engine.py`
 - `app/core/levels.py`
+- `app/core/diagnostics.py`
+- `app/core/reports.py`
 
 Responsibilities:
 
@@ -237,23 +253,29 @@ Responsibilities:
 - fall back to heuristic analysis when Stockfish is unavailable
 - evaluate legal moves
 - estimate move difficulty
-- assign tags such as development, center, king safety, and initiative
-- compute a tutor-aware ranking score
+- assign tactical and strategic findings such as hanging pieces, missed captures, repeated opening tempi, ignored attacked pieces, development, center control, and king safety
+- compute tactical risk, strategic fit, and human-plausibility scores
+- produce stable report types for analysis, coaching, review, and evaluation
 
 ### 3. Tutoring And Commentary
 
 Files:
 
+- `app/core/services.py`
 - `app/core/tutor.py`
 - `app/core/commentary.py`
 - `app/core/evaluator.py`
 
 Responsibilities:
 
+- expose explicit service layers:
+  - `AnalysisService`
+  - `PlayCoachingService`
+  - `ReviewService`
+  - `EvaluationService`
 - turn move analysis into plain-English summaries
-- evaluate a user's move against the strongest and tutor-preferred choices
-- produce verdicts like `Excellent` or `Blunder risk`
-- build simple post-game lessons
+- generate `PositionAnalysisReport`, `MoveCoachingReport`, and `GameReviewReport`
+- build move-by-move coaching and post-game lessons
 
 ### 4. Web Interface
 
@@ -269,6 +291,21 @@ Responsibilities:
 - connect the tutor logic to the user interface
 - display boards, tables, commentary, and PGN output
 
+## Backend Report Types
+
+The backend now uses explicit report objects instead of passing around loosely structured dicts.
+
+Main report types:
+
+- `PositionAnalysisReport`
+- `CandidateMove`
+- `MoveCoachingReport`
+- `AnnotatedGameMove`
+- `GameReviewReport`
+- `TutorEvaluationResult`
+
+These make the project easier to test, easier to extend, and more convincing as a backend engineering project.
+
 ## Heuristic Evaluation Logic
 
 When Stockfish is not available, the app uses a heuristic evaluator.
@@ -282,9 +319,9 @@ The heuristic considers:
 - center control
 - hanging pieces
 
-This is not as strong as Stockfish, but it is enough to support a working demonstration of the tutoring system and interface.
+This is not as strong as Stockfish, but it is enough to support a working fallback path when Stockfish is unavailable.
 
-## Tutor Ranking Logic
+## Tutor Ranking And Diagnostic Logic
 
 The most important part of the project is the ranking logic.
 
@@ -293,7 +330,24 @@ For each legal move, the system estimates:
 - `score_cp`: how good the move is
 - `difficulty`: how hard the move is to find or execute
 - `tags`: educational themes attached to the move
+- `tactical_risk_score`: how dangerous the move is practically
+- `strategic_fit_score`: how well the move addresses the position's needs
+- `human_plausibility_score`: how teachable and realistic the move is for the chosen level
 - `tutor_score`: how appropriate the move is for the chosen ELO
+
+The tutor also produces explicit tactical and strategic findings such as:
+
+- hanging own piece after move
+- missed free capture
+- allowed free capture
+- direct forcing reply for the opponent
+- repeated opening tempo on the same piece
+- ignored attacked high-value piece
+- development improvement or neglect
+- center improvement or neglect
+- king-safety improvement or neglect
+- conversion when ahead
+- complexity mismatch for target ELO
 
 The tutor score rewards:
 
@@ -305,6 +359,7 @@ The tutor score penalizes:
 
 - overly difficult tactical sequences at lower ratings
 - moves that give away too much evaluation compared with the strongest option
+- moves that create direct tactical risk
 
 This is how the app creates a difference between "engine best" and "best teaching move."
 
@@ -330,27 +385,34 @@ This is how the app creates a difference between "engine best" and "best teachin
 2. Choose your color.
 3. Enter your moves one by one.
 4. Read the live commentary after each turn.
-5. Use the post-game summary and PGN for review.
+5. Use the critical moments, recurring patterns, and PGN for review.
+
+### Use Case 4: Run The Evaluation Harness
+
+1. Run `python3 analysis/evaluate_tutor.py`.
+2. Inspect the JSON summary.
+3. Use the benchmark examples and metrics in the report/demo.
 
 ## Current Limitations
 
-This is a prototype, so some features are intentionally simplified.
+This is still a prototype, so some features are intentionally simplified.
 
 - Board setup is currently done through FEN input, not drag-and-drop piece placement.
 - The human-like behavior is rules-based and level-aware, not trained on Maia or Maia-2.
 - No Lichess or Chess.com API integration has been added yet.
-- Commentary is template-based rather than generated by an LLM.
-- The heuristic fallback is useful for demonstration, but Stockfish is recommended for stronger analysis.
+- Commentary is rules/template based rather than generated by an LLM.
+- The benchmark dataset is local and small by design.
+- On this machine, the current default runtime still falls back to heuristics unless a Stockfish binary is installed.
 
 ## Suggested Next Steps
 
 If this project is going to be pushed further, the best upgrades would be:
 
-1. Add a visual board editor so users can place pieces directly.
-2. Improve post-game review with concrete blunders and missed tactics by move number.
-3. Connect a real Stockfish binary by default for stronger tactical truth.
-4. Add real human-game data or a Maia-style model for stronger human-like move selection.
-5. Add user testing results comparing this tutor against raw engine output.
+1. Install and wire a real Stockfish binary on every target machine.
+2. Expand the benchmark set and add more level-specific example positions.
+3. Add real human-game data or a Maia-style model for stronger human-like move selection.
+4. Add user testing results comparing this tutor against raw engine output.
+5. Add a richer board editor if UI work becomes important later.
 
 ## Testing
 
@@ -360,12 +422,20 @@ Run the test suite with:
 python3 -m pytest -q
 ```
 
+Run the local evaluation harness with:
+
+```bash
+python3 analysis/evaluate_tutor.py
+```
+
 The current tests cover:
 
 - FEN loading
 - SAN/UCI move parsing
 - candidate move generation
 - commentary generation
+- tactical/coaching diagnostics
+- local benchmark evaluation execution
 
 ## Files And Structure
 
@@ -375,15 +445,26 @@ app/
   core/
     board.py
     commentary.py
+    diagnostics.py
     evaluator.py
     levels.py
     move_engine.py
+    reports.py
+    services.py
     tutor.py
-  ui/
-    streamlit_app.py
+analysis/
+  evaluate_tutor.py
+data/
+  benchmarks/
+    positions.json
+    sample_games.pgn
+app/ui/
+  streamlit_app.py
 tests/
   test_board.py
   test_commentary.py
+  test_evaluator.py
+  test_services.py
   test_moves.py
 requirements.txt
 README.md

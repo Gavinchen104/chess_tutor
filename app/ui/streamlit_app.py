@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from dataclasses import asdict
-
 import chess
 import streamlit as st
 
@@ -112,15 +110,18 @@ def render_position_analyzer(tutor: ChessTutor, level) -> None:
         for candidate in report["candidates"]:
             candidate_rows.append(
                 {
-                    "Move": candidate["san"],
-                    "Score": candidate["score_cp"] / 100,
-                    "Tutor Fit": round(candidate["tutor_score"], 1),
-                    "Difficulty": round(candidate["difficulty"], 2),
-                    "Themes": ", ".join(candidate["tags"]),
+                    "Move": candidate.san,
+                    "Score": candidate.score_cp / 100,
+                    "Tutor Fit": round(candidate.tutor_score, 1),
+                    "Difficulty": round(candidate.difficulty, 2),
+                    "Theme": candidate.primary_theme,
+                    "Mistake Class": candidate.mistake_class,
+                    "Human Plausibility": round(candidate.human_plausibility_score, 1),
                 }
             )
         st.dataframe(candidate_rows, use_container_width=True)
         st.caption(report["evaluation_story"])
+        st.caption(f"Analysis source: {report['engine_provider']}")
 
 
 def analyze_position(tutor: ChessTutor, fen: str, level) -> None:
@@ -135,9 +136,10 @@ def analyze_position(tutor: ChessTutor, fen: str, level) -> None:
         "overview": report.overview,
         "tutor_explanation": report.tutor_explanation,
         "evaluation_story": report.evaluation_story,
-        "best_move": asdict(report.analysis.best_move),
-        "tutor_move": asdict(report.analysis.tutor_move),
-        "candidates": [asdict(item) for item in report.analysis.candidates],
+        "best_move": report.engine_best_move,
+        "tutor_move": report.tutor_move,
+        "candidates": report.candidate_moves,
+        "engine_provider": report.engine_metadata.provider,
     }
 
 
@@ -145,22 +147,24 @@ def evaluate_probe_move(tutor: ChessTutor, fen: str, move_text: str, level) -> N
     try:
         board = load_board(fen)
         parsed = parse_move_text(board, move_text)
-        feedback, report = tutor.coach_player_move(board, parsed.move, level)
+        coaching = tutor.coach_player_move(board, parsed.move, level)
+        report = tutor.analyze_position(board, level)
     except ValueError as exc:
         st.error(str(exc))
         return
 
     st.session_state.analysis_last_move = parsed.move.uci()
     st.session_state.analysis_report = {
-        "overview": f"{feedback.verdict}: {feedback.lesson}",
+        "overview": f"{coaching.verdict}: {coaching.lesson}",
         "tutor_explanation": (
-            f"You played `{feedback.chosen_san}`. Strongest move: `{feedback.best_san}`. "
-            f"Tutor move for this level: `{feedback.tutor_san}`."
+            f"You played `{coaching.chosen_move.san}`. Strongest move: `{coaching.engine_best_move.san}`. "
+            f"Tutor move for this level: `{coaching.tutor_move.san}`."
         ),
         "evaluation_story": report.evaluation_story,
-        "best_move": asdict(report.analysis.best_move),
-        "tutor_move": asdict(report.analysis.tutor_move),
-        "candidates": [asdict(item) for item in report.analysis.candidates],
+        "best_move": report.engine_best_move,
+        "tutor_move": report.tutor_move,
+        "candidates": report.candidate_moves,
+        "engine_provider": report.engine_metadata.provider,
     }
 
 
@@ -199,8 +203,14 @@ def render_play_mode(tutor: ChessTutor, level) -> None:
                  "Black": "Human" if st.session_state.bot_user_color == "Black" else "Tutor Bot"},
     )
     review = tutor.review_game(st.session_state.bot_feedback, pgn)
-    for finding in review.findings:
+    for finding in review.critical_moments:
         st.write(f"- {finding}")
+    for finding in review.recurring_patterns:
+        st.write(f"- {finding}")
+    for strength in review.strengths:
+        st.write(f"- {strength}")
+    if review.next_steps:
+        st.caption("What To Work On Next: " + "; ".join(review.next_steps))
     st.caption(review.summary)
     st.text_area("PGN", value=review.pgn, height=180)
 
@@ -216,7 +226,7 @@ def submit_player_move(tutor: ChessTutor, level, move_text: str) -> None:
 
     try:
         parsed = parse_move_text(board, move_text)
-        feedback, report = tutor.coach_player_move(board, parsed.move, level)
+        coaching = tutor.coach_player_move(board, parsed.move, level)
     except ValueError as exc:
         st.error(str(exc))
         return
@@ -225,21 +235,22 @@ def submit_player_move(tutor: ChessTutor, level, move_text: str) -> None:
     st.session_state.bot_moves.append(parsed.move.uci())
     st.session_state.bot_last_move_uci = parsed.move.uci()
     st.session_state.bot_board_fen = board.fen()
-    st.session_state.bot_feedback.append(feedback)
+    st.session_state.bot_feedback.append(coaching)
     st.session_state.bot_commentary.append(
-        f"You played {feedback.chosen_san}: {feedback.verdict}. {feedback.lesson}"
+        f"You played {coaching.chosen_move.san}: {coaching.verdict}. {coaching.lesson}"
     )
 
     if board.is_game_over():
         return
 
     bot_move = tutor.choose_bot_move(board, level)
-    board.push(bot_move.move)
-    st.session_state.bot_moves.append(bot_move.move.uci())
-    st.session_state.bot_last_move_uci = bot_move.move.uci()
+    bot_move_obj = chess.Move.from_uci(bot_move.uci)
+    board.push(bot_move_obj)
+    st.session_state.bot_moves.append(bot_move.uci)
+    st.session_state.bot_last_move_uci = bot_move.uci
     st.session_state.bot_board_fen = board.fen()
     st.session_state.bot_commentary.append(
-        f"Bot replies with {bot_move.san}: {' '.join(bot_move.reasons[:2])}"
+        f"Bot replies with {bot_move.san}: {bot_move.player_friendly_explanation}"
     )
 
 
@@ -251,12 +262,13 @@ def maybe_make_opening_bot_move(tutor: ChessTutor, level) -> None:
     if not bot_is_white:
         return
     bot_move = tutor.choose_bot_move(board, level)
-    board.push(bot_move.move)
-    st.session_state.bot_moves.append(bot_move.move.uci())
-    st.session_state.bot_last_move_uci = bot_move.move.uci()
+    bot_move_obj = chess.Move.from_uci(bot_move.uci)
+    board.push(bot_move_obj)
+    st.session_state.bot_moves.append(bot_move.uci)
+    st.session_state.bot_last_move_uci = bot_move.uci
     st.session_state.bot_board_fen = board.fen()
     st.session_state.bot_commentary.append(
-        f"Bot opens with {bot_move.san}: {' '.join(bot_move.reasons[:2])}"
+        f"Bot opens with {bot_move.san}: {bot_move.player_friendly_explanation}"
     )
 
 
