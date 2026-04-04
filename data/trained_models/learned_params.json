@@ -103,6 +103,32 @@
         "difficulty": -2.092235
       },
       "intercept": 0.333518
+    },
+    "1800": {
+      "weights": {
+        "eval_gap": -1.4e-05,
+        "num_preferred_tags": 0.243684,
+        "num_priorities": -0.01167,
+        "safety_change": -0.000994,
+        "king_safety_change": 0.014391,
+        "center_change": 0.004625,
+        "opponent_pressure_change": 0.058051,
+        "difficulty": -0.058848
+      },
+      "intercept": -2.245538
+    },
+    "600": {
+      "weights": {
+        "eval_gap": 0.026761,
+        "num_preferred_tags": 1.100479,
+        "num_priorities": -1.683315,
+        "safety_change": -0.013132,
+        "king_safety_change": 0.190005,
+        "center_change": 0.375513,
+        "opponent_pressure_change": -5.115336,
+        "difficulty": -5.014134
+      },
+      "intercept": 3.682962
     }
   }
 }
