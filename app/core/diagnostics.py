@@ -14,6 +14,7 @@ from app.core.move_engine import (
     count_developed_minor_pieces,
     has_castled,
 )
+from app.core.learned_params import learned_params
 from app.core.reports import DiagnosticFinding
 
 
@@ -336,6 +337,25 @@ def compute_human_plausibility(
     strategic_fit: float,
     level: LevelProfile,
 ) -> float:
+    """
+    Estimate how likely a human at this level would play this move.
+
+    Uses Bayesian-learned coefficients when available (Model A posterior means),
+    falling back to handcrafted heuristic weights otherwise.
+    """
+    params = learned_params.get_move_choice_params(level.key)
+    if params is not None:
+        # Use learned coefficients from Bayesian model
+        coeff = params.coefficients
+        score = 100.0 + params.intercept
+        score += coeff.get("eval_gap", 0.0) * eval_gap
+        score += coeff.get("difficulty", 0.0) * difficulty
+        # Map tactical_risk and strategic_fit to the closest learned features
+        score += coeff.get("safety_change", 0.0) * (-tactical_risk)
+        score += coeff.get("center_change", 0.0) * strategic_fit
+        return max(0.0, min(100.0, score))
+
+    # Heuristic fallback (original hardcoded weights)
     complexity_tolerance = {
         "600": 24.0,
         "1000": 18.0,

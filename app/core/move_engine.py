@@ -8,6 +8,7 @@ import shutil
 import chess
 import chess.engine
 
+from app.core.learned_params import learned_params
 from app.core.levels import LevelProfile
 
 
@@ -648,7 +649,32 @@ def compute_tutor_score(
     priorities_addressed: list[str],
     delta: MoveDelta,
 ) -> float:
+    """
+    Compute the teaching value of a move for a given skill level.
+
+    Uses Bayesian-learned weights when available (Model B posterior means),
+    falling back to handcrafted heuristic weights otherwise.
+    """
     eval_gap = max(0, best_score_cp - score_cp)
+    num_preferred = sum(1 for tag in tags if tag in level.preferred_tags)
+
+    params = learned_params.get_tutor_score_params(level.key)
+    if params is not None:
+        # Use learned weights from Bayesian model
+        w = params.weights
+        score = params.intercept
+        score += w.get("eval_gap", 0.0) * eval_gap
+        score += w.get("num_preferred_tags", 0.0) * num_preferred
+        score += w.get("num_priorities", 0.0) * len(priorities_addressed)
+        score += w.get("safety_change", 0.0) * delta.safety_change
+        score += w.get("king_safety_change", 0.0) * delta.king_safety_change
+        score += w.get("center_change", 0.0) * delta.center_control_change
+        score += w.get("opponent_pressure_change", 0.0) * delta.opponent_king_pressure_change
+        score += w.get("difficulty", 0.0) * difficulty
+        # Scale to comparable range as heuristic (~0-200)
+        return score * 100.0
+
+    # Heuristic fallback (original hardcoded weights)
     eval_credit = max(0.0, 150.0 - float(eval_gap))
     preferred_bonus = sum(8.0 for tag in tags if tag in level.preferred_tags)
     priority_bonus = 12.0 * len(priorities_addressed)
