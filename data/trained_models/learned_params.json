@@ -1,0 +1,76 @@
+{
+  "model_a": {
+    "600": {
+      "coefficients": {
+        "eval_gap": -2e-06,
+        "difficulty": -0.29318,
+        "safety_change": -0.002123,
+        "center_change": -0.003568,
+        "king_safety_change": -0.015535,
+        "development_change": 0.240014,
+        "mobility_change": -0.01044,
+        "material_change": 0.000522,
+        "opponent_pressure_change": -0.157331,
+        "is_capture": 1.566827,
+        "is_check": 2.375948,
+        "is_castling": -0.597234,
+        "num_preferred_tags": 0.074017,
+        "num_priorities": -0.261498
+      },
+      "intercept": 0.882764
+    },
+    "1000": {
+      "coefficients": {
+        "eval_gap": -2e-06,
+        "difficulty": -0.571709,
+        "safety_change": -0.002877,
+        "center_change": -0.025285,
+        "king_safety_change": 0.026237,
+        "development_change": -0.252187,
+        "mobility_change": -0.004901,
+        "material_change": 0.00096,
+        "opponent_pressure_change": -0.057436,
+        "is_capture": 1.338191,
+        "is_check": 2.100533,
+        "is_castling": 0.452091,
+        "num_preferred_tags": 0.249611,
+        "num_priorities": -0.340605
+      },
+      "intercept": 1.490439
+    },
+    "1400": {
+      "coefficients": {
+        "eval_gap": -2e-06,
+        "difficulty": -0.338908,
+        "safety_change": -0.001444,
+        "center_change": -0.025583,
+        "king_safety_change": -0.010176,
+        "development_change": 0.400041,
+        "mobility_change": -0.06324,
+        "material_change": 0.001633,
+        "opponent_pressure_change": -0.199165,
+        "is_capture": 1.077457,
+        "is_check": 2.833027,
+        "is_castling": 1.251849,
+        "num_preferred_tags": 0.336756,
+        "num_priorities": -0.444567
+      },
+      "intercept": 0.829795
+    }
+  },
+  "model_b": {
+    "1000": {
+      "weights": {
+        "eval_gap": 0.026761,
+        "num_preferred_tags": 1.100479,
+        "num_priorities": -1.683315,
+        "safety_change": -0.013132,
+        "king_safety_change": 0.190005,
+        "center_change": 0.375513,
+        "opponent_pressure_change": -5.115336,
+        "difficulty": -5.014134
+      },
+      "intercept": 3.682962
+    }
+  }
+}
