@@ -56,6 +56,25 @@
         "num_priorities": -0.444567
       },
       "intercept": 0.829795
+    },
+    "1800": {
+      "coefficients": {
+        "eval_gap": -0.000392,
+        "difficulty": -0.232213,
+        "safety_change": -0.001749,
+        "center_change": -0.009375,
+        "king_safety_change": -0.001239,
+        "development_change": 0.591111,
+        "mobility_change": -0.050056,
+        "material_change": 0.002574,
+        "opponent_pressure_change": -0.205358,
+        "is_capture": 0.52747,
+        "is_check": 2.990426,
+        "is_castling": 1.959906,
+        "num_preferred_tags": 0.249221,
+        "num_priorities": -0.047455
+      },
+      "intercept": 0.567904
     }
   },
   "model_b": {
@@ -71,6 +90,19 @@
         "difficulty": -5.014134
       },
       "intercept": 3.682962
+    },
+    "1400": {
+      "weights": {
+        "eval_gap": 0.005151,
+        "num_preferred_tags": 1.500837,
+        "num_priorities": -0.953703,
+        "safety_change": -0.004897,
+        "king_safety_change": 0.161198,
+        "center_change": 0.114468,
+        "opponent_pressure_change": 0.038647,
+        "difficulty": -2.092235
+      },
+      "intercept": 0.333518
     }
   }
 }
