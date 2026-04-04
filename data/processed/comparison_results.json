@@ -1,0 +1,274 @@
+{
+  "using_learned_params": true,
+  "benchmarks": {
+    "positions": [
+      {
+        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+        "level": "600",
+        "engine_best": "Nf3",
+        "learned_tutor": "Nf3",
+        "heuristic_tutor": "Nf3",
+        "agree": true,
+        "learned_score": 158.5,
+        "heuristic_score": 158.5
+      },
+      {
+        "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+        "level": "1000",
+        "engine_best": "Nf3",
+        "learned_tutor": "d4",
+        "heuristic_tutor": "Nf3",
+        "agree": false,
+        "learned_score": 409.4,
+        "heuristic_score": 52.7
+      },
+      {
+        "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+        "level": "600",
+        "engine_best": "Nc3",
+        "learned_tutor": "Nc3",
+        "heuristic_tutor": "Nc3",
+        "agree": true,
+        "learned_score": 127.7,
+        "heuristic_score": 127.7
+      },
+      {
+        "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+        "level": "1000",
+        "engine_best": "Nc3",
+        "learned_tutor": "Nc3",
+        "heuristic_tutor": "Nc3",
+        "agree": true,
+        "learned_score": 294.2,
+        "heuristic_score": 145.7
+      },
+      {
+        "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+        "level": "1400",
+        "engine_best": "Nc3",
+        "learned_tutor": "d4",
+        "heuristic_tutor": "Nc3",
+        "agree": false,
+        "learned_score": 178.5,
+        "heuristic_score": 93.0
+      },
+      {
+        "fen": "r1bq1rk1/pppp1ppp/2n2n2/4p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 6",
+        "level": "600",
+        "engine_best": "Be3",
+        "learned_tutor": "Be3",
+        "heuristic_tutor": "Be3",
+        "agree": true,
+        "learned_score": 106.8,
+        "heuristic_score": 106.8
+      },
+      {
+        "fen": "r1bq1rk1/pppp1ppp/2n2n2/4p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 6",
+        "level": "1000",
+        "engine_best": "Be3",
+        "learned_tutor": "d4",
+        "heuristic_tutor": "Be3",
+        "agree": false,
+        "learned_score": 238.3,
+        "heuristic_score": 82.6
+      },
+      {
+        "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+        "level": "1000",
+        "engine_best": "Nc3",
+        "learned_tutor": "d4",
+        "heuristic_tutor": "Nc3",
+        "agree": false,
+        "learned_score": 348.1,
+        "heuristic_score": -53.1
+      },
+      {
+        "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
+        "level": "1400",
+        "engine_best": "Nc3",
+        "learned_tutor": "d4",
+        "heuristic_tutor": "Nc3",
+        "agree": false,
+        "learned_score": 142.5,
+        "heuristic_score": -19.3
+      },
+      {
+        "fen": "4k3/8/8/8/4q3/8/4R2P/4K3 w - - 0 1",
+        "level": "600",
+        "engine_best": "Rxe4+",
+        "learned_tutor": "Kf2",
+        "heuristic_tutor": "Kf2",
+        "agree": true,
+        "learned_score": -9.7,
+        "heuristic_score": -9.7
+      },
+      {
+        "fen": "4k3/8/8/8/4q3/8/4R2P/4K3 w - - 0 1",
+        "level": "1000",
+        "engine_best": "Rxe4+",
+        "learned_tutor": "Re3",
+        "heuristic_tutor": "Rxe4+",
+        "agree": false,
+        "learned_score": 846.2,
+        "heuristic_score": -181.5
+      },
+      {
+        "fen": "8/5pk1/3p2p1/2pP4/2P1P3/6P1/5P1P/6K1 w - - 0 1",
+        "level": "1000",
+        "engine_best": "Kg2",
+        "learned_tutor": "f3",
+        "heuristic_tutor": "e5",
+        "agree": false,
+        "learned_score": 40.6,
+        "heuristic_score": 91.1
+      },
+      {
+        "fen": "8/5pk1/3p2p1/2pP4/2P1P3/6P1/5P1P/6K1 w - - 0 1",
+        "level": "1400",
+        "engine_best": "Kg2",
+        "learned_tutor": "f3",
+        "heuristic_tutor": "e5",
+        "agree": false,
+        "learned_score": 13.0,
+        "heuristic_score": 115.0
+      },
+      {
+        "fen": "8/5pk1/3p2p1/2pP4/2P1P3/6P1/5P1P/6K1 w - - 0 1",
+        "level": "1800",
+        "engine_best": "Kg2",
+        "learned_tutor": "g4",
+        "heuristic_tutor": "g4",
+        "agree": true,
+        "learned_score": 146.9,
+        "heuristic_score": 146.9
+      },
+      {
+        "fen": "r1bq1rk1/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 7",
+        "level": "1800",
+        "engine_best": "Be3",
+        "learned_tutor": "Be3",
+        "heuristic_tutor": "Be3",
+        "agree": true,
+        "learned_score": 170.3,
+        "heuristic_score": 170.3
+      }
+    ],
+    "agreement_pct": 46.7,
+    "total_positions": 15
+  },
+  "heldout": {
+    "600": {
+      "total": 300,
+      "learned_match_rate": 14.3,
+      "heuristic_match_rate": 14.3
+    },
+    "1000": {
+      "total": 300,
+      "learned_match_rate": 10.7,
+      "heuristic_match_rate": 16.7
+    },
+    "1400": {
+      "total": 300,
+      "learned_match_rate": 10.0,
+      "heuristic_match_rate": 15.3
+    },
+    "1800": {
+      "total": 300,
+      "learned_match_rate": 14.3,
+      "heuristic_match_rate": 14.3
+    }
+  },
+  "case_studies": [
+    {
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "level": "600",
+      "engine_best": "Nf3",
+      "learned_recommends": "Nf3",
+      "learned_score": 158.5,
+      "heuristic_recommends": "Nf3",
+      "heuristic_score": 158.5,
+      "tags": [
+        "development",
+        "center",
+        "king_safety"
+      ],
+      "reasons": [
+        "brings another minor piece into the game.",
+        "improves control of the center."
+      ],
+      "agrees_with_heuristic": true
+    },
+    {
+      "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
+      "level": "1000",
+      "engine_best": "Nf3",
+      "learned_recommends": "d4",
+      "learned_score": 409.4,
+      "heuristic_recommends": "Nf3",
+      "heuristic_score": 168.5,
+      "tags": [
+        "center",
+        "activity"
+      ],
+      "reasons": [
+        "improves control of the center.",
+        "improves the activity of your pieces."
+      ],
+      "agrees_with_heuristic": false
+    },
+    {
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "level": "600",
+      "engine_best": "Nc3",
+      "learned_recommends": "Nc3",
+      "learned_score": 127.7,
+      "heuristic_recommends": "Nc3",
+      "heuristic_score": 127.7,
+      "tags": [
+        "development",
+        "center"
+      ],
+      "reasons": [
+        "brings another minor piece into the game.",
+        "improves control of the center."
+      ],
+      "agrees_with_heuristic": true
+    },
+    {
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "level": "1000",
+      "engine_best": "Nc3",
+      "learned_recommends": "Nc3",
+      "learned_score": 294.2,
+      "heuristic_recommends": "Nc3",
+      "heuristic_score": 145.7,
+      "tags": [
+        "development",
+        "center"
+      ],
+      "reasons": [
+        "brings another minor piece into the game.",
+        "improves control of the center."
+      ],
+      "agrees_with_heuristic": true
+    },
+    {
+      "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/4P3/3P1N2/PPP2PPP/RNBQKB1R w KQkq - 2 4",
+      "level": "1400",
+      "engine_best": "Nc3",
+      "learned_recommends": "d4",
+      "learned_score": 178.5,
+      "heuristic_recommends": "Nc3",
+      "heuristic_score": 151.7,
+      "tags": [
+        "center",
+        "activity"
+      ],
+      "reasons": [
+        "improves control of the center.",
+        "improves the activity of your pieces."
+      ],
+      "agrees_with_heuristic": false
+    }
+  ]
+}
