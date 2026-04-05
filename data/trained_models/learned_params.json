@@ -2,133 +2,133 @@
   "model_a": {
     "600": {
       "coefficients": {
-        "eval_gap": -2e-06,
-        "difficulty": -0.29318,
-        "safety_change": -0.002123,
-        "center_change": -0.003568,
-        "king_safety_change": -0.015535,
-        "development_change": 0.240014,
-        "mobility_change": -0.01044,
-        "material_change": 0.000522,
-        "opponent_pressure_change": -0.157331,
-        "is_capture": 1.566827,
-        "is_check": 2.375948,
-        "is_castling": -0.597234,
-        "num_preferred_tags": 0.074017,
-        "num_priorities": -0.261498
+        "eval_gap": 1.5e-05,
+        "difficulty": -0.0869,
+        "safety_change": -0.001618,
+        "center_change": -0.018929,
+        "king_safety_change": 0.009091,
+        "development_change": 0.264324,
+        "mobility_change": -0.015624,
+        "material_change": 0.000823,
+        "opponent_pressure_change": -0.196596,
+        "is_capture": 1.668639,
+        "is_check": 2.905777,
+        "is_castling": -34.733685,
+        "num_preferred_tags": 0.16136,
+        "num_priorities": -0.235812
       },
-      "intercept": 0.882764
+      "intercept": 0.542936
     },
     "1000": {
       "coefficients": {
-        "eval_gap": -2e-06,
-        "difficulty": -0.571709,
-        "safety_change": -0.002877,
-        "center_change": -0.025285,
-        "king_safety_change": 0.026237,
-        "development_change": -0.252187,
-        "mobility_change": -0.004901,
-        "material_change": 0.00096,
-        "opponent_pressure_change": -0.057436,
-        "is_capture": 1.338191,
-        "is_check": 2.100533,
-        "is_castling": 0.452091,
-        "num_preferred_tags": 0.249611,
-        "num_priorities": -0.340605
+        "eval_gap": -0.000331,
+        "difficulty": -0.7098,
+        "safety_change": -0.004242,
+        "center_change": -0.036973,
+        "king_safety_change": 0.036212,
+        "development_change": -0.753672,
+        "mobility_change": -0.023215,
+        "material_change": 0.001763,
+        "opponent_pressure_change": -0.119086,
+        "is_capture": 1.241521,
+        "is_check": 2.94228,
+        "is_castling": -0.031218,
+        "num_preferred_tags": 0.276606,
+        "num_priorities": -0.437578
       },
-      "intercept": 1.490439
+      "intercept": 2.481706
     },
     "1400": {
       "coefficients": {
-        "eval_gap": -2e-06,
-        "difficulty": -0.338908,
-        "safety_change": -0.001444,
-        "center_change": -0.025583,
-        "king_safety_change": -0.010176,
-        "development_change": 0.400041,
-        "mobility_change": -0.06324,
-        "material_change": 0.001633,
-        "opponent_pressure_change": -0.199165,
-        "is_capture": 1.077457,
-        "is_check": 2.833027,
-        "is_castling": 1.251849,
-        "num_preferred_tags": 0.336756,
-        "num_priorities": -0.444567
+        "eval_gap": 1e-06,
+        "difficulty": -0.289656,
+        "safety_change": -0.001157,
+        "center_change": -0.043434,
+        "king_safety_change": -0.009303,
+        "development_change": 0.473342,
+        "mobility_change": -0.087812,
+        "material_change": 0.002332,
+        "opponent_pressure_change": -0.248585,
+        "is_capture": 1.154258,
+        "is_check": 3.2425,
+        "is_castling": 1.540219,
+        "num_preferred_tags": 0.099003,
+        "num_priorities": -0.371528
       },
-      "intercept": 0.829795
+      "intercept": 0.890104
     },
     "1800": {
       "coefficients": {
-        "eval_gap": -0.000392,
-        "difficulty": -0.232213,
-        "safety_change": -0.001749,
-        "center_change": -0.009375,
-        "king_safety_change": -0.001239,
-        "development_change": 0.591111,
-        "mobility_change": -0.050056,
-        "material_change": 0.002574,
-        "opponent_pressure_change": -0.205358,
-        "is_capture": 0.52747,
-        "is_check": 2.990426,
-        "is_castling": 1.959906,
-        "num_preferred_tags": 0.249221,
-        "num_priorities": -0.047455
+        "eval_gap": -0.00041,
+        "difficulty": -0.200392,
+        "safety_change": -0.00181,
+        "center_change": -0.030241,
+        "king_safety_change": -0.032336,
+        "development_change": 0.336599,
+        "mobility_change": -0.083154,
+        "material_change": 0.003277,
+        "opponent_pressure_change": -0.271517,
+        "is_capture": 0.774827,
+        "is_check": 3.889601,
+        "is_castling": 2.814966,
+        "num_preferred_tags": 0.062421,
+        "num_priorities": 0.23992
       },
-      "intercept": 0.567904
+      "intercept": 0.631669
     }
   },
   "model_b": {
     "1000": {
       "weights": {
-        "eval_gap": 0.026761,
-        "num_preferred_tags": 1.100479,
-        "num_priorities": -1.683315,
-        "safety_change": -0.013132,
-        "king_safety_change": 0.190005,
-        "center_change": 0.375513,
-        "opponent_pressure_change": -5.115336,
-        "difficulty": -5.014134
+        "eval_gap": 0.026596,
+        "num_preferred_tags": 1.090518,
+        "num_priorities": -1.674757,
+        "safety_change": -0.013088,
+        "king_safety_change": 0.188546,
+        "center_change": 0.376405,
+        "opponent_pressure_change": -5.032516,
+        "difficulty": -4.994071
       },
-      "intercept": 3.682962
+      "intercept": 3.664197
     },
     "1400": {
       "weights": {
-        "eval_gap": 0.005151,
-        "num_preferred_tags": 1.500837,
-        "num_priorities": -0.953703,
-        "safety_change": -0.004897,
-        "king_safety_change": 0.161198,
-        "center_change": 0.114468,
-        "opponent_pressure_change": 0.038647,
-        "difficulty": -2.092235
+        "eval_gap": 0.005168,
+        "num_preferred_tags": 1.503903,
+        "num_priorities": -0.956493,
+        "safety_change": -0.004851,
+        "king_safety_change": 0.161719,
+        "center_change": 0.114485,
+        "opponent_pressure_change": 0.039133,
+        "difficulty": -2.095693
       },
-      "intercept": 0.333518
+      "intercept": 0.334945
     },
     "1800": {
       "weights": {
-        "eval_gap": -1.4e-05,
-        "num_preferred_tags": 0.243684,
-        "num_priorities": -0.01167,
-        "safety_change": -0.000994,
-        "king_safety_change": 0.014391,
-        "center_change": 0.004625,
-        "opponent_pressure_change": 0.058051,
-        "difficulty": -0.058848
+        "eval_gap": -1.3e-05,
+        "num_preferred_tags": 0.306159,
+        "num_priorities": -0.088191,
+        "safety_change": -0.001124,
+        "king_safety_change": 0.026701,
+        "center_change": 0.038839,
+        "opponent_pressure_change": 0.053183,
+        "difficulty": -0.1964
       },
-      "intercept": -2.245538
+      "intercept": -1.840777
     },
     "600": {
       "weights": {
-        "eval_gap": 0.026761,
-        "num_preferred_tags": 1.100479,
-        "num_priorities": -1.683315,
-        "safety_change": -0.013132,
-        "king_safety_change": 0.190005,
-        "center_change": 0.375513,
-        "opponent_pressure_change": -5.115336,
-        "difficulty": -5.014134
+        "eval_gap": 0.026596,
+        "num_preferred_tags": 1.090518,
+        "num_priorities": -1.674757,
+        "safety_change": -0.013088,
+        "king_safety_change": 0.188546,
+        "center_change": 0.376405,
+        "opponent_pressure_change": -5.032516,
+        "difficulty": -4.994071
       },
-      "intercept": 3.682962
+      "intercept": 3.664197
     }
   }
 }
