@@ -2,133 +2,120 @@
   "model_a": {
     "600": {
       "coefficients": {
-        "eval_gap": 1.5e-05,
-        "difficulty": -0.0869,
-        "safety_change": -0.001618,
-        "center_change": -0.018929,
-        "king_safety_change": 0.009091,
-        "development_change": 0.264324,
-        "mobility_change": -0.015624,
-        "material_change": 0.000823,
-        "opponent_pressure_change": -0.196596,
-        "is_capture": 1.668639,
-        "is_check": 2.905777,
-        "is_castling": -34.733685,
-        "num_preferred_tags": 0.16136,
-        "num_priorities": -0.235812
+        "eval_gap": -1e-06,
+        "difficulty": -0.300935,
+        "safety_change": -0.002153,
+        "center_change": -0.003689,
+        "king_safety_change": -0.015943,
+        "development_change": 0.251417,
+        "mobility_change": -0.010605,
+        "material_change": 0.000492,
+        "opponent_pressure_change": -0.157668,
+        "is_capture": 1.579111,
+        "is_check": 2.393596,
+        "is_castling": -0.569541,
+        "num_preferred_tags": 0.066787,
+        "num_priorities": -0.259604
       },
-      "intercept": 0.542936
+      "intercept": 0.89289
     },
     "1000": {
       "coefficients": {
-        "eval_gap": -0.000331,
-        "difficulty": -0.7098,
-        "safety_change": -0.004242,
-        "center_change": -0.036973,
-        "king_safety_change": 0.036212,
-        "development_change": -0.753672,
-        "mobility_change": -0.023215,
-        "material_change": 0.001763,
-        "opponent_pressure_change": -0.119086,
-        "is_capture": 1.241521,
-        "is_check": 2.94228,
-        "is_castling": -0.031218,
-        "num_preferred_tags": 0.276606,
-        "num_priorities": -0.437578
+        "eval_gap": -3e-06,
+        "difficulty": -0.57263,
+        "safety_change": -0.002882,
+        "center_change": -0.025077,
+        "king_safety_change": 0.026468,
+        "development_change": -0.254664,
+        "mobility_change": -0.004799,
+        "material_change": 0.000956,
+        "opponent_pressure_change": -0.056359,
+        "is_capture": 1.339475,
+        "is_check": 2.082936,
+        "is_castling": 0.432238,
+        "num_preferred_tags": 0.252183,
+        "num_priorities": -0.343504
       },
-      "intercept": 2.481706
+      "intercept": 1.476863
     },
     "1400": {
       "coefficients": {
-        "eval_gap": 1e-06,
-        "difficulty": -0.289656,
-        "safety_change": -0.001157,
-        "center_change": -0.043434,
-        "king_safety_change": -0.009303,
-        "development_change": 0.473342,
-        "mobility_change": -0.087812,
-        "material_change": 0.002332,
-        "opponent_pressure_change": -0.248585,
-        "is_capture": 1.154258,
-        "is_check": 3.2425,
-        "is_castling": 1.540219,
-        "num_preferred_tags": 0.099003,
-        "num_priorities": -0.371528
+        "eval_gap": -2e-06,
+        "difficulty": -0.334773,
+        "safety_change": -0.00144,
+        "center_change": -0.025043,
+        "king_safety_change": -0.010157,
+        "development_change": 0.38499,
+        "mobility_change": -0.062635,
+        "material_change": 0.001626,
+        "opponent_pressure_change": -0.197163,
+        "is_capture": 1.0841,
+        "is_check": 2.802274,
+        "is_castling": 1.242652,
+        "num_preferred_tags": 0.332033,
+        "num_priorities": -0.44101
       },
-      "intercept": 0.890104
+      "intercept": 0.794781
     },
     "1800": {
       "coefficients": {
-        "eval_gap": -0.00041,
-        "difficulty": -0.200392,
-        "safety_change": -0.00181,
-        "center_change": -0.030241,
-        "king_safety_change": -0.032336,
-        "development_change": 0.336599,
-        "mobility_change": -0.083154,
-        "material_change": 0.003277,
-        "opponent_pressure_change": -0.271517,
-        "is_capture": 0.774827,
-        "is_check": 3.889601,
-        "is_castling": 2.814966,
-        "num_preferred_tags": 0.062421,
-        "num_priorities": 0.23992
+        "eval_gap": -0.000327,
+        "difficulty": -0.233634,
+        "safety_change": -0.001683,
+        "center_change": -0.009285,
+        "king_safety_change": -0.00082,
+        "development_change": 0.599745,
+        "mobility_change": -0.049614,
+        "material_change": 0.002636,
+        "opponent_pressure_change": -0.206197,
+        "is_capture": 0.52979,
+        "is_check": 2.992409,
+        "is_castling": 1.97796,
+        "num_preferred_tags": 0.251514,
+        "num_priorities": -0.048072
       },
-      "intercept": 0.631669
+      "intercept": 0.586565
     }
   },
   "model_b": {
     "1000": {
       "weights": {
-        "eval_gap": 0.026596,
-        "num_preferred_tags": 1.090518,
-        "num_priorities": -1.674757,
-        "safety_change": -0.013088,
-        "king_safety_change": 0.188546,
-        "center_change": 0.376405,
-        "opponent_pressure_change": -5.032516,
-        "difficulty": -4.994071
+        "eval_gap": 0.026593,
+        "num_preferred_tags": 1.098942,
+        "num_priorities": -1.678558,
+        "safety_change": -0.013091,
+        "king_safety_change": 0.18862,
+        "center_change": 0.374852,
+        "opponent_pressure_change": -5.509894,
+        "difficulty": -4.991407
       },
-      "intercept": 3.664197
+      "intercept": 3.66433
     },
     "1400": {
       "weights": {
-        "eval_gap": 0.005168,
-        "num_preferred_tags": 1.503903,
-        "num_priorities": -0.956493,
-        "safety_change": -0.004851,
-        "king_safety_change": 0.161719,
-        "center_change": 0.114485,
-        "opponent_pressure_change": 0.039133,
-        "difficulty": -2.095693
+        "eval_gap": 0.005151,
+        "num_preferred_tags": 1.500837,
+        "num_priorities": -0.953703,
+        "safety_change": -0.004897,
+        "king_safety_change": 0.161198,
+        "center_change": 0.114468,
+        "opponent_pressure_change": 0.038647,
+        "difficulty": -2.092235
       },
-      "intercept": 0.334945
+      "intercept": 0.333518
     },
     "1800": {
       "weights": {
-        "eval_gap": -1.3e-05,
-        "num_preferred_tags": 0.306159,
-        "num_priorities": -0.088191,
+        "eval_gap": -1.4e-05,
+        "num_preferred_tags": 0.306069,
+        "num_priorities": -0.088084,
         "safety_change": -0.001124,
-        "king_safety_change": 0.026701,
-        "center_change": 0.038839,
-        "opponent_pressure_change": 0.053183,
-        "difficulty": -0.1964
+        "king_safety_change": 0.026719,
+        "center_change": 0.03897,
+        "opponent_pressure_change": 0.053181,
+        "difficulty": -0.195925
       },
-      "intercept": -1.840777
-    },
-    "600": {
-      "weights": {
-        "eval_gap": 0.026596,
-        "num_preferred_tags": 1.090518,
-        "num_priorities": -1.674757,
-        "safety_change": -0.013088,
-        "king_safety_change": 0.188546,
-        "center_change": 0.376405,
-        "opponent_pressure_change": -5.032516,
-        "difficulty": -4.994071
-      },
-      "intercept": 3.664197
+      "intercept": -1.842144
     }
   }
 }
