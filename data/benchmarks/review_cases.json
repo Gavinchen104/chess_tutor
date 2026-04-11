@@ -1,0 +1,62 @@
+[
+  {
+    "label": "Development Neglect 1",
+    "level_key": "600",
+    "player_color": "white",
+    "pgn_path": "data/benchmarks/review_games/dev_neglect_1.pgn",
+    "expected_weakness_themes": [
+      "development",
+      "king_safety"
+    ],
+    "expected_next_step_keywords": [
+      "practice",
+      "development"
+    ],
+    "notes": "White makes several low-value moves and falls behind in development."
+  },
+  {
+    "label": "Queen Wander 1",
+    "level_key": "1000",
+    "player_color": "white",
+    "pgn_path": "data/benchmarks/review_games/queen_wander_1.pgn",
+    "expected_weakness_themes": [
+      "development",
+      "king_safety"
+    ],
+    "expected_next_step_keywords": [
+      "practice",
+      "development"
+    ],
+    "notes": "Early queen moves should create a practical teaching opportunity."
+  },
+  {
+    "label": "Tactical Blunder 1",
+    "level_key": "1000",
+    "player_color": "white",
+    "pgn_path": "data/benchmarks/review_games/tactical_blunder_1.pgn",
+    "expected_weakness_themes": [
+      "safety",
+      "tactics"
+    ],
+    "expected_next_step_keywords": [
+      "practice",
+      "safety"
+    ],
+    "notes": "White enters a tactical sequence that should be criticized as impractical."
+  },
+  {
+    "label": "Delayed Castle 1",
+    "level_key": "1000",
+    "player_color": "white",
+    "pgn_path": "data/benchmarks/review_games/delayed_castle_1.pgn",
+    "expected_weakness_themes": [
+      "king_safety",
+      "development"
+    ],
+    "expected_next_step_keywords": [
+      "practice",
+      "king"
+    ],
+    "notes": "White keeps moving the same bishop and delays castling."
+  }
+]
