@@ -85,6 +85,38 @@ PIECE_SQUARE_TABLES = {
 }
 
 DEFAULT_ENGINE_CANDIDATES = 5
+BOT_RANDOMNESS_BY_LEVEL = {
+    "600": 0.28,
+    "1000": 0.2,
+    "1400": 0.12,
+    "1800": 0.06,
+}
+BOT_POOL_SIZE_BY_LEVEL = {
+    "600": 8,
+    "1000": 7,
+    "1400": 6,
+    "1800": 5,
+}
+BOT_EVAL_GAP_MULTIPLIERS = {
+    "opening": {
+        "600": 2.8,
+        "1000": 2.3,
+        "1400": 1.9,
+        "1800": 1.4,
+    },
+    "middlegame": {
+        "600": 2.4,
+        "1000": 2.0,
+        "1400": 1.6,
+        "1800": 1.3,
+    },
+    "endgame": {
+        "600": 2.0,
+        "1000": 1.7,
+        "1400": 1.5,
+        "1800": 1.2,
+    },
+}
 
 
 @dataclass
@@ -196,16 +228,13 @@ class MoveEngine:
 
     def choose_bot_move(self, board: chess.Board, level: LevelProfile) -> MoveInsight:
         analysis = self.analyze(board, level)
-        short_list = analysis.candidates[: max(3, min(6, len(analysis.candidates)))]
+        phase = estimate_game_phase(board)
+        pool = build_bot_candidate_pool(analysis, board, level, phase)
         weights = []
-        for candidate in short_list:
-            gap = analysis.best_move.score_cp - candidate.score_cp
-            if gap > level.max_eval_loss * 2:
-                continue
-            weight = max(0.5, candidate.tutor_score)
-            if "safety" in candidate.tags:
-                weight += 6.0
-            weights.append((candidate, weight))
+        for candidate in pool:
+            weight = compute_bot_move_weight(board, candidate, analysis.best_move.score_cp, level, phase)
+            jitter = 1.0 + random.uniform(-BOT_RANDOMNESS_BY_LEVEL[level.key], BOT_RANDOMNESS_BY_LEVEL[level.key])
+            weights.append((candidate, max(0.05, weight * jitter)))
         if not weights:
             return analysis.tutor_move
         total = sum(weight for _, weight in weights)
@@ -638,6 +667,166 @@ def estimate_difficulty(
     if move.to_square in (chess.D4, chess.E4, chess.D5, chess.E5):
         difficulty -= 0.2
     return max(0.4, difficulty)
+
+
+def estimate_game_phase(board: chess.Board) -> str:
+    non_pawn_material = sum(
+        PIECE_VALUES[piece.piece_type]
+        for piece in board.piece_map().values()
+        if piece.piece_type not in (chess.KING, chess.PAWN)
+    )
+    if board.fullmove_number <= 10 and len(board.piece_map()) >= 24:
+        return "opening"
+    if non_pawn_material <= 2600:
+        return "endgame"
+    return "middlegame"
+
+
+def allowed_bot_eval_gap(level: LevelProfile, phase: str) -> int:
+    multiplier = BOT_EVAL_GAP_MULTIPLIERS.get(phase, BOT_EVAL_GAP_MULTIPLIERS["middlegame"]).get(level.key, 1.5)
+    return max(level.max_eval_loss, int(level.max_eval_loss * multiplier))
+
+
+def build_bot_candidate_pool(
+    analysis: PositionAnalysis,
+    board: chess.Board,
+    level: LevelProfile,
+    phase: str,
+) -> list[MoveInsight]:
+    allowed_gap = allowed_bot_eval_gap(level, phase)
+    pool_size = BOT_POOL_SIZE_BY_LEVEL[level.key]
+    shortlisted = [
+        candidate
+        for candidate in analysis.candidates
+        if analysis.best_move.score_cp - candidate.score_cp <= allowed_gap
+    ]
+    if analysis.tutor_move.move.uci() not in {candidate.move.uci() for candidate in shortlisted}:
+        shortlisted.append(analysis.tutor_move)
+    if analysis.best_move.move.uci() not in {candidate.move.uci() for candidate in shortlisted}:
+        shortlisted.append(analysis.best_move)
+
+    deduped: dict[str, MoveInsight] = {}
+    for candidate in shortlisted:
+        deduped[candidate.move.uci()] = candidate
+
+    ranked = sorted(
+        deduped.values(),
+        key=lambda candidate: compute_bot_move_weight(board, candidate, analysis.best_move.score_cp, level, phase),
+        reverse=True,
+    )
+    return ranked[: max(3, min(pool_size, len(ranked)))]
+
+
+def compute_bot_move_weight(
+    board: chess.Board,
+    candidate: MoveInsight,
+    best_score_cp: int,
+    level: LevelProfile,
+    phase: str,
+) -> float:
+    human_weight = compute_human_move_choice_weight(board, candidate, best_score_cp, level, phase)
+    gap = max(0, best_score_cp - candidate.score_cp)
+    allowed_gap = allowed_bot_eval_gap(level, phase)
+    gap_ratio = gap / max(1.0, float(allowed_gap))
+    practicality = max(0.08, 1.35 - gap_ratio)
+
+    preferred_tags = sum(1 for tag in candidate.tags if tag in level.preferred_tags)
+    tutor_alignment = 1.0 + min(1.5, max(-0.5, candidate.tutor_score / 120.0))
+    weight = human_weight * practicality * tutor_alignment
+    weight *= 1.0 + preferred_tags * 0.08
+
+    if candidate.delta is not None and candidate.delta.safety_change < -80:
+        weight *= 0.4
+    if candidate.delta is not None and candidate.delta.development_change > 0 and phase == "opening":
+        weight *= 1.12
+    if board.is_castling(candidate.move):
+        weight *= 1.2 if phase == "opening" else 1.08
+    if board.gives_check(candidate.move) and level.key in {"600", "1000"}:
+        weight *= 1.1
+    if is_early_queen_move(board, candidate.move) and level.key in {"600", "1000"}:
+        weight *= 0.45
+    if candidate.difficulty > difficulty_cap_for_bot(level, phase):
+        weight *= 0.5
+    return max(0.05, weight)
+
+
+def compute_human_move_choice_weight(
+    board: chess.Board,
+    candidate: MoveInsight,
+    best_score_cp: int,
+    level: LevelProfile,
+    phase: str,
+) -> float:
+    delta = candidate.delta or MoveDelta(
+        material_change_cp=0,
+        center_control_change=0,
+        safety_change=0,
+        development_change=0,
+        king_safety_change=0,
+        opponent_king_pressure_change=0,
+        mobility_change=0,
+    )
+    eval_gap = max(0, best_score_cp - candidate.score_cp)
+    num_preferred = sum(1 for tag in candidate.tags if tag in level.preferred_tags)
+    params = learned_params.get_move_choice_params(level.key)
+
+    if params is not None:
+        coeff = params.coefficients
+        raw_score = params.intercept
+        raw_score += coeff.get("eval_gap", 0.0) * eval_gap
+        raw_score += coeff.get("difficulty", 0.0) * candidate.difficulty
+        raw_score += coeff.get("safety_change", 0.0) * delta.safety_change
+        raw_score += coeff.get("center_change", 0.0) * delta.center_control_change
+        raw_score += coeff.get("king_safety_change", 0.0) * delta.king_safety_change
+        raw_score += coeff.get("development_change", 0.0) * delta.development_change
+        raw_score += coeff.get("mobility_change", 0.0) * delta.mobility_change
+        raw_score += coeff.get("material_change", 0.0) * delta.material_change_cp
+        raw_score += coeff.get("opponent_pressure_change", 0.0) * delta.opponent_king_pressure_change
+        raw_score += coeff.get("is_capture", 0.0) * float(board.is_capture(candidate.move))
+        raw_score += coeff.get("is_check", 0.0) * float(board.gives_check(candidate.move))
+        raw_score += coeff.get("is_castling", 0.0) * float(board.is_castling(candidate.move))
+        raw_score += coeff.get("num_preferred_tags", 0.0) * num_preferred
+        raw_score += coeff.get("num_priorities", 0.0) * len(candidate.priorities_addressed)
+    else:
+        raw_score = 0.0
+        raw_score += 1.1 * float(board.is_capture(candidate.move))
+        raw_score += 1.5 * float(board.gives_check(candidate.move))
+        raw_score += 1.2 * float(board.is_castling(candidate.move))
+        raw_score += 0.6 * delta.development_change
+        raw_score += 0.02 * delta.safety_change
+        raw_score += 0.01 * delta.center_control_change
+        raw_score += 0.03 * delta.king_safety_change
+        raw_score += 0.2 * num_preferred
+        raw_score -= candidate.difficulty * max(0.18, level.complexity_weight / 80.0)
+        raw_score -= eval_gap / 180.0
+
+    if phase == "opening":
+        raw_score += 0.35 * delta.development_change
+        raw_score += 0.45 * float(board.is_castling(candidate.move))
+    if phase == "endgame" and "conversion" in candidate.tags:
+        raw_score += 0.3
+    if is_early_queen_move(board, candidate.move):
+        raw_score -= 1.0 if level.key in {"600", "1000"} else 0.35
+
+    return max(0.05, pow(2.718281828, max(-4.0, min(4.0, raw_score))))
+
+
+def difficulty_cap_for_bot(level: LevelProfile, phase: str) -> float:
+    base_caps = {
+        "600": 1.7,
+        "1000": 2.1,
+        "1400": 2.7,
+        "1800": 3.2,
+    }
+    phase_bonus = 0.2 if phase == "endgame" else 0.0
+    return base_caps.get(level.key, 2.1) + phase_bonus
+
+
+def is_early_queen_move(board: chess.Board, move: chess.Move) -> bool:
+    piece = board.piece_at(move.from_square)
+    if piece is None or piece.piece_type != chess.QUEEN:
+        return False
+    return board.fullmove_number <= 6 and not board.is_capture(move)
 
 
 def compute_tutor_score(

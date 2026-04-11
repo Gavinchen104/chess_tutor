@@ -159,14 +159,22 @@ The fallback mechanism ensures the system works identically to the original when
 
 ## 5. Comparison Results
 
-### Benchmark Positions (15 curated positions)
-- Agreement between learned and heuristic: **46.7%**
-- The learned model prefers center-control and development moves for intermediate players
-- For beginners (600), both models largely agree
+The current repository now emphasizes a reproducible offline evaluation suite in addition to the learned-vs-heuristic comparison scripts.
 
-### Held-out Game Positions (300 per band)
-- Both models achieve 10-16% match rate with actual human play
-- These rates are comparable because both models optimize for teaching value, not predicting exact human moves
+### Position Benchmarks
+- `analysis/evaluate_positions.py` runs the tutor on curated benchmark positions from `data/benchmarks/positions_v2.json`
+- each case checks expected tutor properties, forbidden properties, primary-theme match, level fit, and explanation completeness
+- outputs include both per-case results and aggregate rates such as benchmark pass rate and explanation completeness rate
+
+### Review Benchmarks
+- `analysis/evaluate_reviews.py` evaluates post-game review quality on curated PGN cases from `data/benchmarks/review_cases.json`
+- each case checks weakness detection, next-step actionability, and consistency between move annotations and the claimed lesson
+- outputs include per-case results and aggregate rates for review usefulness
+
+### User Feedback Evidence
+- the Streamlit app stores lightweight local ratings for clarity, usefulness, actionability, and overwhelm reduction
+- these responses are saved in `analysis/results/user_feedback.jsonl`
+- the unified evaluation bundle includes aggregated feedback summaries for report-ready anecdotal evidence
 
 ## 6. Reproducibility
 
@@ -187,8 +195,11 @@ python -m data.extract_features --max-games 200
 # 4. Train models (in Jupyter notebook, ~5 min)
 jupyter notebook notebooks/model_training.ipynb
 
-# 5. Run comparison experiment
-python analysis/compare_models.py
+# 5. Run the unified offline evaluation suite
+python analysis/evaluate_tutor.py
+python analysis/evaluate_positions.py
+python analysis/evaluate_reviews.py
+python analysis/generate_appendix_report.py
 
 # 6. Run the app
 streamlit run app/main.py

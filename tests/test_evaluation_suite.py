@@ -12,7 +12,9 @@ from analysis.eval_utils import (
 )
 from analysis.evaluate_positions import evaluate_positions
 from analysis.evaluate_reviews import evaluate_reviews
+from analysis.generate_appendix_report import build_appendix_report
 from analysis.generate_appendix_report import generate_appendix_report
+from analysis.user_feedback import append_feedback_entry, load_feedback_entries, summarize_feedback
 
 
 REPO_ROOT = Path(__file__).resolve().parents[1]
@@ -120,3 +122,47 @@ def test_generate_appendix_report_writes_output_files(tmp_path):
     assert (tmp_path / "positions_report.json").exists()
     assert (tmp_path / "reviews_report.json").exists()
     assert (tmp_path / "appendix_summary.json").exists()
+
+
+def test_build_appendix_report_returns_reports_and_summary(tmp_path):
+    result = build_appendix_report(output_dir=tmp_path)
+    assert "positions_report" in result
+    assert "reviews_report" in result
+    assert "feedback_summary" in result
+    assert "summary" in result
+    assert result["summary"]["generated_files"]["positions_report"]
+
+
+def test_user_feedback_round_trip_and_summary(tmp_path):
+    feedback_path = tmp_path / "user_feedback.jsonl"
+    append_feedback_entry(
+        {
+            "level_key": "600",
+            "clarity": 4,
+            "usefulness": 5,
+            "actionability": 4,
+            "overwhelm_reduction": 5,
+            "notes": "Simple and concrete.",
+        },
+        path=feedback_path,
+    )
+    append_feedback_entry(
+        {
+            "level_key": "1000",
+            "clarity": 3,
+            "usefulness": 4,
+            "actionability": 4,
+            "overwhelm_reduction": 4,
+            "notes": "",
+        },
+        path=feedback_path,
+    )
+
+    entries = load_feedback_entries(path=feedback_path)
+    summary = summarize_feedback(entries)
+
+    assert len(entries) == 2
+    assert summary["count"] == 2
+    assert summary["averages"]["usefulness"] == 4.5
+    assert summary["by_level"]["600"] == 1
+    assert summary["recent_notes"][0]["notes"] == "Simple and concrete."

@@ -1,10 +1,22 @@
 from __future__ import annotations
 
+from pathlib import Path
+
 import chess
 import streamlit as st
 
+from analysis.generate_appendix_report import build_appendix_report
+from analysis.user_feedback import (
+    DEFAULT_FEEDBACK_PATH,
+    FEEDBACK_FIELDS,
+    append_feedback_entry,
+    load_feedback_entries,
+    summarize_feedback,
+)
 from app.core.board import (
     START_FEN,
+    board_to_editor_state,
+    build_board_from_editor_state,
     export_pgn_from_moves,
     extract_pgn_movetext,
     load_board,
@@ -21,6 +33,27 @@ EXAMPLE_FENS = {
     "Castling lesson": "r1bq1rk1/pppp1ppp/2n2n2/4p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 6",
     "Endgame conversion": "8/5pk1/3p2p1/2pP4/2P1P3/6P1/5P1P/6K1 w - - 0 1",
 }
+
+ANALYSIS_RESULTS_DIR = Path(__file__).resolve().parents[2] / "analysis" / "results"
+BOARD_EDITOR_SQUARES = [chess.square_name(square) for square in chess.SQUARES]
+CASTLING_OPTIONS = ["K", "Q", "k", "q"]
+PIECE_CHOICES = [
+    ("Empty", ""),
+    ("White King", "K"),
+    ("White Queen", "Q"),
+    ("White Rook", "R"),
+    ("White Bishop", "B"),
+    ("White Knight", "N"),
+    ("White Pawn", "P"),
+    ("Black King", "k"),
+    ("Black Queen", "q"),
+    ("Black Rook", "r"),
+    ("Black Bishop", "b"),
+    ("Black Knight", "n"),
+    ("Black Pawn", "p"),
+]
+PIECE_LABEL_TO_SYMBOL = dict(PIECE_CHOICES)
+PIECE_SYMBOL_TO_LABEL = {symbol: label for label, symbol in PIECE_CHOICES}
 
 
 def run() -> None:
@@ -67,6 +100,14 @@ def initialize_state() -> None:
     st.session_state.setdefault("bot_commentary", [])
     st.session_state.setdefault("bot_feedback", [])
     st.session_state.setdefault("bot_user_color", "White")
+    st.session_state.setdefault("evaluation_report_bundle", None)
+    if "editor_pieces" not in st.session_state:
+        sync_editor_state_from_fen(START_FEN)
+
+
+@st.cache_data(show_spinner=False)
+def run_offline_evaluation_suite(output_dir: str) -> dict:
+    return build_appendix_report(Path(output_dir))
 
 
 def render_board(board: chess.Board, last_move_uci: str | None, orientation: chess.Color) -> None:
@@ -82,9 +123,9 @@ def render_position_analyzer(tutor: ChessTutor, level) -> None:
     with left:
         selected_example = st.selectbox("Example positions", options=list(EXAMPLE_FENS.keys()))
         if st.button("Load Example"):
-            st.session_state.analysis_fen = EXAMPLE_FENS[selected_example]
-            st.session_state.analysis_report = None
-            st.session_state.analysis_last_move = None
+            set_analysis_position(EXAMPLE_FENS[selected_example])
+
+        render_board_editor()
 
         fen = st.text_area("FEN", value=st.session_state.analysis_fen, height=100)
         st.session_state.analysis_fen = fen
@@ -129,6 +170,7 @@ def render_position_analyzer(tutor: ChessTutor, level) -> None:
         st.dataframe(candidate_rows, use_container_width=True)
         st.caption(report["evaluation_story"])
         st.caption(f"Analysis source: {report['engine_provider']}")
+        render_analysis_feedback_form(report)
 
 
 def analyze_position(tutor: ChessTutor, fen: str, level) -> None:
@@ -140,6 +182,9 @@ def analyze_position(tutor: ChessTutor, fen: str, level) -> None:
         return
 
     st.session_state.analysis_report = {
+        "board_fen": report.board_fen,
+        "level_key": report.level_key,
+        "level_label": report.level_label,
         "overview": report.overview,
         "tutor_explanation": report.tutor_explanation,
         "evaluation_story": report.evaluation_story,
@@ -148,6 +193,135 @@ def analyze_position(tutor: ChessTutor, fen: str, level) -> None:
         "candidates": report.candidate_moves,
         "engine_provider": report.engine_metadata.provider,
     }
+
+
+def render_board_editor() -> None:
+    with st.expander("Board Setup Editor", expanded=False):
+        st.caption("Use the editor to place pieces, choose whose turn it is, and apply the setup without writing FEN.")
+
+        control_cols = st.columns(4)
+        with control_cols[0]:
+            if st.button("Sync From FEN", use_container_width=True):
+                try:
+                    sync_editor_state_from_fen(st.session_state.analysis_fen)
+                except ValueError as exc:
+                    st.error(str(exc))
+        with control_cols[1]:
+            if st.button("Apply Editor", use_container_width=True):
+                apply_editor_position()
+        with control_cols[2]:
+            if st.button("Clear Board", use_container_width=True):
+                clear_editor_board()
+        with control_cols[3]:
+            if st.button("Start Position", use_container_width=True):
+                set_analysis_position(START_FEN)
+
+        placement_cols = st.columns([1, 1.4, 1, 1])
+        with placement_cols[0]:
+            square_name = st.selectbox("Square", options=BOARD_EDITOR_SQUARES, key="editor_selected_square")
+        with placement_cols[1]:
+            piece_label = st.selectbox("Piece", options=[label for label, _ in PIECE_CHOICES], key="editor_selected_piece")
+        with placement_cols[2]:
+            if st.button("Place Piece", use_container_width=True):
+                st.session_state.editor_pieces[square_name] = PIECE_LABEL_TO_SYMBOL[piece_label]
+        with placement_cols[3]:
+            if st.button("Clear Square", use_container_width=True):
+                st.session_state.editor_pieces[square_name] = ""
+
+        meta_cols = st.columns(2)
+        with meta_cols[0]:
+            st.radio(
+                "Side to move",
+                options=["white", "black"],
+                format_func=lambda item: item.title(),
+                horizontal=True,
+                key="editor_turn",
+            )
+            st.multiselect(
+                "Castling rights",
+                options=CASTLING_OPTIONS,
+                key="editor_castling_rights",
+            )
+        with meta_cols[1]:
+            st.text_input(
+                "En passant square",
+                placeholder="Leave blank if none",
+                key="editor_en_passant",
+            )
+            st.number_input(
+                "Halfmove clock",
+                min_value=0,
+                step=1,
+                key="editor_halfmove_clock",
+            )
+            st.number_input(
+                "Fullmove number",
+                min_value=1,
+                step=1,
+                key="editor_fullmove_number",
+            )
+
+        st.caption("Placed pieces")
+        st.dataframe(build_editor_piece_rows(st.session_state.editor_pieces), use_container_width=True, hide_index=True)
+
+
+def build_editor_piece_rows(pieces: dict[str, str]) -> list[dict[str, str]]:
+    rows = [
+        {"Square": square_name, "Piece": PIECE_SYMBOL_TO_LABEL[symbol]}
+        for square_name, symbol in sorted(pieces.items())
+        if symbol
+    ]
+    return rows or [{"Square": "(empty)", "Piece": "No pieces placed"}]
+
+
+def clear_editor_board() -> None:
+    st.session_state.editor_pieces = {square_name: "" for square_name in BOARD_EDITOR_SQUARES}
+    st.session_state.editor_turn = "white"
+    st.session_state.editor_castling_rights = []
+    st.session_state.editor_en_passant = ""
+    st.session_state.editor_halfmove_clock = 0
+    st.session_state.editor_fullmove_number = 1
+    st.session_state.analysis_report = None
+    st.session_state.analysis_last_move = None
+
+
+def sync_editor_state_from_fen(fen: str) -> None:
+    board = load_board(fen)
+    editor_state = board_to_editor_state(board)
+    st.session_state.editor_pieces = {
+        square_name: editor_state["pieces"].get(square_name, "")
+        for square_name in BOARD_EDITOR_SQUARES
+    }
+    st.session_state.editor_turn = editor_state["turn"]
+    st.session_state.editor_castling_rights = editor_state["castling_rights"]
+    st.session_state.editor_en_passant = editor_state["en_passant"]
+    st.session_state.editor_halfmove_clock = editor_state["halfmove_clock"]
+    st.session_state.editor_fullmove_number = editor_state["fullmove_number"]
+
+
+def apply_editor_position() -> None:
+    try:
+        board = build_board_from_editor_state(
+            pieces=st.session_state.editor_pieces,
+            turn=st.session_state.editor_turn,
+            castling_rights=list(st.session_state.editor_castling_rights),
+            en_passant=st.session_state.editor_en_passant.strip(),
+            halfmove_clock=int(st.session_state.editor_halfmove_clock),
+            fullmove_number=int(st.session_state.editor_fullmove_number),
+        )
+    except ValueError as exc:
+        st.error(str(exc))
+        return
+
+    set_analysis_position(board.fen())
+    st.success("Board setup applied to the analyzer.")
+
+
+def set_analysis_position(fen: str) -> None:
+    st.session_state.analysis_fen = fen
+    st.session_state.analysis_report = None
+    st.session_state.analysis_last_move = None
+    sync_editor_state_from_fen(fen)
 
 
 def evaluate_probe_move(tutor: ChessTutor, fen: str, move_text: str, level) -> None:
@@ -162,6 +336,9 @@ def evaluate_probe_move(tutor: ChessTutor, fen: str, move_text: str, level) -> N
 
     st.session_state.analysis_last_move = parsed.move.uci()
     st.session_state.analysis_report = {
+        "board_fen": report.board_fen,
+        "level_key": report.level_key,
+        "level_label": report.level_label,
         "overview": f"{coaching.verdict}: {coaching.lesson}",
         "tutor_explanation": (
             f"You played `{coaching.chosen_move.san}`. Strongest move: `{coaching.engine_best_move.san}`. "
@@ -173,6 +350,46 @@ def evaluate_probe_move(tutor: ChessTutor, fen: str, move_text: str, level) -> N
         "candidates": report.candidate_moves,
         "engine_provider": report.engine_metadata.provider,
     }
+
+
+def render_analysis_feedback_form(report: dict) -> None:
+    st.subheader("Quick Feedback")
+    st.caption("Save a short rating for this analysis so the project can collect lightweight usefulness evidence.")
+
+    with st.form(key=f"analysis_feedback_{report['level_key']}"):
+        clarity = st.slider("Clarity", min_value=1, max_value=5, value=4, help="Was the advice easy to understand?")
+        usefulness = st.slider("Usefulness", min_value=1, max_value=5, value=4, help="Was it more useful than raw engine output?")
+        actionability = st.slider("Actionability", min_value=1, max_value=5, value=4, help="Did it suggest something concrete to do?")
+        overwhelm_reduction = st.slider(
+            "Overwhelm Reduction",
+            min_value=1,
+            max_value=5,
+            value=4,
+            help="Did it reduce confusion compared with a raw engine line dump?",
+        )
+        notes = st.text_area("Optional Notes", placeholder="What felt helpful or unhelpful about this advice?")
+        submitted = st.form_submit_button("Save Feedback", use_container_width=True)
+
+    if not submitted:
+        return
+
+    append_feedback_entry(
+        {
+            "source": "position_analyzer",
+            "level_key": report["level_key"],
+            "level_label": report["level_label"],
+            "board_fen": report["board_fen"],
+            "engine_provider": report["engine_provider"],
+            "engine_move": report["best_move"].san,
+            "tutor_move": report["tutor_move"].san,
+            "clarity": clarity,
+            "usefulness": usefulness,
+            "actionability": actionability,
+            "overwhelm_reduction": overwhelm_reduction,
+            "notes": notes.strip(),
+        }
+    )
+    st.success("Feedback saved locally.")
 
 
 def render_play_mode(tutor: ChessTutor, level) -> None:
@@ -298,6 +515,143 @@ def render_evaluation_story(level) -> None:
         "That gives you a compact demo story for the report: the tutor does not replace tactical truth, "
         "it filters truth into advice that is more actionable for novice-to-intermediate players."
     )
+
+    st.subheader("Offline Evaluation Suite")
+    st.write(
+        "The app can also surface the offline benchmark suite used in the appendix. "
+        "This checks whether tutor recommendations satisfy level-appropriate properties and whether "
+        "post-game reviews detect the right weaknesses and next steps."
+    )
+
+    if st.button("Run Offline Evaluation Suite", use_container_width=True):
+        with st.spinner("Running position and review benchmarks..."):
+            st.session_state.evaluation_report_bundle = run_offline_evaluation_suite(str(ANALYSIS_RESULTS_DIR))
+
+    bundle = st.session_state.evaluation_report_bundle
+    if not bundle:
+        st.caption("Run the suite to load benchmark metrics, case results, and generated appendix files.")
+    else:
+        summary = bundle["summary"]
+        positions_report = bundle["positions_report"]
+        reviews_report = bundle["reviews_report"]
+
+        pos_col, review_col = st.columns(2)
+        with pos_col:
+            st.metric("Position Benchmarks", positions_report["benchmark_count"])
+        with review_col:
+            st.metric("Review Benchmarks", reviews_report["benchmark_count"])
+
+        render_metric_table("Position Metrics", positions_report["metrics"])
+        render_metric_table("Review Metrics", reviews_report["metrics"])
+
+        st.subheader("Position Benchmark Cases")
+        st.dataframe(
+            [
+                {
+                    "Label": case["label"],
+                    "Passed": case["passed"],
+                    "Level": case.get("level_key", ""),
+                    "Tutor Move": case.get("tutor_move", ""),
+                    "Engine Move": case.get("engine_best_move", ""),
+                    "Primary Theme": case.get("primary_theme", ""),
+                    "Eval Gap": case.get("eval_gap_cp", ""),
+                    "Difficulty": case.get("difficulty", ""),
+                    "Explanation OK": case.get("explanation_complete", ""),
+                }
+                for case in positions_report["cases"]
+            ],
+            use_container_width=True,
+        )
+
+        st.subheader("Review Benchmark Cases")
+        st.dataframe(
+            [
+                {
+                    "Label": case["label"],
+                    "Passed": case["passed"],
+                    "Level": case.get("level_key", ""),
+                    "Weakness Detection": case.get("weakness_detection_pass", ""),
+                    "Next Step Actionable": case.get("next_step_actionability_pass", ""),
+                    "Annotation Consistent": case.get("annotation_consistency_pass", ""),
+                    "Annotated Themes": ", ".join(case.get("annotated_themes", [])),
+                }
+                for case in reviews_report["cases"]
+            ],
+            use_container_width=True,
+        )
+
+        with st.expander("Generated Appendix Files"):
+            for label, path in summary["generated_files"].items():
+                st.code(f"{label}: {path}")
+
+    render_user_feedback_summary()
+
+
+def render_metric_table(title: str, metrics: dict[str, float]) -> None:
+    st.caption(title)
+    st.dataframe(
+        [
+            {
+                "Metric": metric_name.replace("_", " ").title(),
+                "Value": format_metric_value(metric_name, value),
+            }
+            for metric_name, value in metrics.items()
+        ],
+        use_container_width=True,
+        hide_index=True,
+    )
+
+
+def format_metric_value(metric_name: str, value: float) -> str:
+    if "rate" in metric_name:
+        return f"{value * 100:.1f}%"
+    if float(value).is_integer():
+        return str(int(value))
+    return f"{value:.2f}"
+
+
+def render_user_feedback_summary() -> None:
+    entries = load_feedback_entries()
+    summary = summarize_feedback(entries)
+
+    st.subheader("User Feedback Evidence")
+    st.caption(f"Stored at: {DEFAULT_FEEDBACK_PATH}")
+    if summary["count"] == 0:
+        st.caption("No saved user feedback yet. Submit a few ratings from the Position Analyzer to build anecdotal evidence.")
+        return
+
+    count_col, avg_col = st.columns(2)
+    with count_col:
+        st.metric("Saved Responses", summary["count"])
+    with avg_col:
+        avg_usefulness = summary["averages"].get("usefulness", 0.0)
+        st.metric("Average Usefulness", f"{avg_usefulness:.2f} / 5")
+
+    st.caption("Feedback Averages")
+    st.dataframe(
+        [
+            {"Metric": field.replace("_", " ").title(), "Average": f"{summary['averages'][field]:.2f} / 5"}
+            for field in FEEDBACK_FIELDS
+            if field in summary["averages"]
+        ],
+        use_container_width=True,
+        hide_index=True,
+    )
+
+    st.caption("Responses By Level")
+    st.dataframe(
+        [
+            {"Level": level_key, "Responses": count}
+            for level_key, count in sorted(summary["by_level"].items())
+        ],
+        use_container_width=True,
+        hide_index=True,
+    )
+
+    if summary["recent_notes"]:
+        st.caption("Recent Notes")
+        for note in summary["recent_notes"]:
+            st.write(f"- [{note['level_key']}] {note['notes']}")
 
 
 def reset_bot_game() -> None:
