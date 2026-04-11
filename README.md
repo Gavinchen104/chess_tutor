@@ -475,3 +475,21 @@ README.md
 If you need a short report thesis, you can use something close to this:
 
 > Traditional chess engines optimize for strongest play, but novice and intermediate players benefit more from advice that is understandable, rating-appropriate, and actionable. This project addresses that gap by combining chess evaluation with level-aware move ranking and tutoring commentary.
+## Offline Evaluation Suite
+
+Run the following from the repo root:
+
+\`\`\`bash
+python3 analysis/evaluate_tutor.py
+python3 analysis/evaluate_positions.py
+python3 analysis/evaluate_reviews.py
+python3 analysis/generate_appendix_report.py
+\`\`\`
+
+The new scripts generate reproducible benchmark-based evidence for:
+
+- position-level teaching quality
+- post-game review usefulness
+- appendix-ready summary metrics
+
+Generated outputs are written to analysis/results/.
