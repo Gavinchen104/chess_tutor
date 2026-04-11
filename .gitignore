@@ -27,3 +27,4 @@ others/
 .ipynb_checkpoints/
 *.log
 .streamlit/
+analysis/results/
