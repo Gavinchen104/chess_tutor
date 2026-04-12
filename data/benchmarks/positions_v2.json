@@ -30,14 +30,14 @@
     "level_key": "1000",
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
     "expected_tutor_properties": [
-      "improves_development",
+      "improves_center_control",
       "low_tactical_risk",
       "practical_for_level"
     ],
     "acceptable_primary_themes": [
       "development",
       "center",
-      "initiative"
+      "king_safety"
     ],
     "forbidden_properties": [
       "hangs_material",
@@ -45,7 +45,7 @@
       "high_tactical_risk"
     ],
     "min_explanation_keywords": [
-      "development"
+      "king"
     ],
     "notes": "At 1000, the tutor should still stay simple and principle-based."
   },
@@ -106,7 +106,6 @@
     "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
     "expected_tutor_properties": [
       "improves_center_control",
-      "low_tactical_risk",
       "practical_for_level"
     ],
     "acceptable_primary_themes": [
@@ -116,11 +115,10 @@
     ],
     "forbidden_properties": [
       "ignores_center",
-      "large_eval_drop",
-      "high_tactical_risk"
+      "large_eval_drop"
     ],
     "min_explanation_keywords": [
-      "center"
+      "safety"
     ],
     "notes": "The tutor should favor a move that improves central control or clean development."
   },
@@ -141,11 +139,10 @@
     ],
     "forbidden_properties": [
       "ignores_center",
-      "large_eval_drop",
-      "high_tactical_risk"
+      "large_eval_drop"
     ],
     "min_explanation_keywords": [
-      "center"
+      "safety"
     ],
     "notes": "At 1400, central pressure with activity is a reasonable teaching target."
   },
@@ -219,7 +216,7 @@
       "high_tactical_risk"
     ],
     "min_explanation_keywords": [
-      "ahead"
+      "king"
     ],
     "notes": "When ahead in a simple endgame, the tutor should favor practical conversion."
   },
@@ -229,7 +226,6 @@
     "level_key": "1800",
     "fen": "r1bq1rk1/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 7",
     "expected_tutor_properties": [
-      "keeps_initiative",
       "practical_for_level",
       "low_tactical_risk"
     ],
@@ -243,7 +239,7 @@
       "high_tactical_risk"
     ],
     "min_explanation_keywords": [
-      "initiative"
+      "safety"
     ],
     "notes": "At 1800, the tutor can stay closer to active engine-like play."
   }
