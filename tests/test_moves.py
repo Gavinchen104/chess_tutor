@@ -19,7 +19,12 @@ def test_move_engine_identifies_opening_priorities():
     assert analysis.tutor_move.plan
 
 
-def test_low_level_bot_penalizes_early_queen_moves_more_than_high_level_bot():
+def test_low_level_bot_penalizes_early_queen_moves_more_than_high_level_bot(monkeypatch):
+    # Learned move-choice weights can dominate the ratio; this test targets handcrafted bot heuristics.
+    monkeypatch.setattr(
+        "app.core.move_engine.learned_params.get_move_choice_params",
+        lambda _elo: None,
+    )
     board = chess.Board()
     board.push_san("e4")
     board.push_san("e5")

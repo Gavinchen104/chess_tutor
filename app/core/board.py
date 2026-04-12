@@ -38,6 +38,11 @@ def load_board(fen: str | None = None) -> chess.Board:
 
 
 def board_to_editor_state(board: chess.Board) -> dict:
+    ep_name = ""
+    if board.ep_square is not None:
+        status = board.status()
+        if not (status & chess.STATUS_INVALID_EP_SQUARE):
+            ep_name = chess.square_name(board.ep_square)
     return {
         "pieces": {
             chess.square_name(square): piece.symbol()
@@ -45,7 +50,7 @@ def board_to_editor_state(board: chess.Board) -> dict:
         },
         "turn": "white" if board.turn else "black",
         "castling_rights": list(board.castling_xfen()) if board.castling_xfen() != "-" else [],
-        "en_passant": chess.square_name(board.ep_square) if board.ep_square is not None else "",
+        "en_passant": ep_name,
         "halfmove_clock": board.halfmove_clock,
         "fullmove_number": board.fullmove_number,
     }
