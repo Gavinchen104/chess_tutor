@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chessboard</title>
+  <style>
+    :root {
+      --light: #f0d9b5;
+      --dark: #b58863;
+      --highlight: rgba(255, 215, 0, 0.55);
+      --target: rgba(40, 167, 69, 0.35);
+      --selected: rgba(52, 152, 219, 0.42);
+      --text: #1f1f1f;
+      --muted: #5f6368;
+      --panel: #ffffff;
+      --border: #d7d7d7;
+    }
+
+    body {
+      margin: 0;
+      font-family: Georgia, "Times New Roman", serif;
+      color: var(--text);
+      background: transparent;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 420px;
+      box-sizing: border-box;
+      padding: 8px 6px 4px;
+      margin: 0 auto;
+      --board-size: 420px;
+      --square-size: 52.5px;
+    }
+
+    .board {
+      display: grid;
+      grid-template-columns: repeat(8, var(--square-size));
+      grid-template-rows: repeat(8, var(--square-size));
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+      width: var(--board-size);
+      height: var(--board-size);
+      background: var(--panel);
+      user-select: none;
+    }
+
+    .square {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: var(--square-size);
+      height: var(--square-size);
+      font-size: 40px;
+      line-height: 1;
+      cursor: default;
+      box-sizing: border-box;
+    }
+
+    .light { background: var(--light); }
+    .dark { background: var(--dark); }
+    .selected { box-shadow: inset 0 0 0 999px var(--selected); }
+    .lastmove { box-shadow: inset 0 0 0 999px var(--highlight); }
+    .target::after {
+      content: "";
+      width: 24%;
+      height: 24%;
+      border-radius: 999px;
+      background: var(--target);
+      position: absolute;
+    }
+
+    .piece {
+      cursor: grab;
+      z-index: 2;
+    }
+
+    .piece.disabled {
+      cursor: default;
+      opacity: 0.92;
+    }
+
+    .coord {
+      position: absolute;
+      font-size: 11px;
+      opacity: 0.8;
+      font-family: system-ui, sans-serif;
+      pointer-events: none;
+    }
+
+    .coord.file {
+      right: 4px;
+      bottom: 2px;
+    }
+
+    .coord.rank {
+      left: 4px;
+      top: 2px;
+    }
+
+    .meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 8px;
+      font-family: system-ui, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .promotion {
+      display: none;
+      margin-top: 10px;
+      padding: 10px;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.96);
+      font-family: system-ui, sans-serif;
+    }
+
+    .promotion.show {
+      display: block;
+    }
+
+    .promotion-buttons {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    button {
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: 8px;
+      padding: 6px 10px;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    button:hover {
+      border-color: #8aa4c8;
+      background: #f5faff;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div id="board" class="board"></div>
+    <div id="promotion" class="promotion">
+      <div>Choose a promotion piece</div>
+      <div id="promotion-buttons" class="promotion-buttons"></div>
+    </div>
+    <div class="meta">
+      <span id="status">Drag a piece to make a move.</span>
+      <span id="mode"></span>
+    </div>
+  </div>
+
+  <script>
+    const PIECES = {
+      "K": "♔", "Q": "♕", "R": "♖", "B": "♗", "N": "♘", "P": "♙",
+      "k": "♚", "q": "♛", "r": "♜", "b": "♝", "n": "♞", "p": "♟",
+    };
+    const FILES = ["a", "b", "c", "d", "e", "f", "g", "h"];
+    const RANKS = ["1", "2", "3", "4", "5", "6", "7", "8"];
+
+    let latestArgs = {};
+    let selectedSquare = null;
+    let pendingPromotionMoves = [];
+
+    function sendMessage(type, data) {
+      window.parent.postMessage({ isStreamlitMessage: true, type, ...data }, "*");
+    }
+
+    function setComponentReady() {
+      sendMessage("streamlit:componentReady", { apiVersion: 1 });
+    }
+
+    function setFrameHeight(height) {
+      sendMessage("streamlit:setFrameHeight", { height });
+    }
+
+    function setComponentValue(value) {
+      sendMessage("streamlit:setComponentValue", { value });
+    }
+
+    function orderedSquares(orientation) {
+      const files = orientation === "black" ? [...FILES].reverse() : FILES;
+      const ranks = orientation === "black" ? RANKS : [...RANKS].reverse();
+      const squares = [];
+      for (const rank of ranks) {
+        for (const file of files) {
+          squares.push(`${file}${rank}`);
+        }
+      }
+      return squares;
+    }
+
+    function squareColor(square) {
+      const file = FILES.indexOf(square[0]);
+      const rank = Number(square[1]) - 1;
+      return (file + rank) % 2 === 0 ? "dark" : "light";
+    }
+
+    function legalMovesFrom(square) {
+      return (latestArgs.legal_moves || []).filter((uci) => uci.slice(0, 2) === square);
+    }
+
+    function legalTargets(square) {
+      return new Set(legalMovesFrom(square).map((uci) => uci.slice(2, 4)));
+    }
+
+    function clearPromotion() {
+      pendingPromotionMoves = [];
+      document.getElementById("promotion").classList.remove("show");
+      document.getElementById("promotion-buttons").innerHTML = "";
+    }
+
+    function emitMove(uci) {
+      clearPromotion();
+      selectedSquare = null;
+      setComponentValue({ uci, event_id: `${uci}-${Date.now()}` });
+      render(latestArgs);
+    }
+
+    function chooseMove(fromSquare, toSquare) {
+      const candidates = legalMovesFrom(fromSquare).filter((uci) => uci.slice(2, 4) === toSquare);
+      if (candidates.length === 0) {
+        document.getElementById("status").textContent = "That destination is not legal in this position.";
+        selectedSquare = null;
+        render(latestArgs);
+        return;
+      }
+      if (candidates.length === 1) {
+        emitMove(candidates[0]);
+        return;
+      }
+
+      pendingPromotionMoves = candidates;
+      const container = document.getElementById("promotion-buttons");
+      container.innerHTML = "";
+      for (const uci of candidates) {
+        const promo = uci[4];
+        const button = document.createElement("button");
+        button.type = "button";
+        button.textContent = promo ? PIECES[promo === promo.toUpperCase() ? promo : promo.toUpperCase()] || promo.toUpperCase() : uci;
+        button.title = `Promote to ${promo.toUpperCase()}`;
+        button.addEventListener("click", () => emitMove(uci));
+        container.appendChild(button);
+      }
+      document.getElementById("promotion").classList.add("show");
+      document.getElementById("status").textContent = "Choose a promotion piece.";
+    }
+
+    function handleSquareActivation(square) {
+      if (latestArgs.disabled) {
+        return;
+      }
+      if (!selectedSquare) {
+        if (legalMovesFrom(square).length === 0) {
+          document.getElementById("status").textContent = "Select a piece that has a legal move.";
+          return;
+        }
+        selectedSquare = square;
+        clearPromotion();
+        document.getElementById("status").textContent = `Selected ${square}. Choose a destination square.`;
+        render(latestArgs);
+        return;
+      }
+
+      if (selectedSquare === square) {
+        selectedSquare = null;
+        clearPromotion();
+        document.getElementById("status").textContent = "Selection cleared.";
+        render(latestArgs);
+        return;
+      }
+      chooseMove(selectedSquare, square);
+    }
+
+    function render(args) {
+      latestArgs = args || {};
+      const boardSize = Number(latestArgs.board_size || 420);
+      const wrap = document.querySelector(".wrap");
+      wrap.style.maxWidth = `${boardSize}px`;
+      wrap.style.setProperty("--board-size", `${boardSize}px`);
+      wrap.style.setProperty("--square-size", `${boardSize / 8}px`);
+      const boardEl = document.getElementById("board");
+      boardEl.innerHTML = "";
+      const orientation = latestArgs.orientation || "white";
+      const pieces = latestArgs.pieces || {};
+      const lastMove = latestArgs.last_move_uci || "";
+      const lastFrom = lastMove.slice(0, 2);
+      const lastTo = lastMove.slice(2, 4);
+      const targets = selectedSquare ? legalTargets(selectedSquare) : new Set();
+
+      for (const square of orderedSquares(orientation)) {
+        const squareEl = document.createElement("div");
+        squareEl.className = `square ${squareColor(square)}`;
+        if (square === selectedSquare) {
+          squareEl.classList.add("selected");
+        }
+        if (square === lastFrom || square === lastTo) {
+          squareEl.classList.add("lastmove");
+        }
+        if (targets.has(square)) {
+          squareEl.classList.add("target");
+        }
+        squareEl.dataset.square = square;
+        squareEl.addEventListener("click", () => handleSquareActivation(square));
+        squareEl.addEventListener("dragover", (event) => {
+          if (!latestArgs.disabled && selectedSquare) {
+            event.preventDefault();
+          }
+        });
+        squareEl.addEventListener("drop", (event) => {
+          if (latestArgs.disabled || !selectedSquare) {
+            return;
+          }
+          event.preventDefault();
+          chooseMove(selectedSquare, square);
+        });
+
+        const file = square[0];
+        const rank = square[1];
+        if ((orientation === "white" && rank === "1") || (orientation === "black" && rank === "8")) {
+          const coord = document.createElement("span");
+          coord.className = "coord file";
+          coord.textContent = file;
+          squareEl.appendChild(coord);
+        }
+        if ((orientation === "white" && file === "a") || (orientation === "black" && file === "h")) {
+          const coord = document.createElement("span");
+          coord.className = "coord rank";
+          coord.textContent = rank;
+          squareEl.appendChild(coord);
+        }
+
+        const piece = pieces[square];
+        if (piece) {
+          const pieceEl = document.createElement("div");
+          pieceEl.className = `piece${latestArgs.disabled ? " disabled" : ""}`;
+          pieceEl.textContent = PIECES[piece];
+          pieceEl.draggable = !latestArgs.disabled && legalMovesFrom(square).length > 0;
+          pieceEl.addEventListener("dragstart", () => {
+            selectedSquare = square;
+            clearPromotion();
+            document.getElementById("status").textContent = `Dragging from ${square}. Drop on a legal square.`;
+            render(latestArgs);
+          });
+          squareEl.appendChild(pieceEl);
+        }
+        boardEl.appendChild(squareEl);
+      }
+
+      document.getElementById("mode").textContent = latestArgs.disabled ? "Board input locked" : "Drag or click to move";
+      if (!selectedSquare && !pendingPromotionMoves.length) {
+        document.getElementById("status").textContent = latestArgs.disabled
+          ? "Board input is disabled for this position."
+          : "Drag a piece or click a piece and destination square.";
+      }
+
+      setFrameHeight(document.documentElement.scrollHeight);
+    }
+
+    window.addEventListener("message", (event) => {
+      if (event.data.type !== "streamlit:render") {
+        return;
+      }
+      render(event.data.args || {});
+    });
+
+    setComponentReady();
+    setFrameHeight(470);
+  </script>
+</body>
+</html>

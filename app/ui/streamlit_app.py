@@ -21,10 +21,11 @@ from app.core.board import (
     extract_pgn_movetext,
     load_board,
     parse_move_text,
-    render_board_svg,
 )
+from app.core.adaptation import SessionBayesianAdapter
 from app.core.levels import LEVELS, get_level
 from app.core.tutor import ChessTutor
+from app.ui.chessboard_component import interactive_chessboard
 
 
 EXAMPLE_FENS = {
@@ -60,21 +61,28 @@ def run() -> None:
     st.set_page_config(page_title="Chess Tutor", page_icon="♟️", layout="wide")
     st.title("Chess Tutor")
     st.caption("Skill-aware chess feedback built for novice-to-intermediate players.")
-
-    tutor = ChessTutor()
     initialize_state()
 
     with st.sidebar:
         st.header("Session")
         level_key = st.selectbox("Target ELO", options=list(LEVELS.keys()), format_func=lambda key: LEVELS[key].label)
         level = get_level(level_key)
+        adapter = get_session_adapter(level_key)
+        tutor = ChessTutor(adapter=adapter)
         st.write(level.description)
         st.write(f"Commentary style: {level.commentary_style}")
+        render_live_bayesian_sidebar(adapter, level)
         if st.button("Reset Position Analyzer"):
             st.session_state.analysis_fen = START_FEN
             st.session_state.analysis_last_move = None
         if st.button("New Bot Game"):
             reset_bot_game()
+        if st.button("Reset Live Bayesian State"):
+            st.session_state.live_bayesian_adapters[level_key] = SessionBayesianAdapter.for_level(level_key)
+            adapter = st.session_state.live_bayesian_adapters[level_key]
+            tutor = ChessTutor(adapter=adapter)
+            st.session_state.analysis_report = None
+            st.success("Live Bayesian adaptation reset for this rating band.")
 
     tab_analysis, tab_play, tab_story = st.tabs(
         ["Position Analyzer", "Play Against Bot", "Evaluation Story"]
@@ -87,7 +95,7 @@ def run() -> None:
         render_play_mode(tutor, level)
 
     with tab_story:
-        render_evaluation_story(level)
+        render_evaluation_story(level, adapter)
 
 
 def initialize_state() -> None:
@@ -101,8 +109,31 @@ def initialize_state() -> None:
     st.session_state.setdefault("bot_feedback", [])
     st.session_state.setdefault("bot_user_color", "White")
     st.session_state.setdefault("evaluation_report_bundle", None)
+    st.session_state.setdefault("live_bayesian_adapters", {})
+    st.session_state.setdefault("analysis_last_drag_event", None)
+    st.session_state.setdefault("bot_last_drag_event", None)
     if "editor_pieces" not in st.session_state:
         sync_editor_state_from_fen(START_FEN)
+
+
+def get_session_adapter(level_key: str) -> SessionBayesianAdapter:
+    adapters: dict[str, SessionBayesianAdapter] = st.session_state.live_bayesian_adapters
+    if level_key not in adapters:
+        adapters[level_key] = SessionBayesianAdapter.for_level(level_key)
+    return adapters[level_key]
+
+
+def render_live_bayesian_sidebar(adapter: SessionBayesianAdapter, level) -> None:
+    summary = adapter.summary(level)
+    st.subheader("Live Bayesian State")
+    st.caption("Session-level posterior updates sit on top of the trained model priors.")
+    st.write(f"Inferred practical level: about {summary['estimated_elo']}")
+    st.write(f"Current preference trend: {str(summary['preferred_theme']).replace('_', ' ')}")
+    st.write(f"Confidence: {summary['confidence']}")
+    st.caption(
+        f"Observations: {summary['move_observations']} move choices, "
+        f"{summary['feedback_observations']} feedback entries"
+    )
 
 
 @st.cache_data(show_spinner=False)
@@ -110,10 +141,17 @@ def run_offline_evaluation_suite(output_dir: str) -> dict:
     return build_appendix_report(Path(output_dir))
 
 
-def render_board(board: chess.Board, last_move_uci: str | None, orientation: chess.Color) -> None:
-    last_move = chess.Move.from_uci(last_move_uci) if last_move_uci else None
-    svg = render_board_svg(board, lastmove=last_move, orientation=orientation)
-    st.markdown(svg, unsafe_allow_html=True)
+def maybe_handle_dragged_move(
+    payload: dict | None,
+    *,
+    event_state_key: str,
+) -> str | None:
+    if not payload or "uci" not in payload or "event_id" not in payload:
+        return None
+    if st.session_state.get(event_state_key) == payload["event_id"]:
+        return None
+    st.session_state[event_state_key] = payload["event_id"]
+    return str(payload["uci"])
 
 
 def render_position_analyzer(tutor: ChessTutor, level) -> None:
@@ -143,8 +181,18 @@ def render_position_analyzer(tutor: ChessTutor, level) -> None:
     with right:
         try:
             board = load_board(st.session_state.analysis_fen)
-            render_board(board, st.session_state.analysis_last_move, board.turn)
+            dragged = interactive_chessboard(
+                board,
+                key="analysis_drag_board",
+                orientation=board.turn,
+                last_move_uci=st.session_state.analysis_last_move,
+            )
             st.code(f"Side to move: {'White' if board.turn else 'Black'}")
+            st.caption("Drag a piece on the interactive board to evaluate that move instantly.")
+            dragged_uci = maybe_handle_dragged_move(dragged, event_state_key="analysis_last_drag_event")
+            if dragged_uci:
+                evaluate_probe_move(tutor, st.session_state.analysis_fen, dragged_uci, level)
+                st.rerun()
         except ValueError as exc:
             st.error(f"Invalid FEN: {exc}")
 
@@ -170,7 +218,7 @@ def render_position_analyzer(tutor: ChessTutor, level) -> None:
         st.dataframe(candidate_rows, use_container_width=True)
         st.caption(report["evaluation_story"])
         st.caption(f"Analysis source: {report['engine_provider']}")
-        render_analysis_feedback_form(report)
+        render_analysis_feedback_form(report, get_session_adapter(level.key))
 
 
 def analyze_position(tutor: ChessTutor, fen: str, level) -> None:
@@ -350,9 +398,18 @@ def evaluate_probe_move(tutor: ChessTutor, fen: str, move_text: str, level) -> N
         "candidates": report.candidate_moves,
         "engine_provider": report.engine_metadata.provider,
     }
+    get_session_adapter(level.key).observe_move_choice(
+        coaching.chosen_move.model_features,
+        tutor_features=coaching.tutor_move.model_features,
+        eval_gap_cp=coaching.score_delta_cp,
+        difficulty=coaching.chosen_move.difficulty,
+        tactical_risk_score=coaching.chosen_move.tactical_risk_score,
+        mistake_class=coaching.chosen_move.mistake_class,
+        level=level,
+    )
 
 
-def render_analysis_feedback_form(report: dict) -> None:
+def render_analysis_feedback_form(report: dict, adapter: SessionBayesianAdapter) -> None:
     st.subheader("Quick Feedback")
     st.caption("Save a short rating for this analysis so the project can collect lightweight usefulness evidence.")
 
@@ -389,6 +446,15 @@ def render_analysis_feedback_form(report: dict) -> None:
             "notes": notes.strip(),
         }
     )
+    adapter.observe_feedback(
+        report["tutor_move"].model_features,
+        {
+            "clarity": clarity,
+            "usefulness": usefulness,
+            "actionability": actionability,
+            "overwhelm_reduction": overwhelm_reduction,
+        },
+    )
     st.success("Feedback saved locally.")
 
 
@@ -406,8 +472,23 @@ def render_play_mode(tutor: ChessTutor, level) -> None:
 
     board = load_board(st.session_state.bot_board_fen)
     orientation = chess.WHITE if st.session_state.bot_user_color == "White" else chess.BLACK
-    render_board(board, st.session_state.bot_last_move_uci, orientation)
+    expected_user_turn = (board.turn == chess.WHITE and st.session_state.bot_user_color == "White") or (
+        board.turn == chess.BLACK and st.session_state.bot_user_color == "Black"
+    )
+    dragged = interactive_chessboard(
+        board,
+        key="play_drag_board",
+        orientation=orientation,
+        last_move_uci=st.session_state.bot_last_move_uci,
+        disabled=board.is_game_over() or not expected_user_turn,
+    )
     st.code("Moves: " + (" ".join(st.session_state.bot_moves) or "(none yet)"))
+    st.caption("You can drag a piece on the board or type SAN/UCI below.")
+
+    dragged_uci = maybe_handle_dragged_move(dragged, event_state_key="bot_last_drag_event")
+    if dragged_uci:
+        submit_player_move(tutor, level, dragged_uci)
+        st.rerun()
 
     if board.is_game_over():
         st.success(f"Game over: {board.result()} ({board.outcome().termination.name})")
@@ -465,6 +546,15 @@ def submit_player_move(tutor: ChessTutor, level, move_text: str) -> None:
     st.session_state.bot_commentary.append(
         f"You played {coaching.chosen_move.san}: {coaching.verdict}. {coaching.lesson}"
     )
+    get_session_adapter(level.key).observe_move_choice(
+        coaching.chosen_move.model_features,
+        tutor_features=coaching.tutor_move.model_features,
+        eval_gap_cp=coaching.score_delta_cp,
+        difficulty=coaching.chosen_move.difficulty,
+        tactical_risk_score=coaching.chosen_move.tactical_risk_score,
+        mistake_class=coaching.chosen_move.mistake_class,
+        level=level,
+    )
 
     if board.is_game_over():
         st.rerun()
@@ -500,7 +590,7 @@ def maybe_make_opening_bot_move(tutor: ChessTutor, level) -> None:
     )
 
 
-def render_evaluation_story(level) -> None:
+def render_evaluation_story(level, adapter: SessionBayesianAdapter) -> None:
     st.subheader("Why this is more useful than raw engine output")
     st.write(
         "A raw engine answers 'what is strongest?' This tutor adds a second question: "
@@ -585,6 +675,26 @@ def render_evaluation_story(level) -> None:
                 st.code(f"{label}: {path}")
 
     render_user_feedback_summary()
+    render_live_bayesian_story(adapter, level)
+
+
+def render_live_bayesian_story(adapter: SessionBayesianAdapter, level) -> None:
+    summary = adapter.summary(level)
+    st.subheader("Live Bayesian Adaptation")
+    st.write(
+        "The app starts from the trained Bayesian priors for this ELO band, then maintains a session-level posterior "
+        "that updates from your move choices and saved feedback."
+    )
+    story_rows = [
+        {"Signal": "Estimated Practical Level", "Value": summary["estimated_elo"]},
+        {"Signal": "Preference Trend", "Value": str(summary["preferred_theme"]).replace("_", " ").title()},
+        {"Signal": "Confidence", "Value": summary["confidence"]},
+        {"Signal": "Move Observations", "Value": summary["move_observations"]},
+        {"Signal": "Feedback Observations", "Value": summary["feedback_observations"]},
+        {"Signal": "Adjusted Complexity Weight", "Value": f"{summary['adjusted_complexity_weight']:.2f}"},
+        {"Signal": "Adjusted Max Eval Loss", "Value": summary["adjusted_max_eval_loss"]},
+    ]
+    st.dataframe(story_rows, use_container_width=True, hide_index=True)
 
 
 def render_metric_table(title: str, metrics: dict[str, float]) -> None:

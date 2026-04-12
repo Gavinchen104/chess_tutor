@@ -56,6 +56,17 @@ def board_to_editor_state(board: chess.Board) -> dict:
     }
 
 
+def board_to_piece_map(board: chess.Board) -> dict[str, str]:
+    return {
+        chess.square_name(square): piece.symbol()
+        for square, piece in board.piece_map().items()
+    }
+
+
+def legal_move_uci_list(board: chess.Board) -> list[str]:
+    return [move.uci() for move in board.legal_moves]
+
+
 def build_board_from_editor_state(
     *,
     pieces: dict[str, str],

@@ -2,7 +2,9 @@ import chess
 
 from app.core.board import (
     board_to_editor_state,
+    board_to_piece_map,
     build_board_from_editor_state,
+    legal_move_uci_list,
     load_board,
     parse_move_text,
 )
@@ -50,3 +52,14 @@ def test_board_editor_rejects_invalid_positions():
         assert "Invalid board setup" in str(exc)
     else:
         raise AssertionError("Expected invalid board setup to raise ValueError.")
+
+
+def test_board_piece_map_and_legal_moves_helpers():
+    board = chess.Board()
+    piece_map = board_to_piece_map(board)
+    legal_moves = legal_move_uci_list(board)
+
+    assert piece_map["e1"] == "K"
+    assert piece_map["d8"] == "q"
+    assert "e2e4" in legal_moves
+    assert "g1f3" in legal_moves

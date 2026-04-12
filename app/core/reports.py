@@ -43,6 +43,7 @@ class CandidateMove:
     better_alternative_reason: str
     tags: list[str] = field(default_factory=list)
     priorities_addressed: list[str] = field(default_factory=list)
+    model_features: dict[str, float] = field(default_factory=dict)
     plan: str = ""
     tactical_findings: list[DiagnosticFinding] = field(default_factory=list)
     strategic_findings: list[DiagnosticFinding] = field(default_factory=list)

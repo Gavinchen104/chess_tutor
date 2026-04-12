@@ -4,6 +4,7 @@ from dataclasses import dataclass
 
 import chess
 
+from app.core.adaptation import SessionBayesianAdapter
 from app.core.levels import LevelProfile
 from app.core.move_engine import (
     MoveInsight,
@@ -63,6 +64,7 @@ def analyze_move_diagnostics(
     insight: MoveInsight,
     analysis: PositionAnalysis,
     level: LevelProfile,
+    adaptation: SessionBayesianAdapter | None = None,
 ) -> MoveDiagnostics:
     before = analysis.snapshot or PositionSnapshot(
         material_balance_cp=0,
@@ -100,6 +102,8 @@ def analyze_move_diagnostics(
         tactical_risk_score,
         strategic_fit_score,
         level,
+        model_features=insight.model_features,
+        adaptation=adaptation,
     )
     mistake_class = classify_move(eval_gap, tactical_risk_score, insight, analysis, level)
     primary_theme, primary_reason = pick_primary_message(
@@ -336,6 +340,9 @@ def compute_human_plausibility(
     tactical_risk: float,
     strategic_fit: float,
     level: LevelProfile,
+    *,
+    model_features: dict[str, float] | None = None,
+    adaptation: SessionBayesianAdapter | None = None,
 ) -> float:
     """
     Estimate how likely a human at this level would play this move.
@@ -353,6 +360,8 @@ def compute_human_plausibility(
         # Map tactical_risk and strategic_fit to the closest learned features
         score += coeff.get("safety_change", 0.0) * (-tactical_risk)
         score += coeff.get("center_change", 0.0) * strategic_fit
+        if adaptation is not None and model_features is not None:
+            score += 12.0 * adaptation.move_choice_adjustment(model_features)
         return max(0.0, min(100.0, score))
 
     # Heuristic fallback (original hardcoded weights)
@@ -367,6 +376,8 @@ def compute_human_plausibility(
     score -= max(0.0, difficulty * complexity_tolerance)
     score -= tactical_risk * 0.6
     score += strategic_fit * 0.35
+    if adaptation is not None and model_features is not None:
+        score += 10.0 * adaptation.move_choice_adjustment(model_features)
     return max(0.0, min(100.0, score))
 
 
