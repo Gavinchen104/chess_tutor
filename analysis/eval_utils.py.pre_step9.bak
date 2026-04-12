@@ -8,11 +8,11 @@ from app.core.levels import LEVELS
 from app.core.reports import CandidateMove, DiagnosticFinding
 
 
-LOW_TACTICAL_RISK_THRESHOLD = 25.0
+LOW_TACTICAL_RISK_THRESHOLD = 20.0
 HIGH_TACTICAL_RISK_THRESHOLD = 30.0
 
 DIFFICULTY_THRESHOLDS = {
-    "600": 2.2,
+    "600": 2.0,
     "1000": 2.4,
     "1400": 2.8,
     "1800": 3.2,
@@ -112,15 +112,7 @@ def expected_property_passes(report, candidate: CandidateMove, level_key: str, p
         return practical_for_level(candidate, level_key)
 
     if property_name == "supports_conversion":
-        return (
-            candidate_matches_theme(candidate, "conversion")
-            or (
-                "conversion" in set(getattr(report, "position_needs", []))
-                and candidate.mistake_class in {"best", "practical"}
-                and candidate.eval_gap_cp <= allowed_eval_gap(level_key)
-                and candidate.tactical_risk_score < LOW_TACTICAL_RISK_THRESHOLD + 5.0
-            )
-        )
+        return candidate_matches_theme(candidate, "conversion")
 
     if property_name == "keeps_initiative":
         return candidate_matches_theme(candidate, "initiative")

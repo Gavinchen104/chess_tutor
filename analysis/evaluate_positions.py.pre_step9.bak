@@ -13,7 +13,6 @@ import chess
 from app.core.levels import LEVELS
 from app.core.services import AnalysisService
 from analysis.eval_utils import (
-    candidate_matches_theme,
     explanation_is_complete,
     expected_property_passes,
     forbidden_property_violated,
@@ -62,7 +61,7 @@ def evaluate_positions(positions_path: Path = DEFAULT_POSITIONS_PATH) -> dict:
                 for property_name in case["forbidden_properties"]
             }
 
-            theme_match = any(candidate_matches_theme(candidate, theme) for theme in case["acceptable_primary_themes"])
+            theme_match = candidate.primary_theme in case["acceptable_primary_themes"]
             level_fit = practical_for_level(candidate, level_key)
 
             explanation_text = f"{report.tutor_explanation} {candidate.player_friendly_explanation}"

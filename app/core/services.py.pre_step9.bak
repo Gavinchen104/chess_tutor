@@ -312,7 +312,7 @@ class ReviewService:
         critical_moments = [
             f"Move {item.move_number} ({item.san}) was a {item.verdict.lower()} because it missed {item.primary_theme.replace('_', ' ')}. Better practical move: {item.suggested_alternative_san}."
             for item in biggest_mistakes
-            if item.tutor_gap_cp > 0 and item.verdict in {"Inaccuracy", "Mistake", "Blunder"}
+            if item.tutor_gap_cp > 0
         ]
 
         recurring_patterns = summarize_patterns(annotated_moves)
