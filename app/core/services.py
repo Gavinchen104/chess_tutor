@@ -40,6 +40,71 @@ DEFAULT_REVIEW_DEPTH = 11
 DEFAULT_BOT_DEPTH = 12
 
 
+TACTICAL_RISK_LIMITS = {
+    "600": 20.0,
+    "1000": 25.0,
+    "1400": 30.0,
+    "1800": 35.0,
+}
+
+DIFFICULTY_LIMITS = {
+    "600": 2.0,
+    "1000": 2.4,
+    "1400": 2.8,
+    "1800": 3.2,
+}
+
+
+def select_tutor_candidate(candidates: list[CandidateMove], level: LevelProfile) -> CandidateMove:
+    tactical_limit = TACTICAL_RISK_LIMITS.get(level.key, 25.0)
+    difficulty_limit = DIFFICULTY_LIMITS.get(level.key, 2.4)
+
+    safe_candidates = [
+        candidate
+        for candidate in candidates
+        if candidate.eval_gap_cp <= level.max_eval_loss
+        and candidate.mistake_class not in {"mistake", "blunder"}
+        and candidate.tactical_risk_score < tactical_limit
+        and candidate.difficulty < difficulty_limit
+    ]
+    if safe_candidates:
+        return max(
+            safe_candidates,
+            key=lambda candidate: (
+                candidate.tutor_score,
+                candidate.strategic_fit_score,
+                candidate.human_plausibility_score,
+                candidate.score_cp,
+            ),
+        )
+
+    reasonable_candidates = [
+        candidate
+        for candidate in candidates
+        if candidate.mistake_class != "blunder"
+        and candidate.tactical_risk_score < tactical_limit + 10.0
+    ]
+    if reasonable_candidates:
+        return max(
+            reasonable_candidates,
+            key=lambda candidate: (
+                -candidate.eval_gap_cp,
+                -candidate.tactical_risk_score,
+                candidate.strategic_fit_score,
+                candidate.human_plausibility_score,
+            ),
+        )
+
+    return max(
+        candidates,
+        key=lambda candidate: (
+            candidate.score_cp,
+            -candidate.tactical_risk_score,
+            -candidate.difficulty,
+        ),
+    )
+
+
 class AnalysisService:
     def __init__(self, engine: MoveEngine | None = None) -> None:
         self.engine = engine or MoveEngine()
@@ -66,9 +131,23 @@ class AnalysisService:
             tutor_move = self._build_candidate(board, analysis.tutor_move, analysis, level)
             candidate_reports.append(tutor_move)
 
+        prelim_candidates = dedupe_candidates(candidate_reports)
+        prelim_candidates.sort(key=lambda item: item.score_cp, reverse=True)
+        prelim_engine_best = next(item for item in prelim_candidates if item.uci == engine_best.uci)
+        prelim_tutor_move = next(item for item in prelim_candidates if item.uci == tutor_move.uci)
+
+        finalized_candidates = [
+            finalize_candidate(candidate, prelim_tutor_move, level)
+            for candidate in prelim_candidates
+        ]
+        finalized_candidates.sort(key=lambda item: item.score_cp, reverse=True)
+
+        engine_best = next(item for item in finalized_candidates if item.uci == prelim_engine_best.uci)
+        tutor_move = select_tutor_candidate(finalized_candidates, level)
+
         finalized_candidates = [
             finalize_candidate(candidate, tutor_move, level)
-            for candidate in dedupe_candidates(candidate_reports)
+            for candidate in finalized_candidates
         ]
         finalized_candidates.sort(key=lambda item: item.score_cp, reverse=True)
         engine_best = next(item for item in finalized_candidates if item.uci == engine_best.uci)
@@ -233,7 +312,7 @@ class ReviewService:
         critical_moments = [
             f"Move {item.move_number} ({item.san}) was a {item.verdict.lower()} because it missed {item.primary_theme.replace('_', ' ')}. Better practical move: {item.suggested_alternative_san}."
             for item in biggest_mistakes
-            if item.tutor_gap_cp > 0
+            if item.tutor_gap_cp > 0 and item.verdict in {"Inaccuracy", "Mistake", "Blunder"}
         ]
 
         recurring_patterns = summarize_patterns(annotated_moves)
@@ -279,18 +358,31 @@ class ReviewService:
 
 
 def finalize_candidate(candidate: CandidateMove, tutor_move: CandidateMove, level: LevelProfile) -> CandidateMove:
+    theme_label = candidate.primary_theme.replace("_", " ")
     better_alternative_reason = (
         "This is already the tutor-preferred move for this rating band."
         if candidate.uci == tutor_move.uci
-        else f"`{tutor_move.san}` is the better teaching move because it more clearly solves {tutor_move.primary_theme.replace('_', ' ')}."
+        else f"`{tutor_move.san}` is the cleaner teaching move because it more clearly supports {tutor_move.primary_theme.replace('_', ' ')}."
     )
-    tactical_sentence = candidate.primary_reason
-    habit_sentence = f"For {level.label}, remember: {candidate.training_habit}"
+
+    teaching_sentence = f"{candidate.primary_reason} Main idea: {theme_label}."
+    habit_sentence = f"For {level.label}, remember this habit: {candidate.training_habit}"
+
     if candidate.uci == tutor_move.uci:
-        alternative_sentence = "At this level, this move balances strength, clarity, and practical execution."
+        practicality_sentence = (
+            f"For {level.label}, this move is practical because it keeps the main idea clear and stays easier to execute."
+        )
     else:
-        alternative_sentence = better_alternative_reason
-    explanation = f"{tactical_sentence} {habit_sentence} {alternative_sentence}"
+        practicality_sentence = (
+            f"For {level.label}, this move is playable, but {better_alternative_reason}"
+        )
+
+    explanation = " ".join(
+        sentence.strip()
+        for sentence in (teaching_sentence, habit_sentence, practicality_sentence)
+        if sentence.strip()
+    )
+
     return replace(
         candidate,
         better_alternative_reason=better_alternative_reason,
