@@ -1,0 +1,164 @@
+from __future__ import annotations
+
+import json
+from pathlib import Path
+from typing import Iterable
+
+from app.core.levels import LEVELS
+from app.core.reports import CandidateMove, DiagnosticFinding
+
+
+LOW_TACTICAL_RISK_THRESHOLD = 25.0
+HIGH_TACTICAL_RISK_THRESHOLD = 30.0
+
+DIFFICULTY_THRESHOLDS = {
+    "600": 2.0,
+    "1000": 2.4,
+    "1400": 2.8,
+    "1800": 3.2,
+}
+
+HUMAN_PLAUSIBILITY_THRESHOLDS = {
+    "600": 45.0,
+    "1000": 45.0,
+    "1400": 40.0,
+    "1800": 35.0,
+}
+
+TRAINING_WORDS = ("habit", "remember", "practice", "goal", "train")
+
+
+def load_json(path: Path) -> list[dict]:
+    with path.open("r", encoding="utf-8") as handle:
+        data = json.load(handle)
+    if not isinstance(data, list):
+        raise ValueError(f"Expected a JSON list in {path}, but got {type(data).__name__}.")
+    return data
+
+
+def safe_rate(numerator: int, denominator: int) -> float:
+    if denominator == 0:
+        return 0.0
+    return round(numerator / denominator, 4)
+
+
+def normalize_text(parts: Iterable[str]) -> str:
+    return " ".join(str(part).strip().lower() for part in parts if part).strip()
+
+
+def _all_findings(candidate: CandidateMove) -> list[DiagnosticFinding]:
+    return list(candidate.tactical_findings) + list(candidate.strategic_findings)
+
+
+def finding_codes(candidate: CandidateMove, direction: str | None = None) -> set[str]:
+    codes: set[str] = set()
+    for finding in _all_findings(candidate):
+        if direction is None or finding.direction == direction:
+            codes.add(finding.code)
+    return codes
+
+
+def finding_themes(candidate: CandidateMove, direction: str | None = None) -> set[str]:
+    themes: set[str] = set()
+    for finding in _all_findings(candidate):
+        if direction is None or finding.direction == direction:
+            themes.add(finding.theme)
+    return themes
+
+
+def candidate_matches_theme(candidate: CandidateMove, theme: str) -> bool:
+    return (
+        candidate.primary_theme == theme
+        or theme in candidate.tags
+        or theme in candidate.priorities_addressed
+        or theme in finding_themes(candidate, direction="positive")
+    )
+
+
+def allowed_eval_gap(level_key: str) -> int:
+    return LEVELS[level_key].max_eval_loss
+
+
+def difficulty_threshold(level_key: str) -> float:
+    return DIFFICULTY_THRESHOLDS[level_key]
+
+
+def practical_for_level(candidate: CandidateMove, level_key: str) -> bool:
+    return (
+        candidate.mistake_class not in {"mistake", "blunder"}
+        and candidate.eval_gap_cp <= allowed_eval_gap(level_key)
+        and candidate.difficulty < difficulty_threshold(level_key)
+        and candidate.human_plausibility_score >= HUMAN_PLAUSIBILITY_THRESHOLDS[level_key]
+    )
+
+
+def expected_property_passes(report, candidate: CandidateMove, level_key: str, property_name: str) -> bool:
+    if property_name == "improves_development":
+        return candidate_matches_theme(candidate, "development")
+
+    if property_name == "improves_center_control":
+        return candidate_matches_theme(candidate, "center")
+
+    if property_name == "improves_king_safety":
+        return candidate_matches_theme(candidate, "king_safety")
+
+    if property_name == "low_tactical_risk":
+        return candidate.tactical_risk_score < LOW_TACTICAL_RISK_THRESHOLD
+
+    if property_name == "not_too_complex":
+        return candidate.difficulty < difficulty_threshold(level_key)
+
+    if property_name == "practical_for_level":
+        return practical_for_level(candidate, level_key)
+
+    if property_name == "supports_conversion":
+        return candidate_matches_theme(candidate, "conversion")
+
+    if property_name == "keeps_initiative":
+        return candidate_matches_theme(candidate, "initiative")
+
+    raise ValueError(f"Unsupported expected property: {property_name}")
+
+
+def forbidden_property_violated(report, candidate: CandidateMove, level_key: str, property_name: str) -> bool:
+    negative_codes = finding_codes(candidate, direction="negative")
+    position_needs = set(getattr(report, "position_needs", []))
+
+    if property_name == "hangs_material":
+        return bool({"hanging_own_piece", "allowed_free_capture"} & negative_codes)
+
+    if property_name == "large_eval_drop":
+        return candidate.eval_gap_cp > allowed_eval_gap(level_key)
+
+    if property_name == "too_complex_for_level":
+        return candidate.difficulty >= difficulty_threshold(level_key)
+
+    if property_name == "ignores_king_safety":
+        return "king_safety" in position_needs and not candidate_matches_theme(candidate, "king_safety")
+
+    if property_name == "ignores_development":
+        return "development" in position_needs and not candidate_matches_theme(candidate, "development")
+
+    if property_name == "ignores_center":
+        return "center" in position_needs and not candidate_matches_theme(candidate, "center")
+
+    if property_name == "high_tactical_risk":
+        return candidate.tactical_risk_score >= HIGH_TACTICAL_RISK_THRESHOLD
+
+    raise ValueError(f"Unsupported forbidden property: {property_name}")
+
+
+def explanation_is_complete(explanation_text: str, required_keywords: list[str]) -> bool:
+    lowered = explanation_text.lower()
+    keyword_hit = True if not required_keywords else any(keyword.lower() in lowered for keyword in required_keywords)
+    training_hit = any(word in lowered for word in TRAINING_WORDS)
+    return keyword_hit and training_hit
+
+
+def theme_variants(theme: str) -> set[str]:
+    return {theme.lower(), theme.replace("_", " ").lower()}
+
+
+def text_mentions_theme(text: str, theme: str) -> bool:
+    lowered = text.lower()
+    return any(variant in lowered for variant in theme_variants(theme))

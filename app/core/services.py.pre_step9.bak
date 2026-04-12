@@ -1,0 +1,515 @@
+from __future__ import annotations
+
+from dataclasses import replace
+import io
+from pathlib import Path
+
+import chess
+import chess.pgn
+
+from app.core.commentary import (
+    build_engine_vs_tutor_story,
+    build_move_explanation,
+    build_position_summary,
+)
+from app.core.diagnostics import analyze_move_diagnostics
+from app.core.levels import LevelProfile
+from app.core.move_engine import MoveEngine, MoveInsight, PositionAnalysis
+from app.core.reports import (
+    AnnotatedGameMove,
+    CandidateMove,
+    EngineMetadata,
+    EvaluationExample,
+    GameReviewReport,
+    MoveCoachingReport,
+    PositionAnalysisReport,
+    TutorEvaluationResult,
+)
+
+
+VERDICT_LABELS = {
+    "best": "Best",
+    "practical": "Practical",
+    "inaccuracy": "Inaccuracy",
+    "mistake": "Mistake",
+    "blunder": "Blunder",
+}
+
+DEFAULT_ANALYSIS_DEPTH = 12
+DEFAULT_REVIEW_DEPTH = 11
+DEFAULT_BOT_DEPTH = 12
+
+
+TACTICAL_RISK_LIMITS = {
+    "600": 20.0,
+    "1000": 25.0,
+    "1400": 30.0,
+    "1800": 35.0,
+}
+
+DIFFICULTY_LIMITS = {
+    "600": 2.0,
+    "1000": 2.4,
+    "1400": 2.8,
+    "1800": 3.2,
+}
+
+
+def select_tutor_candidate(candidates: list[CandidateMove], level: LevelProfile) -> CandidateMove:
+    tactical_limit = TACTICAL_RISK_LIMITS.get(level.key, 25.0)
+    difficulty_limit = DIFFICULTY_LIMITS.get(level.key, 2.4)
+
+    safe_candidates = [
+        candidate
+        for candidate in candidates
+        if candidate.eval_gap_cp <= level.max_eval_loss
+        and candidate.mistake_class not in {"mistake", "blunder"}
+        and candidate.tactical_risk_score < tactical_limit
+        and candidate.difficulty < difficulty_limit
+    ]
+    if safe_candidates:
+        return max(
+            safe_candidates,
+            key=lambda candidate: (
+                candidate.tutor_score,
+                candidate.strategic_fit_score,
+                candidate.human_plausibility_score,
+                candidate.score_cp,
+            ),
+        )
+
+    reasonable_candidates = [
+        candidate
+        for candidate in candidates
+        if candidate.mistake_class != "blunder"
+        and candidate.tactical_risk_score < tactical_limit + 10.0
+    ]
+    if reasonable_candidates:
+        return max(
+            reasonable_candidates,
+            key=lambda candidate: (
+                -candidate.eval_gap_cp,
+                -candidate.tactical_risk_score,
+                candidate.strategic_fit_score,
+                candidate.human_plausibility_score,
+            ),
+        )
+
+    return max(
+        candidates,
+        key=lambda candidate: (
+            candidate.score_cp,
+            -candidate.tactical_risk_score,
+            -candidate.difficulty,
+        ),
+    )
+
+
+class AnalysisService:
+    def __init__(self, engine: MoveEngine | None = None) -> None:
+        self.engine = engine or MoveEngine()
+
+    def analyze_position(
+        self,
+        board: chess.Board,
+        level: LevelProfile,
+        *,
+        candidate_limit: int = 5,
+    ) -> PositionAnalysisReport:
+        analysis = self.engine.analyze(board, level)
+        candidate_insights = analysis.candidates[: max(candidate_limit, 3)]
+        candidate_reports = [
+            self._build_candidate(board, candidate, analysis, level)
+            for candidate in candidate_insights
+        ]
+        engine_best = self._find_candidate(candidate_reports, analysis.best_move)
+        tutor_move = self._find_candidate(candidate_reports, analysis.tutor_move)
+        if engine_best is None:
+            engine_best = self._build_candidate(board, analysis.best_move, analysis, level)
+            candidate_reports.append(engine_best)
+        if tutor_move is None:
+            tutor_move = self._build_candidate(board, analysis.tutor_move, analysis, level)
+            candidate_reports.append(tutor_move)
+
+        prelim_candidates = dedupe_candidates(candidate_reports)
+        prelim_candidates.sort(key=lambda item: item.score_cp, reverse=True)
+        prelim_engine_best = next(item for item in prelim_candidates if item.uci == engine_best.uci)
+        prelim_tutor_move = next(item for item in prelim_candidates if item.uci == tutor_move.uci)
+
+        finalized_candidates = [
+            finalize_candidate(candidate, prelim_tutor_move, level)
+            for candidate in prelim_candidates
+        ]
+        finalized_candidates.sort(key=lambda item: item.score_cp, reverse=True)
+
+        engine_best = next(item for item in finalized_candidates if item.uci == prelim_engine_best.uci)
+        tutor_move = select_tutor_candidate(finalized_candidates, level)
+
+        finalized_candidates = [
+            finalize_candidate(candidate, tutor_move, level)
+            for candidate in finalized_candidates
+        ]
+        finalized_candidates.sort(key=lambda item: item.score_cp, reverse=True)
+        engine_best = next(item for item in finalized_candidates if item.uci == engine_best.uci)
+        tutor_move = next(item for item in finalized_candidates if item.uci == tutor_move.uci)
+
+        report = PositionAnalysisReport(
+            board_fen=board.fen(),
+            side_to_move="White" if board.turn else "Black",
+            level_key=level.key,
+            level_label=level.label,
+            engine_metadata=self._build_engine_metadata(analysis),
+            position_needs=analysis.position_needs,
+            overview="",
+            tutor_explanation="",
+            evaluation_story="",
+            engine_best_move=engine_best,
+            tutor_move=tutor_move,
+            candidate_moves=finalized_candidates,
+        )
+        report.overview = build_position_summary(report, level)
+        report.tutor_explanation = build_move_explanation(report.tutor_move, level)
+        report.evaluation_story = build_engine_vs_tutor_story(report, level)
+        return report
+
+    def _build_candidate(
+        self,
+        board: chess.Board,
+        insight: MoveInsight,
+        analysis: PositionAnalysis,
+        level: LevelProfile,
+    ) -> CandidateMove:
+        diagnostics = analyze_move_diagnostics(board, insight, analysis, level)
+        eval_gap = max(0, analysis.best_move.score_cp - insight.score_cp)
+        return CandidateMove(
+            san=insight.san,
+            uci=insight.move.uci(),
+            score_cp=insight.score_cp,
+            eval_gap_cp=eval_gap,
+            tutor_score=insight.tutor_score,
+            difficulty=insight.difficulty,
+            tactical_risk_score=diagnostics.tactical_risk_score,
+            strategic_fit_score=diagnostics.strategic_fit_score,
+            human_plausibility_score=diagnostics.human_plausibility_score,
+            mistake_class=diagnostics.mistake_class,
+            primary_theme=diagnostics.primary_theme,
+            primary_reason=diagnostics.primary_reason,
+            player_friendly_explanation="",
+            training_habit=diagnostics.training_habit,
+            better_alternative_reason="",
+            tags=insight.tags,
+            priorities_addressed=insight.priorities_addressed,
+            plan=insight.plan,
+            tactical_findings=diagnostics.tactical_findings,
+            strategic_findings=diagnostics.strategic_findings,
+        )
+
+    def _build_engine_metadata(self, analysis: PositionAnalysis) -> EngineMetadata:
+        provider = analysis.engine_name
+        stockfish_path = self.engine.stockfish_path if provider == "Stockfish" else None
+        fallback_reason = None if provider == "Stockfish" else "Stockfish executable not available; using heuristic fallback."
+        return EngineMetadata(
+            provider=provider,
+            analysis_depth=DEFAULT_ANALYSIS_DEPTH,
+            multipv=len(analysis.candidates),
+            stockfish_path=stockfish_path,
+            fallback_reason=fallback_reason,
+        )
+
+    @staticmethod
+    def _find_candidate(candidates: list[CandidateMove], insight: MoveInsight) -> CandidateMove | None:
+        for candidate in candidates:
+            if candidate.uci == insight.move.uci():
+                return candidate
+        return None
+
+
+class PlayCoachingService:
+    def __init__(self, engine: MoveEngine | None = None, analysis_service: AnalysisService | None = None) -> None:
+        self.engine = engine or MoveEngine()
+        self.analysis_service = analysis_service or AnalysisService(self.engine)
+
+    def coach_move(
+        self,
+        board_before: chess.Board,
+        move: chess.Move,
+        level: LevelProfile,
+    ) -> MoveCoachingReport:
+        analysis_report = self.analysis_service.analyze_position(board_before, level, candidate_limit=6)
+        analysis = self.engine.analyze(board_before, level)
+        insight = self.engine.inspect_move(
+            board_before,
+            move,
+            level,
+            best_score_cp=analysis.best_move.score_cp,
+            position_snapshot=analysis.snapshot,
+            position_needs=analysis.position_needs,
+        )
+        chosen_move = finalize_candidate(
+            self.analysis_service._build_candidate(board_before, insight, analysis, level),
+            analysis_report.tutor_move,
+            level,
+        )
+        verdict = VERDICT_LABELS[chosen_move.mistake_class]
+        coach_note = insight.plan
+        lesson = chosen_move.player_friendly_explanation
+        return MoveCoachingReport(
+            board_fen=board_before.fen(),
+            move_number=board_before.fullmove_number,
+            player_color="White" if board_before.turn else "Black",
+            chosen_move=chosen_move,
+            engine_best_move=analysis_report.engine_best_move,
+            tutor_move=analysis_report.tutor_move,
+            eval_before_cp=analysis_report.engine_best_move.score_cp,
+            eval_after_cp=chosen_move.score_cp,
+            score_delta_cp=chosen_move.eval_gap_cp,
+            verdict=verdict,
+            coach_note=coach_note,
+            lesson=lesson,
+        )
+
+
+class ReviewService:
+    def review_reports(
+        self,
+        coaching_reports: list[MoveCoachingReport],
+        pgn: str,
+    ) -> GameReviewReport:
+        if not coaching_reports:
+            return GameReviewReport(
+                pgn=pgn,
+                annotated_moves=[],
+                critical_moments=["No moves recorded yet."],
+                recurring_patterns=[],
+                strengths=[],
+                next_steps=[],
+                findings=["No moves recorded yet."],
+                summary="Play a few moves to generate a review.",
+            )
+
+        annotated_moves = [
+            AnnotatedGameMove(
+                move_number=report.move_number,
+                player_color=report.player_color,
+                san=report.chosen_move.san,
+                eval_before_cp=report.eval_before_cp,
+                eval_after_cp=report.eval_after_cp,
+                tutor_gap_cp=report.score_delta_cp,
+                verdict=report.verdict,
+                primary_theme=report.chosen_move.primary_theme,
+                explanation=report.lesson,
+                suggested_alternative_san=report.tutor_move.san,
+                training_habit=report.chosen_move.training_habit,
+            )
+            for report in coaching_reports
+        ]
+
+        biggest_mistakes = sorted(
+            annotated_moves,
+            key=lambda item: item.tutor_gap_cp,
+            reverse=True,
+        )[:3]
+        critical_moments = [
+            f"Move {item.move_number} ({item.san}) was a {item.verdict.lower()} because it missed {item.primary_theme.replace('_', ' ')}. Better practical move: {item.suggested_alternative_san}."
+            for item in biggest_mistakes
+            if item.tutor_gap_cp > 0
+        ]
+
+        recurring_patterns = summarize_patterns(annotated_moves)
+        strengths = summarize_strengths(annotated_moves)
+        next_steps = build_next_steps(recurring_patterns, strengths)
+        findings = critical_moments + recurring_patterns + strengths
+        summary = (
+            f"Main lesson: {next_steps[0]}"
+            if next_steps
+            else "Main lesson: keep comparing your move with the cleanest practical alternative."
+        )
+        return GameReviewReport(
+            pgn=pgn,
+            annotated_moves=annotated_moves,
+            critical_moments=critical_moments,
+            recurring_patterns=recurring_patterns,
+            strengths=strengths,
+            next_steps=next_steps,
+            findings=findings,
+            summary=summary,
+        )
+
+    def review_pgn(
+        self,
+        pgn_text: str,
+        level: LevelProfile,
+        *,
+        player_color: chess.Color = chess.WHITE,
+        engine: MoveEngine | None = None,
+    ) -> GameReviewReport:
+        parsed = chess.pgn.read_game(io.StringIO(pgn_text))
+        if parsed is None:
+            return self.review_reports([], pgn_text)
+        coaching_service = PlayCoachingService(engine=engine)
+        board = parsed.board()
+        reports: list[MoveCoachingReport] = []
+        for move in parsed.mainline_moves():
+            board_before = board.copy(stack=False)
+            if board.turn == player_color:
+                reports.append(coaching_service.coach_move(board_before, move, level))
+            board.push(move)
+        return self.review_reports(reports, pgn_text)
+
+
+def finalize_candidate(candidate: CandidateMove, tutor_move: CandidateMove, level: LevelProfile) -> CandidateMove:
+    theme_label = candidate.primary_theme.replace("_", " ")
+    better_alternative_reason = (
+        "This is already the tutor-preferred move for this rating band."
+        if candidate.uci == tutor_move.uci
+        else f"`{tutor_move.san}` is the cleaner teaching move because it more clearly supports {tutor_move.primary_theme.replace('_', ' ')}."
+    )
+
+    teaching_sentence = f"{candidate.primary_reason} Main idea: {theme_label}."
+    habit_sentence = f"For {level.label}, remember this habit: {candidate.training_habit}"
+
+    if candidate.uci == tutor_move.uci:
+        practicality_sentence = (
+            f"For {level.label}, this move is practical because it keeps the main idea clear and stays easier to execute."
+        )
+    else:
+        practicality_sentence = (
+            f"For {level.label}, this move is playable, but {better_alternative_reason}"
+        )
+
+    explanation = " ".join(
+        sentence.strip()
+        for sentence in (teaching_sentence, habit_sentence, practicality_sentence)
+        if sentence.strip()
+    )
+
+    return replace(
+        candidate,
+        better_alternative_reason=better_alternative_reason,
+        player_friendly_explanation=explanation,
+    )
+
+
+def dedupe_candidates(candidates: list[CandidateMove]) -> list[CandidateMove]:
+    seen: dict[str, CandidateMove] = {}
+    for candidate in candidates:
+        seen[candidate.uci] = candidate
+    return list(seen.values())
+
+
+def summarize_patterns(annotated_moves: list[AnnotatedGameMove]) -> list[str]:
+    counts: dict[str, int] = {}
+    for move in annotated_moves:
+        if move.tutor_gap_cp <= 0:
+            continue
+        counts[move.primary_theme] = counts.get(move.primary_theme, 0) + 1
+    ranked = sorted(counts.items(), key=lambda item: item[1], reverse=True)[:2]
+    return [
+        f"Recurring pattern: {theme.replace('_', ' ')} came up on {count} move(s)."
+        for theme, count in ranked
+    ]
+
+
+def summarize_strengths(annotated_moves: list[AnnotatedGameMove]) -> list[str]:
+    counts: dict[str, int] = {}
+    for move in annotated_moves:
+        if move.verdict not in {"Best", "Practical"}:
+            continue
+        counts[move.primary_theme] = counts.get(move.primary_theme, 0) + 1
+    if not counts:
+        return ["Strength: you stayed engaged in practical decision-making even when the position became difficult."]
+    theme, count = max(counts.items(), key=lambda item: item[1])
+    return [f"Strength: you handled {theme.replace('_', ' ')} well on {count} move(s)."]
+
+
+def build_next_steps(recurring_patterns: list[str], strengths: list[str]) -> list[str]:
+    next_steps: list[str] = []
+    if recurring_patterns:
+        first_pattern = recurring_patterns[0].split(": ", 1)[-1].rstrip(".")
+        next_steps.append(f"deliberately practice {first_pattern} before searching for ambitious continuations")
+    if strengths:
+        next_steps.append("keep repeating the same pre-move scan on your better practical moves")
+    return next_steps or ["check safety, then choose the cleanest improving move"]
+
+
+class EvaluationService:
+    def __init__(self, engine: MoveEngine | None = None) -> None:
+        self.engine = engine or MoveEngine()
+        self.analysis_service = AnalysisService(self.engine)
+        self.review_service = ReviewService()
+
+    def evaluate_local_benchmarks(
+        self,
+        positions_path: Path,
+        games_path: Path,
+        levels: dict[str, LevelProfile],
+    ) -> TutorEvaluationResult:
+        import json
+
+        with positions_path.open("r", encoding="utf-8") as handle:
+            positions = json.load(handle)
+        position_examples: list[EvaluationExample] = []
+        differed = 0
+        explanation_words = 0
+        theme_counts: dict[str, int] = {}
+
+        for item in positions:
+            level = levels[item["level_key"]]
+            board = chess.Board(item["fen"])
+            report = self.analysis_service.analyze_position(board, level, candidate_limit=5)
+            if report.tutor_move.uci != report.engine_best_move.uci:
+                differed += 1
+            explanation_words += len(report.tutor_move.player_friendly_explanation.split())
+            theme_counts[report.tutor_move.primary_theme] = theme_counts.get(report.tutor_move.primary_theme, 0) + 1
+            position_examples.append(
+                EvaluationExample(
+                    label=item["label"],
+                    level_key=item["level_key"],
+                    theme=item["theme"],
+                    engine_move=report.engine_best_move.san,
+                    tutor_move=report.tutor_move.san,
+                    eval_gap_cp=report.tutor_move.eval_gap_cp,
+                    explanation=report.tutor_move.player_friendly_explanation,
+                    differed_from_engine=report.tutor_move.uci != report.engine_best_move.uci,
+                )
+            )
+
+        with games_path.open("r", encoding="utf-8") as handle:
+            games_text = handle.read()
+        pgn_stream = io.StringIO(games_text)
+        chunks: list[str] = []
+        while True:
+            game = chess.pgn.read_game(pgn_stream)
+            if game is None:
+                break
+            chunks.append(str(game))
+        game_summaries: list[str] = []
+        game_theme_counts: dict[str, int] = {}
+        for chunk in chunks:
+            review = self.review_service.review_pgn(chunk, levels["1000"], engine=self.engine)
+            game_summaries.append(review.summary)
+            for annotated in review.annotated_moves:
+                game_theme_counts[annotated.primary_theme] = game_theme_counts.get(annotated.primary_theme, 0) + 1
+
+        metrics = {
+            "pct_tutor_differs_from_engine": round((differed / max(1, len(position_examples))) * 100.0, 2),
+            "avg_explanation_words": round(explanation_words / max(1, len(position_examples)), 2),
+            "unique_primary_themes": float(len(theme_counts)),
+            "benchmarked_games": float(len(game_summaries)),
+        }
+        for theme, count in sorted(game_theme_counts.items()):
+            metrics[f"game_theme_{theme}"] = float(count)
+        return TutorEvaluationResult(
+            engine_available=bool(self.engine.stockfish_path),
+            benchmark_count=len(position_examples),
+            game_count=len(game_summaries),
+            metrics=metrics,
+            position_examples=position_examples[:5],
+            game_summaries=game_summaries,
+            user_feedback_rubric={
+                "clarity": "Rate whether the advice explained the move in plain language.",
+                "usefulness": "Rate whether the recommendation felt more actionable than raw engine output.",
+                "actionability": "Rate whether the lesson suggested a concrete habit for the next move.",
+                "overwhelm_reduction": "Rate whether the tutor reduced confusion compared with long engine lines.",
+            },
+        )
