@@ -1,6 +1,7 @@
 python-chess>=1.999
 streamlit>=1.50.0
 pytest>=8.0.0
+pyarrow>=15.0.0
 
 # Data collection & processing
 requests>=2.31.0

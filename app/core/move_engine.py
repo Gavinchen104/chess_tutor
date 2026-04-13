@@ -8,6 +8,7 @@ import shutil
 import chess
 import chess.engine
 
+from app.core.adaptation import SessionBayesianAdapter
 from app.core.learned_params import learned_params
 from app.core.levels import LevelProfile
 
@@ -160,6 +161,7 @@ class MoveInsight:
     plan: str = ""
     snapshot: PositionSnapshot | None = None
     delta: MoveDelta | None = None
+    model_features: dict[str, float] = field(default_factory=dict)
 
 
 @dataclass
@@ -186,8 +188,9 @@ def find_stockfish_path() -> str | None:
 
 
 class MoveEngine:
-    def __init__(self) -> None:
+    def __init__(self, adapter: SessionBayesianAdapter | None = None) -> None:
         self.stockfish_path = find_stockfish_path()
+        self.adapter = adapter
 
     def analyze(self, board: chess.Board, level: LevelProfile) -> PositionAnalysis:
         candidates = self._get_candidates(board)
@@ -229,10 +232,17 @@ class MoveEngine:
     def choose_bot_move(self, board: chess.Board, level: LevelProfile) -> MoveInsight:
         analysis = self.analyze(board, level)
         phase = estimate_game_phase(board)
-        pool = build_bot_candidate_pool(analysis, board, level, phase)
+        pool = build_bot_candidate_pool(analysis, board, level, phase, adaptation=self.adapter)
         weights = []
         for candidate in pool:
-            weight = compute_bot_move_weight(board, candidate, analysis.best_move.score_cp, level, phase)
+            weight = compute_bot_move_weight(
+                board,
+                candidate,
+                analysis.best_move.score_cp,
+                level,
+                phase,
+                adaptation=self.adapter,
+            )
             jitter = 1.0 + random.uniform(-BOT_RANDOMNESS_BY_LEVEL[level.key], BOT_RANDOMNESS_BY_LEVEL[level.key])
             weights.append((candidate, max(0.05, weight * jitter)))
         if not weights:
@@ -272,6 +282,17 @@ class MoveEngine:
         baseline = best_score_cp if best_score_cp is not None else score
         tags, reasons, warnings, priorities_addressed = describe_move_features(board, move, before, after, needs)
         difficulty = estimate_difficulty(board, move, score, baseline, delta)
+        model_features = build_model_features(
+            board,
+            move,
+            level,
+            score_cp=score,
+            best_score_cp=baseline,
+            difficulty=difficulty,
+            tags=tags,
+            priorities_addressed=priorities_addressed,
+            delta=delta,
+        )
         tutor_score = compute_tutor_score(
             score,
             baseline,
@@ -280,6 +301,8 @@ class MoveEngine:
             difficulty,
             priorities_addressed,
             delta,
+            model_features=model_features,
+            adaptation=self.adapter,
         )
         return MoveInsight(
             move=move,
@@ -294,6 +317,7 @@ class MoveEngine:
             plan=build_move_plan(tags, priorities_addressed, delta),
             snapshot=after,
             delta=delta,
+            model_features=model_features,
         )
 
     def evaluate_position_for_side(self, board: chess.Board, perspective: chess.Color) -> int:
@@ -669,6 +693,36 @@ def estimate_difficulty(
     return max(0.4, difficulty)
 
 
+def build_model_features(
+    board: chess.Board,
+    move: chess.Move,
+    level: LevelProfile,
+    *,
+    score_cp: int,
+    best_score_cp: int,
+    difficulty: float,
+    tags: list[str],
+    priorities_addressed: list[str],
+    delta: MoveDelta,
+) -> dict[str, float]:
+    return {
+        "eval_gap": float(max(0, best_score_cp - score_cp)),
+        "difficulty": float(difficulty),
+        "safety_change": float(delta.safety_change),
+        "center_change": float(delta.center_control_change),
+        "king_safety_change": float(delta.king_safety_change),
+        "development_change": float(delta.development_change),
+        "mobility_change": float(delta.mobility_change),
+        "material_change": float(delta.material_change_cp),
+        "opponent_pressure_change": float(delta.opponent_king_pressure_change),
+        "is_capture": float(board.is_capture(move)),
+        "is_check": float(board.gives_check(move)),
+        "is_castling": float(board.is_castling(move)),
+        "num_preferred_tags": float(sum(1 for tag in tags if tag in level.preferred_tags)),
+        "num_priorities": float(len(priorities_addressed)),
+    }
+
+
 def estimate_game_phase(board: chess.Board) -> str:
     non_pawn_material = sum(
         PIECE_VALUES[piece.piece_type]
@@ -692,6 +746,7 @@ def build_bot_candidate_pool(
     board: chess.Board,
     level: LevelProfile,
     phase: str,
+    adaptation: SessionBayesianAdapter | None = None,
 ) -> list[MoveInsight]:
     allowed_gap = allowed_bot_eval_gap(level, phase)
     pool_size = BOT_POOL_SIZE_BY_LEVEL[level.key]
@@ -711,7 +766,14 @@ def build_bot_candidate_pool(
 
     ranked = sorted(
         deduped.values(),
-        key=lambda candidate: compute_bot_move_weight(board, candidate, analysis.best_move.score_cp, level, phase),
+        key=lambda candidate: compute_bot_move_weight(
+            board,
+            candidate,
+            analysis.best_move.score_cp,
+            level,
+            phase,
+            adaptation=adaptation,
+        ),
         reverse=True,
     )
     return ranked[: max(3, min(pool_size, len(ranked)))]
@@ -723,8 +785,17 @@ def compute_bot_move_weight(
     best_score_cp: int,
     level: LevelProfile,
     phase: str,
+    adaptation: SessionBayesianAdapter | None = None,
 ) -> float:
-    human_weight = compute_human_move_choice_weight(board, candidate, best_score_cp, level, phase)
+    human_weight = compute_human_move_choice_weight(
+        board,
+        candidate,
+        best_score_cp,
+        level,
+        phase,
+        model_features=candidate.model_features,
+        adaptation=adaptation,
+    )
     gap = max(0, best_score_cp - candidate.score_cp)
     allowed_gap = allowed_bot_eval_gap(level, phase)
     gap_ratio = gap / max(1.0, float(allowed_gap))
@@ -756,6 +827,9 @@ def compute_human_move_choice_weight(
     best_score_cp: int,
     level: LevelProfile,
     phase: str,
+    *,
+    model_features: dict[str, float] | None = None,
+    adaptation: SessionBayesianAdapter | None = None,
 ) -> float:
     delta = candidate.delta or MoveDelta(
         material_change_cp=0,
@@ -766,39 +840,53 @@ def compute_human_move_choice_weight(
         opponent_king_pressure_change=0,
         mobility_change=0,
     )
-    eval_gap = max(0, best_score_cp - candidate.score_cp)
-    num_preferred = sum(1 for tag in candidate.tags if tag in level.preferred_tags)
+    features = model_features or build_model_features(
+        board,
+        candidate.move,
+        level,
+        score_cp=candidate.score_cp,
+        best_score_cp=best_score_cp,
+        difficulty=candidate.difficulty,
+        tags=candidate.tags,
+        priorities_addressed=candidate.priorities_addressed,
+        delta=delta,
+    )
+    eval_gap = int(features["eval_gap"])
+    num_preferred = int(features["num_preferred_tags"])
     params = learned_params.get_move_choice_params(level.key)
 
     if params is not None:
         coeff = params.coefficients
         raw_score = params.intercept
-        raw_score += coeff.get("eval_gap", 0.0) * eval_gap
-        raw_score += coeff.get("difficulty", 0.0) * candidate.difficulty
-        raw_score += coeff.get("safety_change", 0.0) * delta.safety_change
-        raw_score += coeff.get("center_change", 0.0) * delta.center_control_change
-        raw_score += coeff.get("king_safety_change", 0.0) * delta.king_safety_change
-        raw_score += coeff.get("development_change", 0.0) * delta.development_change
-        raw_score += coeff.get("mobility_change", 0.0) * delta.mobility_change
-        raw_score += coeff.get("material_change", 0.0) * delta.material_change_cp
-        raw_score += coeff.get("opponent_pressure_change", 0.0) * delta.opponent_king_pressure_change
-        raw_score += coeff.get("is_capture", 0.0) * float(board.is_capture(candidate.move))
-        raw_score += coeff.get("is_check", 0.0) * float(board.gives_check(candidate.move))
-        raw_score += coeff.get("is_castling", 0.0) * float(board.is_castling(candidate.move))
-        raw_score += coeff.get("num_preferred_tags", 0.0) * num_preferred
-        raw_score += coeff.get("num_priorities", 0.0) * len(candidate.priorities_addressed)
+        raw_score += coeff.get("eval_gap", 0.0) * features["eval_gap"]
+        raw_score += coeff.get("difficulty", 0.0) * features["difficulty"]
+        raw_score += coeff.get("safety_change", 0.0) * features["safety_change"]
+        raw_score += coeff.get("center_change", 0.0) * features["center_change"]
+        raw_score += coeff.get("king_safety_change", 0.0) * features["king_safety_change"]
+        raw_score += coeff.get("development_change", 0.0) * features["development_change"]
+        raw_score += coeff.get("mobility_change", 0.0) * features["mobility_change"]
+        raw_score += coeff.get("material_change", 0.0) * features["material_change"]
+        raw_score += coeff.get("opponent_pressure_change", 0.0) * features["opponent_pressure_change"]
+        raw_score += coeff.get("is_capture", 0.0) * features["is_capture"]
+        raw_score += coeff.get("is_check", 0.0) * features["is_check"]
+        raw_score += coeff.get("is_castling", 0.0) * features["is_castling"]
+        raw_score += coeff.get("num_preferred_tags", 0.0) * features["num_preferred_tags"]
+        raw_score += coeff.get("num_priorities", 0.0) * features["num_priorities"]
     else:
         raw_score = 0.0
-        raw_score += 1.1 * float(board.is_capture(candidate.move))
-        raw_score += 1.5 * float(board.gives_check(candidate.move))
-        raw_score += 1.2 * float(board.is_castling(candidate.move))
-        raw_score += 0.6 * delta.development_change
-        raw_score += 0.02 * delta.safety_change
-        raw_score += 0.01 * delta.center_control_change
-        raw_score += 0.03 * delta.king_safety_change
+        raw_score += 1.1 * features["is_capture"]
+        raw_score += 1.5 * features["is_check"]
+        raw_score += 1.2 * features["is_castling"]
+        raw_score += 0.6 * features["development_change"]
+        raw_score += 0.02 * features["safety_change"]
+        raw_score += 0.01 * features["center_change"]
+        raw_score += 0.03 * features["king_safety_change"]
         raw_score += 0.2 * num_preferred
         raw_score -= candidate.difficulty * max(0.18, level.complexity_weight / 80.0)
         raw_score -= eval_gap / 180.0
+
+    if adaptation is not None:
+        raw_score += adaptation.move_choice_adjustment(features)
 
     if phase == "opening":
         raw_score += 0.35 * delta.development_change
@@ -837,6 +925,9 @@ def compute_tutor_score(
     difficulty: float,
     priorities_addressed: list[str],
     delta: MoveDelta,
+    *,
+    model_features: dict[str, float] | None = None,
+    adaptation: SessionBayesianAdapter | None = None,
 ) -> float:
     """
     Compute the teaching value of a move for a given skill level.
@@ -846,20 +937,32 @@ def compute_tutor_score(
     """
     eval_gap = max(0, best_score_cp - score_cp)
     num_preferred = sum(1 for tag in tags if tag in level.preferred_tags)
+    features = model_features or {
+        "eval_gap": float(eval_gap),
+        "num_preferred_tags": float(num_preferred),
+        "num_priorities": float(len(priorities_addressed)),
+        "safety_change": float(delta.safety_change),
+        "king_safety_change": float(delta.king_safety_change),
+        "center_change": float(delta.center_control_change),
+        "opponent_pressure_change": float(delta.opponent_king_pressure_change),
+        "difficulty": float(difficulty),
+    }
 
     params = learned_params.get_tutor_score_params(level.key)
     if params is not None:
         # Use learned weights from Bayesian model
         w = params.weights
         score = params.intercept
-        score += w.get("eval_gap", 0.0) * eval_gap
-        score += w.get("num_preferred_tags", 0.0) * num_preferred
-        score += w.get("num_priorities", 0.0) * len(priorities_addressed)
-        score += w.get("safety_change", 0.0) * delta.safety_change
-        score += w.get("king_safety_change", 0.0) * delta.king_safety_change
-        score += w.get("center_change", 0.0) * delta.center_control_change
-        score += w.get("opponent_pressure_change", 0.0) * delta.opponent_king_pressure_change
-        score += w.get("difficulty", 0.0) * difficulty
+        score += w.get("eval_gap", 0.0) * features["eval_gap"]
+        score += w.get("num_preferred_tags", 0.0) * features["num_preferred_tags"]
+        score += w.get("num_priorities", 0.0) * features["num_priorities"]
+        score += w.get("safety_change", 0.0) * features["safety_change"]
+        score += w.get("king_safety_change", 0.0) * features["king_safety_change"]
+        score += w.get("center_change", 0.0) * features["center_change"]
+        score += w.get("opponent_pressure_change", 0.0) * features["opponent_pressure_change"]
+        score += w.get("difficulty", 0.0) * features["difficulty"]
+        if adaptation is not None:
+            score += 0.3 * adaptation.tutor_score_adjustment(features)
         # Scale to comparable range as heuristic (~0-200)
         return score * 100.0
 
@@ -874,7 +977,7 @@ def compute_tutor_score(
     complexity_penalty = difficulty * level.complexity_weight
     tactical_risk_penalty = max(0.0, -delta.safety_change / 8.0)
     king_risk_penalty = max(0.0, -delta.king_safety_change * 3.0)
-    return (
+    score = (
         eval_credit
         + preferred_bonus
         + priority_bonus
@@ -886,3 +989,6 @@ def compute_tutor_score(
         - tactical_risk_penalty
         - king_risk_penalty
     )
+    if adaptation is not None:
+        score += 25.0 * adaptation.tutor_score_adjustment(features)
+    return score

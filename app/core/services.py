@@ -116,19 +116,20 @@ class AnalysisService:
         *,
         candidate_limit: int = 5,
     ) -> PositionAnalysisReport:
-        analysis = self.engine.analyze(board, level)
+        effective_level = self.engine.adapter.adapt_level(level) if self.engine.adapter is not None else level
+        analysis = self.engine.analyze(board, effective_level)
         candidate_insights = analysis.candidates[: max(candidate_limit, 3)]
         candidate_reports = [
-            self._build_candidate(board, candidate, analysis, level)
+            self._build_candidate(board, candidate, analysis, effective_level)
             for candidate in candidate_insights
         ]
         engine_best = self._find_candidate(candidate_reports, analysis.best_move)
         tutor_move = self._find_candidate(candidate_reports, analysis.tutor_move)
         if engine_best is None:
-            engine_best = self._build_candidate(board, analysis.best_move, analysis, level)
+            engine_best = self._build_candidate(board, analysis.best_move, analysis, effective_level)
             candidate_reports.append(engine_best)
         if tutor_move is None:
-            tutor_move = self._build_candidate(board, analysis.tutor_move, analysis, level)
+            tutor_move = self._build_candidate(board, analysis.tutor_move, analysis, effective_level)
             candidate_reports.append(tutor_move)
 
         prelim_candidates = dedupe_candidates(candidate_reports)
@@ -137,16 +138,16 @@ class AnalysisService:
         prelim_tutor_move = next(item for item in prelim_candidates if item.uci == tutor_move.uci)
 
         finalized_candidates = [
-            finalize_candidate(candidate, prelim_tutor_move, level)
+            finalize_candidate(candidate, prelim_tutor_move, effective_level)
             for candidate in prelim_candidates
         ]
         finalized_candidates.sort(key=lambda item: item.score_cp, reverse=True)
 
         engine_best = next(item for item in finalized_candidates if item.uci == prelim_engine_best.uci)
-        tutor_move = select_tutor_candidate(finalized_candidates, level)
+        tutor_move = select_tutor_candidate(finalized_candidates, effective_level)
 
         finalized_candidates = [
-            finalize_candidate(candidate, tutor_move, level)
+            finalize_candidate(candidate, tutor_move, effective_level)
             for candidate in finalized_candidates
         ]
         finalized_candidates.sort(key=lambda item: item.score_cp, reverse=True)
@@ -167,9 +168,9 @@ class AnalysisService:
             tutor_move=tutor_move,
             candidate_moves=finalized_candidates,
         )
-        report.overview = build_position_summary(report, level)
-        report.tutor_explanation = build_move_explanation(report.tutor_move, level)
-        report.evaluation_story = build_engine_vs_tutor_story(report, level)
+        report.overview = build_position_summary(report, effective_level)
+        report.tutor_explanation = build_move_explanation(report.tutor_move, effective_level)
+        report.evaluation_story = build_engine_vs_tutor_story(report, effective_level)
         return report
 
     def _build_candidate(
@@ -179,7 +180,7 @@ class AnalysisService:
         analysis: PositionAnalysis,
         level: LevelProfile,
     ) -> CandidateMove:
-        diagnostics = analyze_move_diagnostics(board, insight, analysis, level)
+        diagnostics = analyze_move_diagnostics(board, insight, analysis, level, adaptation=self.engine.adapter)
         eval_gap = max(0, analysis.best_move.score_cp - insight.score_cp)
         return CandidateMove(
             san=insight.san,
@@ -199,6 +200,7 @@ class AnalysisService:
             better_alternative_reason="",
             tags=insight.tags,
             priorities_addressed=insight.priorities_addressed,
+            model_features=insight.model_features,
             plan=insight.plan,
             tactical_findings=diagnostics.tactical_findings,
             strategic_findings=diagnostics.strategic_findings,
@@ -235,20 +237,21 @@ class PlayCoachingService:
         move: chess.Move,
         level: LevelProfile,
     ) -> MoveCoachingReport:
+        effective_level = self.engine.adapter.adapt_level(level) if self.engine.adapter is not None else level
         analysis_report = self.analysis_service.analyze_position(board_before, level, candidate_limit=6)
-        analysis = self.engine.analyze(board_before, level)
+        analysis = self.engine.analyze(board_before, effective_level)
         insight = self.engine.inspect_move(
             board_before,
             move,
-            level,
+            effective_level,
             best_score_cp=analysis.best_move.score_cp,
             position_snapshot=analysis.snapshot,
             position_needs=analysis.position_needs,
         )
         chosen_move = finalize_candidate(
-            self.analysis_service._build_candidate(board_before, insight, analysis, level),
+            self.analysis_service._build_candidate(board_before, insight, analysis, effective_level),
             analysis_report.tutor_move,
-            level,
+            effective_level,
         )
         verdict = VERDICT_LABELS[chosen_move.mistake_class]
         coach_note = insight.plan
