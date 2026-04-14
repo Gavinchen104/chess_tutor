@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 from pathlib import Path
+from typing import cast
 
 import chess
 import streamlit as st
@@ -57,10 +58,234 @@ PIECE_LABEL_TO_SYMBOL = dict(PIECE_CHOICES)
 PIECE_SYMBOL_TO_LABEL = {symbol: label for label, symbol in PIECE_CHOICES}
 
 
+def apply_custom_theme() -> None:
+    st.markdown(
+        """
+        <style>
+        @import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Spectral:wght@500;600&display=swap');
+
+        :root {
+            --bg-soft: #0b1219;
+            --surface: #121b25;
+            --ink: #e8f1f7;
+            --muted: #9bb2c3;
+            --accent: #1ec8ab;
+            --accent-strong: #149984;
+            --line: #273543;
+            --gold: #f0b35a;
+        }
+
+        .stApp {
+            background:
+                radial-gradient(circle at 10% 15%, rgba(30, 200, 171, 0.16) 0%, transparent 38%),
+                radial-gradient(circle at 90% 10%, rgba(240, 179, 90, 0.14) 0%, transparent 35%),
+                linear-gradient(180deg, #0a1118 0%, #0f1722 100%);
+            color: var(--ink);
+            font-family: 'Space Grotesk', sans-serif;
+        }
+
+        .stApp p,
+        .stApp label,
+        .stApp span,
+        .stApp div {
+            color: var(--ink);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Spectral', serif !important;
+            color: #f3f8fc;
+            letter-spacing: 0.2px;
+        }
+
+        .ui-hero {
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            padding: 1.2rem 1.4rem 1.1rem 1.4rem;
+            background: linear-gradient(120deg, rgba(30,200,171,0.13), rgba(240,179,90,0.12));
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+            margin-bottom: 1rem;
+            animation: fadeSlideIn 450ms ease-out;
+        }
+
+        .ui-hero h1 {
+            margin: 0;
+            font-size: 2rem;
+            line-height: 1.15;
+        }
+
+        .ui-hero p {
+            margin: 0.45rem 0 0 0;
+            color: var(--muted);
+            font-size: 0.98rem;
+        }
+
+        .ui-section {
+            margin-top: 0.35rem;
+            margin-bottom: 0.35rem;
+            padding: 0.2rem 0.1rem;
+            border-left: 4px solid var(--accent);
+            padding-left: 0.7rem;
+            animation: fadeSlideIn 500ms ease-out;
+        }
+
+        .ui-section .title {
+            font-family: 'Spectral', serif;
+            font-size: 1.18rem;
+            color: #dff2ff;
+            margin: 0;
+        }
+
+        .ui-section .subtitle {
+            margin: 0.15rem 0 0 0;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .stButton > button {
+            border-radius: 10px;
+            border: 1px solid #2b4b58;
+            background: linear-gradient(180deg, #132130 0%, #172838 100%);
+            color: #d9edf7;
+            font-weight: 600;
+            transition: all 180ms ease;
+        }
+
+        .stButton > button:hover {
+            border-color: var(--accent);
+            color: #f0fffb;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 22px rgba(30, 200, 171, 0.24);
+        }
+
+        [data-testid="stSidebar"] {
+            background: linear-gradient(180deg, #111a24 0%, #0f1721 100%);
+            border-right: 1px solid var(--line);
+        }
+
+        [data-testid="stMetricValue"] {
+            color: #59e2c7;
+            font-weight: 700;
+        }
+
+        [data-testid="stMetricLabel"] {
+            color: #9cc1d4;
+        }
+
+        [data-testid="stDataFrame"] {
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        [data-testid="stCodeBlock"] {
+            border-radius: 10px;
+            border: 1px solid #304252;
+        }
+
+        .stTextInput input,
+        .stTextArea textarea,
+        .stNumberInput input,
+        .stSelectbox div[data-baseweb="select"] > div,
+        .stMultiSelect div[data-baseweb="select"] > div {
+            background-color: #111b26 !important;
+            color: #e6f2fa !important;
+            border-color: #2c3f4f !important;
+        }
+
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 0.85rem;
+            padding: 0.25rem 0.1rem 0.45rem 0.1rem;
+            margin-bottom: 0.35rem;
+        }
+
+        .stTabs [data-baseweb="tab"] {
+            background: #121d2a;
+            border: 1px solid #243646;
+            border-radius: 10px 10px 0 0;
+            color: #bdd3e2;
+            padding: 0.55rem 1.1rem;
+            min-width: 220px;
+            justify-content: center;
+            letter-spacing: 0.2px;
+        }
+
+        .stTabs [aria-selected="true"] {
+            background: #183347;
+            color: #ecf7ff;
+            border-bottom-color: #183347;
+            box-shadow: 0 10px 18px rgba(0, 0, 0, 0.22);
+        }
+
+        .stAlert {
+            border-radius: 12px;
+        }
+
+        @keyframes fadeSlideIn {
+            from {
+                opacity: 0;
+                transform: translateY(5px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 900px) {
+            .ui-hero h1 {
+                font-size: 1.55rem;
+            }
+            .ui-hero p {
+                font-size: 0.9rem;
+            }
+
+            .stTabs [data-baseweb="tab-list"] {
+                gap: 0.4rem;
+                overflow-x: auto;
+                padding-bottom: 0.25rem;
+            }
+
+            .stTabs [data-baseweb="tab"] {
+                min-width: 150px;
+                padding: 0.5rem 0.75rem;
+            }
+        }
+        </style>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_hero_header() -> None:
+    st.markdown(
+        """
+        <div class="ui-hero">
+            <h1>Chess Tutor</h1>
+            <p>Play, analyze, and review with level-aware coaching that favors learnable decisions over raw engine dumps.</p>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
+def render_section_header(title: str, subtitle: str = "") -> None:
+    subtitle_html = f"<p class='subtitle'>{subtitle}</p>" if subtitle else ""
+    st.markdown(
+        f"""
+        <div class="ui-section">
+            <p class="title">{title}</p>
+            {subtitle_html}
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
+
+
 def run() -> None:
     st.set_page_config(page_title="Chess Tutor", page_icon="♟️", layout="wide")
-    st.title("Chess Tutor")
-    st.caption("Skill-aware chess feedback built for novice-to-intermediate players.")
+    apply_custom_theme()
+    render_hero_header()
     initialize_state()
 
     with st.sidebar:
@@ -155,7 +380,7 @@ def maybe_handle_dragged_move(
 
 
 def render_position_analyzer(tutor: ChessTutor, level) -> None:
-    st.subheader("Set up a position")
+    render_section_header("Position Analyzer", "Set up any legal position and ask for level-aware coaching.")
     left, right = st.columns([1.3, 1.0], gap="large")
 
     with left:
@@ -165,7 +390,7 @@ def render_position_analyzer(tutor: ChessTutor, level) -> None:
 
         render_board_editor()
 
-        fen = st.text_area("FEN", value=st.session_state.analysis_fen, height=100)
+        fen = st.text_area("FEN", value=st.session_state.analysis_fen, height=100) or ""
         st.session_state.analysis_fen = fen
 
         move_probe = st.text_input("Optional: test a move in SAN or UCI", placeholder="e.g. Nf3 or e2e4")
@@ -191,14 +416,15 @@ def render_position_analyzer(tutor: ChessTutor, level) -> None:
             st.caption("Drag a piece on the interactive board to evaluate that move instantly.")
             dragged_uci = maybe_handle_dragged_move(dragged, event_state_key="analysis_last_drag_event")
             if dragged_uci:
-                evaluate_probe_move(tutor, st.session_state.analysis_fen, dragged_uci, level)
+                current_fen = cast(str, st.session_state.analysis_fen)
+                evaluate_probe_move(tutor, current_fen, dragged_uci, level)
                 st.rerun()
         except ValueError as exc:
             st.error(f"Invalid FEN: {exc}")
 
     report = st.session_state.analysis_report
     if report:
-        st.subheader("Tutor Advice")
+        render_section_header("Tutor Advice")
         st.write(report["overview"])
         st.info(report["tutor_explanation"])
 
@@ -410,7 +636,7 @@ def evaluate_probe_move(tutor: ChessTutor, fen: str, move_text: str, level) -> N
 
 
 def render_analysis_feedback_form(report: dict, adapter: SessionBayesianAdapter) -> None:
-    st.subheader("Quick Feedback")
+    render_section_header("Quick Feedback")
     st.caption("Save a short rating for this analysis so the project can collect lightweight usefulness evidence.")
 
     with st.form(key=f"analysis_feedback_{report['level_key']}"):
@@ -459,7 +685,7 @@ def render_analysis_feedback_form(report: dict, adapter: SessionBayesianAdapter)
 
 
 def render_play_mode(tutor: ChessTutor, level) -> None:
-    st.subheader("Play against a level-aware bot")
+    render_section_header("Play Against Bot", "Face a practical bot tuned for your selected ELO profile.")
     controls = st.columns([1, 1, 1])
     with controls[0]:
         st.session_state.bot_user_color = st.selectbox("Play as", options=["White", "Black"], key="bot_color_select")
@@ -491,17 +717,19 @@ def render_play_mode(tutor: ChessTutor, level) -> None:
         st.rerun()
 
     if board.is_game_over():
-        st.success(f"Game over: {board.result()} ({board.outcome().termination.name})")
+        outcome = board.outcome()
+        termination_name = outcome.termination.name if outcome is not None else "UNKNOWN"
+        st.success(f"Game over: {board.result()} ({termination_name})")
     else:
         move_text = st.text_input("Your move", key="bot_move_input", placeholder="e.g. e4, Nf3, or e2e4")
         if st.button("Submit Move", use_container_width=True):
             submit_player_move(tutor, level, move_text)
 
-    st.subheader("Live Commentary")
+    render_section_header("Live Commentary")
     for line in st.session_state.bot_commentary[-8:]:
         st.write(f"- {line}")
 
-    st.subheader("Post-game Review")
+    render_section_header("Post-game Review")
     pgn = export_pgn_from_moves(
         [chess.Move.from_uci(uci) for uci in st.session_state.bot_moves],
         headers={"White": "Human" if st.session_state.bot_user_color == "White" else "Tutor Bot",
@@ -591,7 +819,7 @@ def maybe_make_opening_bot_move(tutor: ChessTutor, level) -> None:
 
 
 def render_evaluation_story(level, adapter: SessionBayesianAdapter) -> None:
-    st.subheader("Why this is more useful than raw engine output")
+    render_section_header("Evaluation Story", "Understand why tutor recommendations differ from pure engine output.")
     st.write(
         "A raw engine answers 'what is strongest?' This tutor adds a second question: "
         f"'what is strongest that a {level.elo}-level player can actually learn from and execute?'"
@@ -606,7 +834,7 @@ def render_evaluation_story(level, adapter: SessionBayesianAdapter) -> None:
         "it filters truth into advice that is more actionable for novice-to-intermediate players."
     )
 
-    st.subheader("Offline Evaluation Suite")
+    render_section_header("Offline Evaluation Suite")
     st.write(
         "The app can also surface the offline benchmark suite used in the appendix. "
         "This checks whether tutor recommendations satisfy level-appropriate properties and whether "
@@ -634,7 +862,7 @@ def render_evaluation_story(level, adapter: SessionBayesianAdapter) -> None:
         render_metric_table("Position Metrics", positions_report["metrics"])
         render_metric_table("Review Metrics", reviews_report["metrics"])
 
-        st.subheader("Position Benchmark Cases")
+        render_section_header("Position Benchmark Cases")
         st.dataframe(
             [
                 {
@@ -653,7 +881,7 @@ def render_evaluation_story(level, adapter: SessionBayesianAdapter) -> None:
             use_container_width=True,
         )
 
-        st.subheader("Review Benchmark Cases")
+        render_section_header("Review Benchmark Cases")
         st.dataframe(
             [
                 {
@@ -680,7 +908,7 @@ def render_evaluation_story(level, adapter: SessionBayesianAdapter) -> None:
 
 def render_live_bayesian_story(adapter: SessionBayesianAdapter, level) -> None:
     summary = adapter.summary(level)
-    st.subheader("Live Bayesian Adaptation")
+    render_section_header("Live Bayesian Adaptation")
     st.write(
         "The app starts from the trained Bayesian priors for this ELO band, then maintains a session-level posterior "
         "that updates from your move choices and saved feedback."
@@ -724,7 +952,7 @@ def render_user_feedback_summary() -> None:
     entries = load_feedback_entries()
     summary = summarize_feedback(entries)
 
-    st.subheader("User Feedback Evidence")
+    render_section_header("User Feedback Evidence")
     st.caption(f"Stored at: {DEFAULT_FEEDBACK_PATH}")
     if summary["count"] == 0:
         st.caption("No saved user feedback yet. Submit a few ratings from the Position Analyzer to build anecdotal evidence.")

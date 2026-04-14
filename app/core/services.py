@@ -55,6 +55,121 @@ DIFFICULTY_LIMITS = {
 }
 
 
+def _tag_overlap(left: list[str], right: list[str]) -> float:
+    left_set = {item for item in left if item}
+    right_set = {item for item in right if item}
+    if not left_set and not right_set:
+        return 0.0
+    union_size = len(left_set | right_set)
+    if union_size == 0:
+        return 0.0
+    return len(left_set & right_set) / float(union_size)
+
+
+def candidate_similarity(left: CandidateMove, right: CandidateMove) -> float:
+    """
+    Estimate semantic overlap between two candidates.
+
+    A higher score means the candidates teach a very similar idea and one of
+    them can be deprioritized in a short teaching list.
+    """
+    theme_overlap = 1.0 if left.primary_theme == right.primary_theme else 0.0
+    tag_overlap = _tag_overlap(left.tags, right.tags)
+    priority_overlap = _tag_overlap(left.priorities_addressed, right.priorities_addressed)
+
+    eval_gap_overlap = 1.0 - min(1.0, abs(left.eval_gap_cp - right.eval_gap_cp) / 120.0)
+    risk_overlap = 1.0 - min(1.0, abs(left.tactical_risk_score - right.tactical_risk_score) / 20.0)
+    difficulty_overlap = 1.0 - min(1.0, abs(left.difficulty - right.difficulty) / 1.0)
+
+    weighted_similarity = (
+        0.30 * theme_overlap
+        + 0.20 * tag_overlap
+        + 0.15 * priority_overlap
+        + 0.15 * eval_gap_overlap
+        + 0.10 * risk_overlap
+        + 0.10 * difficulty_overlap
+    )
+    return max(0.0, min(1.0, weighted_similarity))
+
+
+def diversify_candidates(
+    candidates: list[CandidateMove],
+    limit: int,
+    *,
+    must_include_uci: set[str] | None = None,
+) -> list[CandidateMove]:
+    """
+    Select a high-quality but less redundant candidate list.
+
+    Strategy:
+    1) Keep hard-required moves (engine best, tutor move) when present.
+    2) Greedily add candidates maximizing utility minus similarity penalty,
+       with a small bonus for unseen primary themes.
+    """
+    if not candidates:
+        return []
+
+    limit = max(1, limit)
+    must_include_uci = must_include_uci or set()
+    by_uci = {candidate.uci: candidate for candidate in candidates}
+
+    selected: list[CandidateMove] = []
+    seen_uci: set[str] = set()
+    seen_themes: set[str] = set()
+
+    # Preserve deterministic ordering for required items using score rank.
+    for candidate in sorted(candidates, key=lambda item: item.score_cp, reverse=True):
+        if candidate.uci in must_include_uci and candidate.uci not in seen_uci:
+            selected.append(candidate)
+            seen_uci.add(candidate.uci)
+            seen_themes.add(candidate.primary_theme)
+            if len(selected) >= limit:
+                return sorted(selected, key=lambda item: item.score_cp, reverse=True)
+
+    remaining = [candidate for candidate in candidates if candidate.uci not in seen_uci]
+    while remaining and len(selected) < limit:
+        best_candidate = None
+        best_objective = float("-inf")
+        for candidate in remaining:
+            quality = (
+                candidate.tutor_score / 100.0
+                + candidate.strategic_fit_score / 100.0
+                + candidate.human_plausibility_score / 100.0
+                + candidate.score_cp / 400.0
+            )
+
+            max_similarity = 0.0
+            if selected:
+                max_similarity = max(candidate_similarity(candidate, chosen) for chosen in selected)
+
+            theme_bonus = 0.18 if candidate.primary_theme not in seen_themes else 0.0
+            objective = quality - 0.65 * max_similarity + theme_bonus
+            if objective > best_objective:
+                best_objective = objective
+                best_candidate = candidate
+
+        if best_candidate is None:
+            break
+
+        selected.append(best_candidate)
+        seen_uci.add(best_candidate.uci)
+        seen_themes.add(best_candidate.primary_theme)
+        remaining = [candidate for candidate in remaining if candidate.uci not in seen_uci]
+
+    # Ensure required moves are preserved in edge cases.
+    missing_required = [
+        by_uci[uci]
+        for uci in must_include_uci
+        if uci in by_uci and uci not in {candidate.uci for candidate in selected}
+    ]
+    if missing_required:
+        selected.extend(missing_required)
+
+    selected = dedupe_candidates(selected)
+    selected.sort(key=lambda item: item.score_cp, reverse=True)
+    return selected[:limit]
+
+
 def select_tutor_candidate(candidates: list[CandidateMove], level: LevelProfile) -> CandidateMove:
     tactical_limit = TACTICAL_RISK_LIMITS.get(level.key, 25.0)
     difficulty_limit = DIFFICULTY_LIMITS.get(level.key, 2.4)
@@ -154,6 +269,13 @@ class AnalysisService:
         engine_best = next(item for item in finalized_candidates if item.uci == engine_best.uci)
         tutor_move = next(item for item in finalized_candidates if item.uci == tutor_move.uci)
 
+        display_limit = max(candidate_limit, 3)
+        display_candidates = diversify_candidates(
+            finalized_candidates,
+            display_limit,
+            must_include_uci={engine_best.uci, tutor_move.uci},
+        )
+
         report = PositionAnalysisReport(
             board_fen=board.fen(),
             side_to_move="White" if board.turn else "Black",
@@ -166,7 +288,7 @@ class AnalysisService:
             evaluation_story="",
             engine_best_move=engine_best,
             tutor_move=tutor_move,
-            candidate_moves=finalized_candidates,
+            candidate_moves=display_candidates,
         )
         report.overview = build_position_summary(report, effective_level)
         report.tutor_explanation = build_move_explanation(report.tutor_move, effective_level)
