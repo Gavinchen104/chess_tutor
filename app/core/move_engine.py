@@ -2,15 +2,21 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 import os
+from pathlib import Path
 import random
 import shutil
 
 import chess
 import chess.engine
+from dotenv import load_dotenv
 
 from app.core.adaptation import SessionBayesianAdapter
 from app.core.learned_params import learned_params
 from app.core.levels import LevelProfile
+
+
+REPO_ROOT = Path(__file__).resolve().parents[2]
+load_dotenv(REPO_ROOT / ".env")
 
 
 PIECE_VALUES = {
@@ -179,9 +185,25 @@ def find_stockfish_path() -> str | None:
     env_path = os.getenv("STOCKFISH_EXECUTABLE")
     if env_path and os.path.exists(env_path):
         return env_path
-    common_names = ("stockfish", "stockfish-ubuntu-x86-64", "stockfish-macos")
+
+    repo_candidates = (
+        REPO_ROOT / "third_party" / "stockfish" / "stockfish",
+        REPO_ROOT / "third_party" / "stockfish" / "stockfish.exe",
+        REPO_ROOT / "third_party" / "stockfish" / "stockfish-macos",
+        REPO_ROOT / "third_party" / "stockfish" / "stockfish-ubuntu-x86-64",
+    )
+    for candidate in repo_candidates:
+        if candidate.exists():
+            return str(candidate)
+
+    common_names = (
+        "stockfish",
+        "stockfish-ubuntu-x86-64",
+        "stockfish-macos",
+        "/usr/games/stockfish",
+    )
     for name in common_names:
-        discovered = shutil.which(name)
+        discovered = shutil.which(name) if not name.startswith("/") else (name if os.path.exists(name) else None)
         if discovered:
             return discovered
     return None
