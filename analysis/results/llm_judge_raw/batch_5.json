@@ -1,0 +1,1052 @@
+[
+  {
+    "task_id": "c6c3ef8e81db4c11",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "323e6bac9c55b8a2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "8f2158d0d93f2772",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "67718ae525f96e77",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like being told to develop pieces first; the number list means nothing to me."
+  },
+  {
+    "task_id": "039c71e76aaf2f7b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "8d3fc00058a86919",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like knowing the engine disagrees slightly but the practical pick suits my level."
+  },
+  {
+    "task_id": "1533e82fe03d4031",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like being told to develop pieces first; the number list means nothing to me."
+  },
+  {
+    "task_id": "b819bb95b2bc4bbf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking framework, not just a list of equal-looking moves."
+  },
+  {
+    "task_id": "84adcda1dab97ba5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Labeling alternatives as similar strength saves me from obsessing over tiny eval differences."
+  },
+  {
+    "task_id": "2fcbc54e67edbbcd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I appreciate the heads-up about danger; I would never figure that out from numbers."
+  },
+  {
+    "task_id": "7c891c6e8bf5ce2e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "78943f0681ca4e38",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "e77048199c26695c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like being told to develop pieces first; the number list means nothing to me."
+  },
+  {
+    "task_id": "cf01dbd6567ee2e2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking framework, not just a list of equal-looking moves."
+  },
+  {
+    "task_id": "fe603d4a62009cf2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The practical recommendation makes sense since both moves are nearly equal."
+  },
+  {
+    "task_id": "c8b3ac288e841a1f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "9b0969be9297b2f2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "85e84377ba6fbd5e",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "337ecbd877fca92d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I appreciate the heads-up about danger; I would never figure that out from numbers."
+  },
+  {
+    "task_id": "fed3c44cd7e123e7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The safety flag helps me avoid a mistake I wouldn't have seen."
+  },
+  {
+    "task_id": "4db76ad01ff5d005",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like knowing the engine disagrees slightly but the practical pick suits my level."
+  },
+  {
+    "task_id": "540ca1be64917cd2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "fac057cf8e1fe5e5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "f30846f0c6f785ed",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "387d6a3934155bf0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "5afa236daf44faa0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "7d3775a0a0e49bdb",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "1ea65220b79ee4a6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I appreciate the heads-up about danger; I would never figure that out from numbers."
+  },
+  {
+    "task_id": "329d8395e1e9a18e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The safety flag helps me avoid a mistake I wouldn't have seen."
+  },
+  {
+    "task_id": "c9b091c6df50513b",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I appreciate the practical angle but nearly a pawn difference makes me uneasy."
+  },
+  {
+    "task_id": "688532ce1ca5c9ee",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "18ee0382ea2ee6fd",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "f4d436cf83c4121a",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "5d21d3525d04a17e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "c07c0e5ad39a40ee",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "efe3154f6b38d166",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I appreciate the practical angle but nearly a pawn difference makes me uneasy."
+  },
+  {
+    "task_id": "68e867f34b1ce98e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "f41143c71392eca3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can't turn engine numbers into a plan, so the explained move is more actionable."
+  },
+  {
+    "task_id": "2fc6f69f089cbe33",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The practical recommendation makes sense since both moves are nearly equal."
+  },
+  {
+    "task_id": "ed7e46f9a7171817",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "f2fb050e3aed2f31",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "2e9bb8cd0b29fd01",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Labeling alternatives as similar strength saves me from obsessing over tiny eval differences."
+  },
+  {
+    "task_id": "eea79ef034597550",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "9449c8c98773b463",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "c2e3c887563bbeee",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "201af16398c631b5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "bcad469c22103701",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "f55eebcd6b70729c",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "3cd42810c0bb3d9b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "cdba1fc3d05ce6a9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "e65d65d68c6c888a",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "57e4d5b9223f1ef0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "580277e139534145",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can't turn engine numbers into a plan, so the explained move is more actionable."
+  },
+  {
+    "task_id": "9928bfbc97d4a447",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like knowing the engine disagrees slightly but the practical pick suits my level."
+  },
+  {
+    "task_id": "e29f0962c9e47fb3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "b46399bf7cf39603",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "31cc4530755e2ea0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The practical recommendation makes sense since both moves are nearly equal."
+  },
+  {
+    "task_id": "e51b1dfc18fb2813",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "d4901530d5fbc09c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "5ba68cad0a958d8e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Understanding it's about central control with rough eval is more useful than raw cp."
+  },
+  {
+    "task_id": "46ed49c328ac53d3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "e2986969fb5d2cd2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "3e1f4f05d78482f3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The practical recommendation makes sense since both moves are nearly equal."
+  },
+  {
+    "task_id": "4b499a6ea4358d5f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "b61befaa906f7c4d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "b0cb88e41d0f6bf2",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "0602493a37f4a9dd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "36129c17815f9b41",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can't turn engine numbers into a plan, so the explained move is more actionable."
+  },
+  {
+    "task_id": "417be484d5ba0004",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The practical recommendation makes sense since both moves are nearly equal."
+  },
+  {
+    "task_id": "706cbc3adc26f49a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "8c6a16af3c9a56fa",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "f7174ad4cfb340d0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategic label plus pawn-scale eval bridges the gap between my level and the engine."
+  },
+  {
+    "task_id": "d617d87c15947255",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "5ca766a5aa516bf3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "f04ab751f8bca4b7",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "ab5b7520d7e10724",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "86d18ade4190dc6e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "e99bd502274282c0",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "ad5a169f902f2998",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "30337f5655c9b800",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "b1aa589bd3f3f82e",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "1c0ce0a89a467d00",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like being told to develop pieces first; the number list means nothing to me."
+  },
+  {
+    "task_id": "8bbfbdafba367fae",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing to develop before doing random things is more helpful than score tables."
+  },
+  {
+    "task_id": "c421a1ebb3d9fa5d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Pawn-scale eval plus the development theme gives me a clear picture."
+  },
+  {
+    "task_id": "fc99018fe8f08e93",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "2cadc5c6a792cab6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "0b502eb38497b124",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Pawn-scale eval plus the development theme gives me a clear picture."
+  },
+  {
+    "task_id": "f7a1329c53db9e76",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like being told to develop pieces first; the number list means nothing to me."
+  },
+  {
+    "task_id": "e23a150dff54ded3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing to develop before doing random things is more helpful than score tables."
+  },
+  {
+    "task_id": "0c4ca264a6d73def",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "f4c1f7f4982bbe38",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "3ea531f93c8e4868",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "8e055daef7a68885",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "a7bf7990306316d5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like being told to develop pieces first; the number list means nothing to me."
+  },
+  {
+    "task_id": "4b75e2248755dd60",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing to develop before doing random things is more helpful than score tables."
+  },
+  {
+    "task_id": "971751f1f99c6325",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Pawn-scale eval plus the development theme gives me a clear picture."
+  },
+  {
+    "task_id": "8c02e2d74e9bbea1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like being told to develop pieces first; the number list means nothing to me."
+  },
+  {
+    "task_id": "9a7bbe06959aa7ca",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "aea86c0a2ae0a273",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Pawn-scale eval plus the development theme gives me a clear picture."
+  },
+  {
+    "task_id": "b66b640b5ec8f594",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Getting my king safe sounds important; I don't know what eval means."
+  },
+  {
+    "task_id": "07f962979a8bbea6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "2683f06825cfbbea",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "3276c83bdda94cdd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "b37aabbe0b4c64cf",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "33e331e28557121b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The practical recommendation makes sense since both moves are nearly equal."
+  },
+  {
+    "task_id": "4e31279ac92278c4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "91c22995a8f419a9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "bba1625f0234d783",
+    "clearer": "B",
+    "more_useful": "A",
+    "less_overwhelming": "B",
+    "reason": "The engine's move is significantly stronger and I can handle the complexity at my level."
+  },
+  {
+    "task_id": "56e7b44fc19318f7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "37a5cefadc6250c0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The principle-based suggestion fits what I actually know how to think about."
+  },
+  {
+    "task_id": "222da081d6668750",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like knowing the engine disagrees slightly but the practical pick suits my level."
+  },
+  {
+    "task_id": "cecabb0c57473b89",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "39214e18f5d6d198",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "e306bb1727f7e4a0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Understanding it's about central control with rough eval is more useful than raw cp."
+  },
+  {
+    "task_id": "11a4ba34f6c5361c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I like being told to develop pieces first; the number list means nothing to me."
+  },
+  {
+    "task_id": "9c7976203d801b2f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing to develop before doing random things is more helpful than score tables."
+  },
+  {
+    "task_id": "05a608ce11bb4deb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Pawn-scale eval plus the development theme gives me a clear picture."
+  },
+  {
+    "task_id": "70cec7c424d4fa88",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "ae2df9c8fbeb508b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "19d8b9f023be6fea",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Understanding it's about central control with rough eval is more useful than raw cp."
+  },
+  {
+    "task_id": "f834be73f1c277ba",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "aa249f2635a010fb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "265c9fa54a9f392e",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "5f15da27a1270df0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "54519c98013586a0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "2367c6997942134e",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "4d3c0ee7097b0a58",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "08104a9ea171bb1c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "c26cc0191a172dfb",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "7748376768762833",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "6e77febe2dcdb4d3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "221713e40a63844a",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "4f2403fad2f29ef0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "9852548e7152d7f7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "211753f779d0ee56",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategic theme and pawn-scale eval help me see why this move matters."
+  },
+  {
+    "task_id": "887ceca48265ba74",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "8895a77182f656d3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking framework, not just a list of equal-looking moves."
+  },
+  {
+    "task_id": "e4f20ec99ad355a6",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "57b9e458d3ae4678",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The simple tip gives me one thing to try; the number table is overwhelming."
+  },
+  {
+    "task_id": "c9ae630d69f2e0f9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Being reminded about central control gives me a plan; numbers alone don't."
+  },
+  {
+    "task_id": "4d9761ce2a75abe3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Understanding it's about central control with rough eval is more useful than raw cp."
+  },
+  {
+    "task_id": "5da23d61a046470d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "At least it tells me what to focus on, even if vague; the other is pure numbers."
+  },
+  {
+    "task_id": "2df6a7e74f208f11",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I get the same move either way, but the explanation helps me understand why."
+  },
+  {
+    "task_id": "7b00205259631860",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say the same move; the explanation is repetitive but the numbers are equally unhelpful."
+  },
+  {
+    "task_id": "57a7bfa649756ce7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Getting my king safe sounds important; I don't know what eval means."
+  },
+  {
+    "task_id": "f4748ec400da64a1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking framework, not just a list of equal-looking moves."
+  },
+  {
+    "task_id": "10554e6393af4a84",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Labeling alternatives as similar strength saves me from obsessing over tiny eval differences."
+  },
+  {
+    "task_id": "e27bf81aaa59fc74",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I like the habit tip even if it's a different move; I can't read engine output."
+  },
+  {
+    "task_id": "29e3f81466257f1b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can't turn engine numbers into a plan, so the explained move is more actionable."
+  },
+  {
+    "task_id": "4e3b57076a2505b5",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I appreciate the practical angle but nearly a pawn difference makes me uneasy."
+  }
+]

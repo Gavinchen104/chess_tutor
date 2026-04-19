@@ -51,7 +51,7 @@ GAMES_PER_USER = 80
 DEFAULT_GAMES_PER_BAND = 1500
 
 # Rate limiting (Lichess allows ~20 req/s unauthenticated, be conservative)
-REQUEST_DELAY = 1.0
+REQUEST_DELAY = 2.5
 
 # Tournament search: how many finished tournaments to scan
 MAX_TOURNAMENTS_TO_SCAN = 40

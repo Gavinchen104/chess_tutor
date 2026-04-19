@@ -1,0 +1,506 @@
+[
+  {
+    "task_id": "84bfe04c1c7bfdbb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what centipawns or eval numbers mean, but the habit tip is something I can actually try."
+  },
+  {
+    "task_id": "ca283ef5b8bed168",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching tip is clearer, but the engine alternatives show me other options I could consider."
+  },
+  {
+    "task_id": "8cf828562958fea3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B translates the eval into pawns and labels alternatives by theme, which helps me understand the position."
+  },
+  {
+    "task_id": "bf399caac732c889",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers in B are meaningless to me; A tells me what to focus on in simple words."
+  },
+  {
+    "task_id": "699e2246fcdbaf41",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip is easy to remember, but the engine list shows Rxd7 is almost as good which is useful."
+  },
+  {
+    "task_id": "e99d1fa58d64713e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A tells me Rxd7 is similar strength and labels themes; B just throws cp numbers I can't interpret."
+  },
+  {
+    "task_id": "5386acf9e06ffd5f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B gives me a simple question to ask myself about center control; A is just confusing numbers."
+  },
+  {
+    "task_id": "e2115bb81e29e1cc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit about checking center squares is a concrete thinking tool I can use every move."
+  },
+  {
+    "task_id": "e34cb8fd766ccb2a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains Nc3 is about center and labels alternatives by theme; the cp gaps in B mean nothing to me."
+  },
+  {
+    "task_id": "67107de1ce5f33aa",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just want to know what to play and why; A tells me simply while B is a table of gibberish numbers."
+  },
+  {
+    "task_id": "74ba664190dca8a7",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "B is easier to read but A shows Nc4 and Nb4 are nearly equal, which is good to know."
+  },
+  {
+    "task_id": "c43a51d89e17016b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B explains why it picks Nb4 over the engine's Nc4 and labels options by theme, which I appreciate."
+  },
+  {
+    "task_id": "09cc34a9305de27c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B tells me to think about center squares, which is a habit I can build; A is just numbers."
+  },
+  {
+    "task_id": "54fb6e982b031629",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The center control habit is practical advice I can apply; the engine numbers don't help me plan."
+  },
+  {
+    "task_id": "b6ba76ff8d712ea4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains it's roughly equal and about center and activity; B's raw numbers don't guide my thinking."
+  },
+  {
+    "task_id": "be40daa05366a6f9",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "B is easier to read but A shows Bxa3 wins material which even I can understand as better."
+  },
+  {
+    "task_id": "51727075fec35b04",
+    "clearer": "A",
+    "more_useful": "B",
+    "less_overwhelming": "A",
+    "reason": "A is simpler but B shows Bxa3 captures a piece which is clearly stronger; I'd want to know that."
+  },
+  {
+    "task_id": "fcc9207ddcc32362",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B explains why Bc5+ is more practical and still shows Bxa3 as an option; that transparency is helpful."
+  },
+  {
+    "task_id": "df340b8a295e43c8",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B gives me a simple focus; all those negative numbers in A just confuse me more."
+  },
+  {
+    "task_id": "2ea085af1dd9c238",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip about improving my worst piece is something I can actually remember and use."
+  },
+  {
+    "task_id": "b6971cbafb52beb5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains I'm behind and shows Nf2 is similar strength; B's raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "f3a42272452ab214",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A warns me about hanging pieces and tells me to scan for loose pieces, which I always forget."
+  },
+  {
+    "task_id": "874982d3d1922693",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The safety warning and habit about scanning for loose pieces is exactly what I need at my level."
+  },
+  {
+    "task_id": "d70f2abde5a190cb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B warns about hanging material and labels alternatives by theme; that's more actionable than raw evals."
+  },
+  {
+    "task_id": "bee28d708163cbf2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B gives me a simple center control habit; A's numbers like 'gap 268 cp' are meaningless to me."
+  },
+  {
+    "task_id": "f69f5a1c73637279",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The center control tip gives me a concrete thing to think about; the raw eval list doesn't help."
+  },
+  {
+    "task_id": "28a7ffed2d422097",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B explains the position is about center and activity and translates eval to pawns; A is just numbers."
+  },
+  {
+    "task_id": "940ba1f9de2054bf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B's focus on activity with a simple habit is all I need; the engine numbers in A are overwhelming."
+  },
+  {
+    "task_id": "037e381cf638dd4e",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "B is clearer, but A shows how much better dxc2 is than alternatives which does help a bit."
+  },
+  {
+    "task_id": "914eea0081239cd0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A gives the eval in pawns and labels alternatives by theme; more useful than B's raw cp gaps."
+  },
+  {
+    "task_id": "6e18854c48a8253d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B warns me about king safety, which is a concept I can understand even if I miss tactics."
+  },
+  {
+    "task_id": "33e2314f375d61b9",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "A's king safety warning is useful, but B shows Bxe5 is clearly better which matters too."
+  },
+  {
+    "task_id": "76fd601e8db2e851",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B transparently shows the engine prefers Bxe5 but explains why Rac1 is more practical for my level."
+  },
+  {
+    "task_id": "2b50fe1a41da17d0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B's safety focus and scanning habit is something I can do; the engine numbers mean nothing to me."
+  },
+  {
+    "task_id": "226d9012403d9bdd",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "B is clearer with the safety habit, though A shows me concrete alternatives worth considering."
+  },
+  {
+    "task_id": "6cd3197e6a2c30f7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B labels alternatives by theme and translates the eval; A's raw numbers don't help me plan."
+  },
+  {
+    "task_id": "3d674644a32cff0a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A tells me to think about center squares; B's +5.10 eval and 475 cp gaps mean nothing to me."
+  },
+  {
+    "task_id": "10b5e28a54174cb5",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "A's center control habit is practical, but B shows this move is way better than alternatives."
+  },
+  {
+    "task_id": "b85a854a0d713a92",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B tells me I'm up 5 pawns and explains it's about center, which is more useful than raw engine output."
+  },
+  {
+    "task_id": "949c795bd9f5d500",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B tells me to develop my pieces in the opening; that's advice I can actually follow every game."
+  },
+  {
+    "task_id": "8261814fdb36dfcd",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The development habit is more useful than seeing Nc6 is slightly better by a tiny margin."
+  },
+  {
+    "task_id": "fc7653f7115381c5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains Bg7 helps development and king safety, and transparently shows the engine prefers Nc6."
+  },
+  {
+    "task_id": "8701c16b135046bb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A gives me a simple center control tip; B's numbers like gap 323 cp are completely meaningless."
+  },
+  {
+    "task_id": "23fab3c53f98987b",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "A's habit tip is clearer, but B shows this move is massively better than alternatives."
+  },
+  {
+    "task_id": "ad2bef1bf80b06e2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains the eval in pawns and labels alternatives; B's raw engine output doesn't guide my play."
+  },
+  {
+    "task_id": "eb27c8e1f6e4e7fd",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B tells me to focus on center; I wouldn't know why Nh5 is good from just seeing +3.20."
+  },
+  {
+    "task_id": "460e01ef362f96bd",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Same move but A explains why with a habit tip; B just lists numbers without guidance."
+  },
+  {
+    "task_id": "3f17966930dc99d2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains it's about activity and labels alternatives; B's raw numbers don't help me understand why."
+  },
+  {
+    "task_id": "1165e0ce33164910",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A tells me to develop pieces in the opening, which is simple advice I can remember and use."
+  },
+  {
+    "task_id": "fdd92d30e67b322e",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "A's center tip is clear, but B shows Nc3 is better which the tutor missed; that matters."
+  },
+  {
+    "task_id": "4ff5f4290d0123ba",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains Bg2 for king safety and shows the engine prefers Nc3; that transparency is valuable."
+  },
+  {
+    "task_id": "00f79f526ef3c3f6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A tells me Ne4 improves center and gives a habit; B's eval numbers are meaningless to me."
+  },
+  {
+    "task_id": "ae267514786f0cd8",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B's center control habit is more actionable than seeing raw eval differences between moves."
+  },
+  {
+    "task_id": "ebbb1893d06a672d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A labels alternatives by theme and explains it's about center and activity; B is just raw numbers."
+  },
+  {
+    "task_id": "a342fc90f45e9696",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A tells me to keep my king safe, which is simple and important; B's numbers are overwhelming."
+  },
+  {
+    "task_id": "cf48a4c9f00657fc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The king safety habit is great practical advice; the engine showing Nc3 is slightly better doesn't help me."
+  },
+  {
+    "task_id": "7a1752119dded164",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains O-O for king safety and shows Nc3 is the engine pick; practical and transparent advice."
+  },
+  {
+    "task_id": "c6c780d02fa1f7d9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A tells me Nc6 controls center squares; that's a simple idea I can use every game."
+  },
+  {
+    "task_id": "e16c6c187d26f91f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The center control habit is more practical than a list of moves with small eval differences."
+  },
+  {
+    "task_id": "51fdda957d8ab1fd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains center strategy and labels Nbd7 as similar development option; B is raw numbers only."
+  },
+  {
+    "task_id": "91523b053bfa5ac8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A tells me to develop pieces before side ideas; that's a habit I desperately need to build."
+  },
+  {
+    "task_id": "c527e391e42391ef",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The development habit is clear practical advice; the engine numbers don't teach me anything."
+  },
+  {
+    "task_id": "ae4dcc5fea253c9f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B explains it's about development and labels O-O as king safety option; more useful than raw numbers."
+  },
+  {
+    "task_id": "876434a468d58de6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B gives me a simple center control habit; the engine numbers in A are completely confusing."
+  },
+  {
+    "task_id": "f003a4263d4a9fab",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The center control thinking tool is more practical than raw eval numbers I can't use."
+  },
+  {
+    "task_id": "0e44e72577b97641",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B translates eval to pawns and explains center and activity themes; A is just a number table."
+  },
+  {
+    "task_id": "aecd7f9e52324d08",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A tells me to scan for loose pieces; B's numbers like 866 cp gap are complete gibberish to me."
+  },
+  {
+    "task_id": "76d4b8bb0f9893f4",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "B is clearer, but A shows the huge gap between b4 and Nc3 which even I can tell is important."
+  },
+  {
+    "task_id": "ebcb00199b928d78",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "B explains it's about safety and shows the massive Nc3 drop; the raw engine list is less helpful."
+  },
+  {
+    "task_id": "171f91d3b02ef902",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A gives me a center control habit; B's eval numbers are completely meaningless at my level."
+  },
+  {
+    "task_id": "98c474dee54d66e5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The center control habit is practical advice I can use; the raw engine output teaches me nothing."
+  },
+  {
+    "task_id": "8b6ef24adcfde74e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A explains it's about center, translates the eval, and labels alternatives by theme; B is raw numbers."
+  }
+]

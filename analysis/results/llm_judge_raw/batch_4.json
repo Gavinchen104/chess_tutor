@@ -1,0 +1,1052 @@
+[
+  {
+    "task_id": "4b0ff9ca044a5d98",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Reminding me to look for hanging pieces is the tip I need most."
+  },
+  {
+    "task_id": "1119c3f92a6bd7fa",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I blunder by missing loose pieces; this habit check would help me."
+  },
+  {
+    "task_id": "69937275675a859f",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The themes repeat themselves, adding little over the raw engine list."
+  },
+  {
+    "task_id": "e6645c8e73501711",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Simple advice like 'develop first' sticks with me better than numbers."
+  },
+  {
+    "task_id": "69d83292fe7777cc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The development tip reminds me not to chase tactics too early."
+  },
+  {
+    "task_id": "982190c7d96bafec",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Engine shows an extra alternative; tutor adds a vague strategic label. Wash."
+  },
+  {
+    "task_id": "ede9ce0d41267a64",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The tip about improving pieces gives me a real plan."
+  },
+  {
+    "task_id": "4bbadb6ff547e8b9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Finding my worst-placed piece is real advice I can use mid-game."
+  },
+  {
+    "task_id": "4c847d6d048dd31c",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move and alternatives; the coaching labels are generic here."
+  },
+  {
+    "task_id": "9ea33341ad3df8bc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The tip about developing pieces is something I can actually do next game."
+  },
+  {
+    "task_id": "a9074aa99ef3759e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Good coaching: develop first, even when there's a tempting move."
+  },
+  {
+    "task_id": "11ef20c679bd4543",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The practical reasoning resonates more than a number I can't fully exploit."
+  },
+  {
+    "task_id": "4ca5e6c9aed76c99",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can actually do 'improve your worst piece' in a real game."
+  },
+  {
+    "task_id": "471d60025a921909",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "When I'm stuck, 'improve your worst piece' gives me a plan."
+  },
+  {
+    "task_id": "b1425631ac706eaa",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I get the same info from both; the tutor version is just wordier."
+  },
+  {
+    "task_id": "bc69ed3e74a97ef3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The tip about developing pieces is something I can actually do next game."
+  },
+  {
+    "task_id": "a0b5b998d913110b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know development matters, but the habit reinforcement keeps me disciplined."
+  },
+  {
+    "task_id": "8a2f3a5800d5d39c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The practical reasoning resonates more than a number I can't fully exploit."
+  },
+  {
+    "task_id": "f5c4d42335137968",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip about improving pieces gives me a real plan."
+  },
+  {
+    "task_id": "6123662fcae04bbf",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I often don't know what to do in quiet spots; this helps."
+  },
+  {
+    "task_id": "1ec02e34f7a6b1a8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The practical reasoning resonates more than a number I can't fully exploit."
+  },
+  {
+    "task_id": "c5bb332f922c78ce",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Scanning for loose pieces is advice I can actually follow."
+  },
+  {
+    "task_id": "9c8f459cec4baf1d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Scanning for undefended stuff is the exact habit I need to drill."
+  },
+  {
+    "task_id": "8257fda11dd84edb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I trust the engine's eval, but knowing which move I can actually execute matters more."
+  },
+  {
+    "task_id": "48380e4f042e56ac",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip about improving pieces gives me a real plan."
+  },
+  {
+    "task_id": "411ae833c667ff99",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "When I'm stuck, 'improve your worst piece' gives me a plan."
+  },
+  {
+    "task_id": "d95a782944908d2c",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching version labels everything as the same theme, so it's not adding much."
+  },
+  {
+    "task_id": "81dcf0e5ec3e3815",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I always forget to castle; the safety reminder helps."
+  },
+  {
+    "task_id": "3003a8046a49e817",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know development matters, but the habit reinforcement keeps me disciplined."
+  },
+  {
+    "task_id": "aca87b3c6c065257",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move and alternatives; the coaching labels are generic here."
+  },
+  {
+    "task_id": "17e9f3a57e98e146",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Thinking about the center squares is clearer than random numbers."
+  },
+  {
+    "task_id": "04a5ffd35eb71bb6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The center focus is more actionable than a list of eval numbers."
+  },
+  {
+    "task_id": "354cd50d5375df5d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The practical reasoning resonates more than a number I can't fully exploit."
+  },
+  {
+    "task_id": "605600fb97cae35b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can actually do 'improve your worst piece' in a real game."
+  },
+  {
+    "task_id": "9bc1d848646af498",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Finding my worst-placed piece is real advice I can use mid-game."
+  },
+  {
+    "task_id": "c1370780e1b7ee6d",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching version labels everything as the same theme, so it's not adding much."
+  },
+  {
+    "task_id": "5de0c388417f39d2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip about improving pieces gives me a real plan."
+  },
+  {
+    "task_id": "c258650240969ce3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Finding my worst-placed piece is real advice I can use mid-game."
+  },
+  {
+    "task_id": "f63398c0099cc684",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move and alternatives; the coaching labels are generic here."
+  },
+  {
+    "task_id": "5b0132bbb4050815",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Thinking about the center squares is clearer than random numbers."
+  },
+  {
+    "task_id": "4cd9a3785a87e123",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The center focus is more actionable than a list of eval numbers."
+  },
+  {
+    "task_id": "a3816051426928c2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Labeling alternatives by theme helps me understand the position's demands."
+  },
+  {
+    "task_id": "14180a9ca93aa85c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can actually do 'improve your worst piece' in a real game."
+  },
+  {
+    "task_id": "8c1826924a5bf2cd",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "When I'm stuck, 'improve your worst piece' gives me a plan."
+  },
+  {
+    "task_id": "6b4e12f1b1f32069",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move and alternatives; the coaching labels are generic here."
+  },
+  {
+    "task_id": "ee33748d842917d7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I always forget to check if my pieces are safe before moving."
+  },
+  {
+    "task_id": "a573411c3af711df",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "At my level, piece safety checks prevent most of my blunders."
+  },
+  {
+    "task_id": "a6341ca73df46151",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The themes repeat themselves, adding little over the raw engine list."
+  },
+  {
+    "task_id": "68432d3add470ac2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The center control tip gives me a real thing to aim for."
+  },
+  {
+    "task_id": "a9e3154d67a9bcdf",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I struggle with quiet positions; a center-control checklist helps."
+  },
+  {
+    "task_id": "82c77d693a9f7c86",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The coaching version labels everything as the same theme, so it's not adding much."
+  },
+  {
+    "task_id": "4c2f91bb67c9cb38",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I always forget to castle; the safety reminder helps."
+  },
+  {
+    "task_id": "5c30a9b2454eccb8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I often get attacked because I delay castling; this tip targets that."
+  },
+  {
+    "task_id": "bc911ce7cdda666f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "I can see the pawn-eval AND the strategic idea, which is the right balance."
+  },
+  {
+    "task_id": "a779d1ccea3c4b5c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I never thought about e4/d4/e5/d5 before; now I have a target."
+  },
+  {
+    "task_id": "5d199acc5b786b19",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I struggle with quiet positions; a center-control checklist helps."
+  },
+  {
+    "task_id": "c73716a2ac4a8ca4",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I get the same info from both; the tutor version is just wordier."
+  },
+  {
+    "task_id": "9ee7b4a527f9afbe",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Good point about protecting my king before doing anything else."
+  },
+  {
+    "task_id": "3a66051dd9717f68",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Good reminder to castle early instead of chasing material."
+  },
+  {
+    "task_id": "c7c2951b5098f7a2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "I can see the pawn-eval AND the strategic idea, which is the right balance."
+  },
+  {
+    "task_id": "40f3dcfcfd86f846",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The center control tip gives me a real thing to aim for."
+  },
+  {
+    "task_id": "3d2c9510e4129fbf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I struggle with quiet positions; a center-control checklist helps."
+  },
+  {
+    "task_id": "f0d383c99d1da5bc",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching version labels everything as the same theme, so it's not adding much."
+  },
+  {
+    "task_id": "34aab6eb9ae94b1d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "King safety is something I understand; centipawns are not."
+  },
+  {
+    "task_id": "1344fb9860464347",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I often get attacked because I delay castling; this tip targets that."
+  },
+  {
+    "task_id": "233006e24e842f2b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "The strategic labels on each option help me pick based on my plan."
+  },
+  {
+    "task_id": "4576c35018a000a7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The center control tip gives me a real thing to aim for."
+  },
+  {
+    "task_id": "1fd8bfa4f1ba5106",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The center focus is more actionable than a list of eval numbers."
+  },
+  {
+    "task_id": "ecbdaa3ae532c027",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The themes repeat themselves, adding little over the raw engine list."
+  },
+  {
+    "task_id": "9e734d117ed77703",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I always forget to castle; the safety reminder helps."
+  },
+  {
+    "task_id": "d4baf42cd4865143",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Prioritizing king safety before activity addresses my biggest weakness."
+  },
+  {
+    "task_id": "04de543b27ad8483",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "The strategic labels on each option help me pick based on my plan."
+  },
+  {
+    "task_id": "a33078ab688d79c4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Thinking about the center squares is clearer than random numbers."
+  },
+  {
+    "task_id": "b3294dbfbd8a3de7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Thinking about central squares gives me a plan in quiet positions."
+  },
+  {
+    "task_id": "f3729f4305ff66c5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Labeling alternatives by theme helps me understand the position's demands."
+  },
+  {
+    "task_id": "2f58045f0c7b9355",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Thinking about the center squares is clearer than random numbers."
+  },
+  {
+    "task_id": "645e05aa06ec2103",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Thinking about central squares gives me a plan in quiet positions."
+  },
+  {
+    "task_id": "4f58dccde5bf8da3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Understanding why a practical move beats the engine pick is exactly what I need."
+  },
+  {
+    "task_id": "c7360f6c65fce56d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Reminding me to look for hanging pieces is the tip I need most."
+  },
+  {
+    "task_id": "d0a9147a4af13317",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Scanning for undefended stuff is the exact habit I need to drill."
+  },
+  {
+    "task_id": "64602c27c8d4c0c1",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Engine shows an extra alternative; tutor adds a vague strategic label. Wash."
+  },
+  {
+    "task_id": "a6ec3226c65ed710",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can actually do 'improve your worst piece' in a real game."
+  },
+  {
+    "task_id": "9338587336c6ac51",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I often don't know what to do in quiet spots; this helps."
+  },
+  {
+    "task_id": "3a31b7fd877c0e98",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching version labels everything as the same theme, so it's not adding much."
+  },
+  {
+    "task_id": "251e07ad6608a6ba",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip about improving pieces gives me a real plan."
+  },
+  {
+    "task_id": "1f8ebefb6c766ee0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I often don't know what to do in quiet spots; this helps."
+  },
+  {
+    "task_id": "dda39ab6d6f3b09e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "The strategic labels on each option help me pick based on my plan."
+  },
+  {
+    "task_id": "4db715ee936d96ca",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can actually do 'improve your worst piece' in a real game."
+  },
+  {
+    "task_id": "c3c2c527804f360b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Finding my worst-placed piece is real advice I can use mid-game."
+  },
+  {
+    "task_id": "7b8875806f86e67f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Labeling alternatives by theme helps me understand the position's demands."
+  },
+  {
+    "task_id": "8472d383470e69d8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I never thought about e4/d4/e5/d5 before; now I have a target."
+  },
+  {
+    "task_id": "9e7764a0ee72d3a9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The center focus is more actionable than a list of eval numbers."
+  },
+  {
+    "task_id": "ba95d68ca67a1451",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The coaching version labels everything as the same theme, so it's not adding much."
+  },
+  {
+    "task_id": "543732884fff9d31",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Finding my worst piece and improving it makes sense to me."
+  },
+  {
+    "task_id": "13e1ad72fbf6ca11",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Finding my worst-placed piece is real advice I can use mid-game."
+  },
+  {
+    "task_id": "498aa562ce928220",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "I can see the pawn-eval AND the strategic idea, which is the right balance."
+  },
+  {
+    "task_id": "2626b8274750960b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The tip about improving pieces gives me a real plan."
+  },
+  {
+    "task_id": "a6ce7555b943bbe1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "When I'm stuck, 'improve your worst piece' gives me a plan."
+  },
+  {
+    "task_id": "08299819c4e6660c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "I can see the pawn-eval AND the strategic idea, which is the right balance."
+  },
+  {
+    "task_id": "5c488d4b06025f84",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Reminding me to look for hanging pieces is the tip I need most."
+  },
+  {
+    "task_id": "31c4b93ea85c3b16",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Scanning for undefended stuff is the exact habit I need to drill."
+  },
+  {
+    "task_id": "dceeb8a6e73653ad",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The themes repeat themselves, adding little over the raw engine list."
+  },
+  {
+    "task_id": "36d924e66085ef81",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip about improving pieces gives me a real plan."
+  },
+  {
+    "task_id": "c561d5c8be9e678a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "When I'm stuck, 'improve your worst piece' gives me a plan."
+  },
+  {
+    "task_id": "6289a1c48699cb1f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "I can see the pawn-eval AND the strategic idea, which is the right balance."
+  },
+  {
+    "task_id": "bae0d9ce2139b5d3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I never thought about e4/d4/e5/d5 before; now I have a target."
+  },
+  {
+    "task_id": "171d3b7fe588d8ac",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Thinking about central squares gives me a plan in quiet positions."
+  },
+  {
+    "task_id": "bd54efdc72803b49",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I get the same info from both; the tutor version is just wordier."
+  },
+  {
+    "task_id": "369a8863d16bb3da",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Finding my worst piece and improving it makes sense to me."
+  },
+  {
+    "task_id": "11271652a655a331",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Finding my worst-placed piece is real advice I can use mid-game."
+  },
+  {
+    "task_id": "1a26b56c5a671627",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I get the same info from both; the tutor version is just wordier."
+  },
+  {
+    "task_id": "5e313bff4e43b3a2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Simple advice like 'develop first' sticks with me better than numbers."
+  },
+  {
+    "task_id": "ae3bdf331732cc8e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Good coaching: develop first, even when there's a tempting move."
+  },
+  {
+    "task_id": "3f9d6b13591afae1",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I get the same info from both; the tutor version is just wordier."
+  },
+  {
+    "task_id": "92b47a74fa4ad9b2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Simple advice like 'develop first' sticks with me better than numbers."
+  },
+  {
+    "task_id": "40d0adbee7c5e8a9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know development matters, but the habit reinforcement keeps me disciplined."
+  },
+  {
+    "task_id": "527140487a2d988b",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The themes repeat themselves, adding little over the raw engine list."
+  },
+  {
+    "task_id": "e19725c61da29a65",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know to bring out my pieces now instead of chasing checks."
+  },
+  {
+    "task_id": "bfd7d287d59e2e35",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know development matters, but the habit reinforcement keeps me disciplined."
+  },
+  {
+    "task_id": "61c27824e32f20a2",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I get the same info from both; the tutor version is just wordier."
+  },
+  {
+    "task_id": "e0651aa46520c946",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip about developing pieces is something I can actually do next game."
+  },
+  {
+    "task_id": "0aade38ee7ec63ae",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know development matters, but the habit reinforcement keeps me disciplined."
+  },
+  {
+    "task_id": "92f4f8c34136f943",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move and alternatives; the coaching labels are generic here."
+  },
+  {
+    "task_id": "f215d6ed6a0f5fc1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I never thought about e4/d4/e5/d5 before; now I have a target."
+  },
+  {
+    "task_id": "80cfb710a6d871bb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Thinking about central squares gives me a plan in quiet positions."
+  },
+  {
+    "task_id": "e64d019823930d0f",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I get the same info from both; the tutor version is just wordier."
+  },
+  {
+    "task_id": "625ad6c25c294dba",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Thinking about the center squares is clearer than random numbers."
+  },
+  {
+    "task_id": "a807ed0c0890f83a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The center focus is more actionable than a list of eval numbers."
+  },
+  {
+    "task_id": "5ec7cb6462c7f80c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The practical reasoning resonates more than a number I can't fully exploit."
+  },
+  {
+    "task_id": "f62424379f7b2b1f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Good point about protecting my king before doing anything else."
+  },
+  {
+    "task_id": "9748bcac0dfcf122",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I struggle with quiet positions; a center-control checklist helps."
+  },
+  {
+    "task_id": "2eb5eb252137f5b1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "The strategic labels on each option help me pick based on my plan."
+  },
+  {
+    "task_id": "9907461a3790d0d0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can actually do 'improve your worst piece' in a real game."
+  },
+  {
+    "task_id": "a613fde2d72b76c3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Finding my worst-placed piece is real advice I can use mid-game."
+  },
+  {
+    "task_id": "cb8039f0e18c62ab",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "I can see the pawn-eval AND the strategic idea, which is the right balance."
+  },
+  {
+    "task_id": "7a24506196335b1a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know to bring out my pieces now instead of chasing checks."
+  },
+  {
+    "task_id": "fa3693c0fd221918",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know development matters, but the habit reinforcement keeps me disciplined."
+  },
+  {
+    "task_id": "45ce48a43f467b58",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "I can see the pawn-eval AND the strategic idea, which is the right balance."
+  },
+  {
+    "task_id": "7345f15c303efdb6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Thinking about the center squares is clearer than random numbers."
+  },
+  {
+    "task_id": "05eac7e8abdbff4e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Thinking about central squares gives me a plan in quiet positions."
+  },
+  {
+    "task_id": "4a8e31be980067e5",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move and alternatives; the coaching labels are generic here."
+  },
+  {
+    "task_id": "6d9bdd1eef79ae3d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Finding my worst piece and improving it makes sense to me."
+  },
+  {
+    "task_id": "a6aac63aacd51307",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "When I'm stuck, 'improve your worst piece' gives me a plan."
+  },
+  {
+    "task_id": "bec1029d26602219",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The practical reasoning resonates more than a number I can't fully exploit."
+  },
+  {
+    "task_id": "9754995740c6193b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The tip about improving pieces gives me a real plan."
+  },
+  {
+    "task_id": "9388675d9eeb55f9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I often don't know what to do in quiet spots; this helps."
+  },
+  {
+    "task_id": "6229dec999aca1ab",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I get the same info from both; the tutor version is just wordier."
+  },
+  {
+    "task_id": "532a7a1e2b8ffbb2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip about developing pieces is something I can actually do next game."
+  },
+  {
+    "task_id": "9101547f85f67fbb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The development tip reminds me not to chase tactics too early."
+  },
+  {
+    "task_id": "21ccf7fe2ab65808",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Understanding why a practical move beats the engine pick is exactly what I need."
+  }
+]

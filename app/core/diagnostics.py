@@ -405,8 +405,20 @@ def pick_primary_message(
     insight: MoveInsight,
     analysis: PositionAnalysis,
 ) -> tuple[str, str]:
-    negative = [item for item in tactical_findings + strategic_findings if item.direction == "negative"]
     theme_priority = {"safety": 0, "king_safety": 1, "tactics": 2}
+
+    positive = [item for item in tactical_findings + strategic_findings if item.direction == "positive"]
+    positive.sort(key=lambda item: (-SEVERITY_SCORES[item.severity], theme_priority.get(item.theme, 3)))
+
+    if insight.priorities_addressed:
+        theme = insight.priorities_addressed[0]
+        for finding in strategic_findings:
+            if finding.theme == theme and finding.direction == "positive":
+                return theme, finding.summary
+        return theme, f"The move directly improves {theme.replace('_', ' ')}."
+    if positive:
+        return positive[0].theme, positive[0].summary
+    negative = [item for item in tactical_findings + strategic_findings if item.direction == "negative"]
     negative.sort(
         key=lambda item: (
             theme_priority.get(item.theme, 3),
@@ -414,17 +426,7 @@ def pick_primary_message(
         )
     )
     if negative:
-        return negative[0].theme, negative[0].summary
-    if insight.priorities_addressed:
-        theme = insight.priorities_addressed[0]
-        for finding in strategic_findings:
-            if finding.theme == theme and finding.direction == "positive":
-                return theme, finding.summary
-        return theme, f"The move directly improves {theme.replace('_', ' ')}."
-    ranked = [item for item in tactical_findings + strategic_findings if item.direction == "positive"]
-    ranked.sort(key=lambda item: (-SEVERITY_SCORES[item.severity], theme_priority.get(item.theme, 3)))
-    if ranked:
-        return ranked[0].theme, ranked[0].summary
+        return negative[0].theme, f"Watch out: {negative[0].summary.lower()}"
     if insight.tags:
         theme = insight.tags[0]
         return theme, f"The move mainly supports {theme.replace('_', ' ')}."

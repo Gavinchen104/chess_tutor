@@ -2,120 +2,617 @@
   "model_a": {
     "600": {
       "coefficients": {
-        "eval_gap": -1e-06,
-        "difficulty": -0.300935,
-        "safety_change": -0.002153,
-        "center_change": -0.003689,
-        "king_safety_change": -0.015943,
-        "development_change": 0.251417,
-        "mobility_change": -0.010605,
-        "material_change": 0.000492,
-        "opponent_pressure_change": -0.157668,
-        "is_capture": 1.579111,
-        "is_check": 2.393596,
-        "is_castling": -0.569541,
-        "num_preferred_tags": 0.066787,
-        "num_priorities": -0.259604
+        "eval_gap": 0.0005453402326132411,
+        "difficulty": -0.3188202619473311,
+        "safety_change": -0.0002106449234210706,
+        "center_change": -0.06591717817142682,
+        "king_safety_change": 0.006315549840622245,
+        "development_change": 0.6453919211447021,
+        "mobility_change": -0.004620022316803981,
+        "material_change": 0.0035276440732558726,
+        "opponent_pressure_change": -0.3779798911289781,
+        "is_capture": 1.357384043053548,
+        "is_check": 4.833055246884184,
+        "is_castling": 1.4135239283353098,
+        "num_preferred_tags": -0.18628667234507862,
+        "num_priorities": -0.003768621250443536
       },
-      "intercept": 0.89289
+      "intercept": 0.0,
+      "coefficients_stats": {
+        "eval_gap": {
+          "mean": 6.86,
+          "sd": 4.411,
+          "hdi_3%": -0.598,
+          "hdi_97%": 15.765,
+          "r_hat": 1.0,
+          "ess_bulk": 965.0
+        },
+        "difficulty": {
+          "mean": -0.357,
+          "sd": 0.317,
+          "hdi_3%": -0.923,
+          "hdi_97%": 0.222,
+          "r_hat": 1.0,
+          "ess_bulk": 388.0
+        },
+        "safety_change": {
+          "mean": -0.056,
+          "sd": 0.35,
+          "hdi_3%": -0.76,
+          "hdi_97%": 0.534,
+          "r_hat": 1.0,
+          "ess_bulk": 455.0
+        },
+        "center_change": {
+          "mean": -0.355,
+          "sd": 0.144,
+          "hdi_3%": -0.645,
+          "hdi_97%": -0.1,
+          "r_hat": 1.0,
+          "ess_bulk": 1249.0
+        },
+        "king_safety_change": {
+          "mean": 0.027,
+          "sd": 0.177,
+          "hdi_3%": -0.308,
+          "hdi_97%": 0.342,
+          "r_hat": 1.0,
+          "ess_bulk": 1038.0
+        },
+        "development_change": {
+          "mean": 0.241,
+          "sd": 0.154,
+          "hdi_3%": -0.034,
+          "hdi_97%": 0.527,
+          "r_hat": 1.01,
+          "ess_bulk": 902.0
+        },
+        "mobility_change": {
+          "mean": -0.027,
+          "sd": 0.229,
+          "hdi_3%": -0.414,
+          "hdi_97%": 0.416,
+          "r_hat": 1.0,
+          "ess_bulk": 894.0
+        },
+        "material_change": {
+          "mean": 0.308,
+          "sd": 0.188,
+          "hdi_3%": -0.048,
+          "hdi_97%": 0.658,
+          "r_hat": 1.0,
+          "ess_bulk": 352.0
+        },
+        "opponent_pressure_change": {
+          "mean": -1.06,
+          "sd": 0.583,
+          "hdi_3%": -2.186,
+          "hdi_97%": -0.032,
+          "r_hat": 1.0,
+          "ess_bulk": 441.0
+        },
+        "is_capture": {
+          "mean": 0.386,
+          "sd": 0.165,
+          "hdi_3%": 0.09,
+          "hdi_97%": 0.706,
+          "r_hat": 1.01,
+          "ess_bulk": 395.0
+        },
+        "is_check": {
+          "mean": 1.261,
+          "sd": 0.579,
+          "hdi_3%": 0.282,
+          "hdi_97%": 2.393,
+          "r_hat": 1.0,
+          "ess_bulk": 464.0
+        },
+        "is_castling": {
+          "mean": 0.134,
+          "sd": 0.095,
+          "hdi_3%": -0.042,
+          "hdi_97%": 0.311,
+          "r_hat": 1.0,
+          "ess_bulk": 905.0
+        },
+        "num_preferred_tags": {
+          "mean": -0.151,
+          "sd": 0.234,
+          "hdi_3%": -0.588,
+          "hdi_97%": 0.269,
+          "r_hat": 1.0,
+          "ess_bulk": 608.0
+        },
+        "num_priorities": {
+          "mean": -0.003,
+          "sd": 0.222,
+          "hdi_3%": -0.449,
+          "hdi_97%": 0.364,
+          "r_hat": 1.0,
+          "ess_bulk": 749.0
+        }
+      }
     },
     "1000": {
       "coefficients": {
-        "eval_gap": -3e-06,
-        "difficulty": -0.57263,
-        "safety_change": -0.002882,
-        "center_change": -0.025077,
-        "king_safety_change": 0.026468,
-        "development_change": -0.254664,
-        "mobility_change": -0.004799,
-        "material_change": 0.000956,
-        "opponent_pressure_change": -0.056359,
-        "is_capture": 1.339475,
-        "is_check": 2.082936,
-        "is_castling": 0.432238,
-        "num_preferred_tags": 0.252183,
-        "num_priorities": -0.343504
+        "eval_gap": 9.762146208374401e-05,
+        "difficulty": 0.04972639297099132,
+        "safety_change": 0.0009240882238345337,
+        "center_change": 0.05072995129548848,
+        "king_safety_change": 0.028456858060557463,
+        "development_change": -0.21338049852838492,
+        "mobility_change": -0.008769753770080876,
+        "material_change": 0.004605372115275978,
+        "opponent_pressure_change": -0.1623895117824997,
+        "is_capture": 0.9041908120575955,
+        "is_check": 2.415012352205666,
+        "is_castling": 0.17584117671693944,
+        "num_preferred_tags": 0.03724505199399768,
+        "num_priorities": -0.3600778372019671
       },
-      "intercept": 1.476863
+      "intercept": 0.0,
+      "coefficients_stats": {
+        "eval_gap": {
+          "mean": 0.992,
+          "sd": 4.599,
+          "hdi_3%": -7.483,
+          "hdi_97%": 9.309,
+          "r_hat": 1.01,
+          "ess_bulk": 821.0
+        },
+        "difficulty": {
+          "mean": 0.055,
+          "sd": 0.279,
+          "hdi_3%": -0.443,
+          "hdi_97%": 0.602,
+          "r_hat": 1.01,
+          "ess_bulk": 564.0
+        },
+        "safety_change": {
+          "mean": 0.238,
+          "sd": 0.277,
+          "hdi_3%": -0.306,
+          "hdi_97%": 0.738,
+          "r_hat": 1.02,
+          "ess_bulk": 607.0
+        },
+        "center_change": {
+          "mean": 0.272,
+          "sd": 0.14,
+          "hdi_3%": 0.029,
+          "hdi_97%": 0.541,
+          "r_hat": 1.0,
+          "ess_bulk": 687.0
+        },
+        "king_safety_change": {
+          "mean": 0.114,
+          "sd": 0.163,
+          "hdi_3%": -0.163,
+          "hdi_97%": 0.433,
+          "r_hat": 1.0,
+          "ess_bulk": 674.0
+        },
+        "development_change": {
+          "mean": -0.073,
+          "sd": 0.164,
+          "hdi_3%": -0.372,
+          "hdi_97%": 0.244,
+          "r_hat": 1.01,
+          "ess_bulk": 738.0
+        },
+        "mobility_change": {
+          "mean": -0.049,
+          "sd": 0.233,
+          "hdi_3%": -0.439,
+          "hdi_97%": 0.39,
+          "r_hat": 1.0,
+          "ess_bulk": 767.0
+        },
+        "material_change": {
+          "mean": 0.395,
+          "sd": 0.199,
+          "hdi_3%": 0.01,
+          "hdi_97%": 0.764,
+          "r_hat": 1.02,
+          "ess_bulk": 480.0
+        },
+        "opponent_pressure_change": {
+          "mean": -0.413,
+          "sd": 0.332,
+          "hdi_3%": -1.0,
+          "hdi_97%": 0.224,
+          "r_hat": 1.01,
+          "ess_bulk": 402.0
+        },
+        "is_capture": {
+          "mean": 0.255,
+          "sd": 0.173,
+          "hdi_3%": -0.077,
+          "hdi_97%": 0.56,
+          "r_hat": 1.01,
+          "ess_bulk": 560.0
+        },
+        "is_check": {
+          "mean": 0.558,
+          "sd": 0.335,
+          "hdi_3%": -0.075,
+          "hdi_97%": 1.14,
+          "r_hat": 1.01,
+          "ess_bulk": 330.0
+        },
+        "is_castling": {
+          "mean": 0.019,
+          "sd": 0.097,
+          "hdi_3%": -0.16,
+          "hdi_97%": 0.2,
+          "r_hat": 1.0,
+          "ess_bulk": 682.0
+        },
+        "num_preferred_tags": {
+          "mean": 0.028,
+          "sd": 0.207,
+          "hdi_3%": -0.367,
+          "hdi_97%": 0.398,
+          "r_hat": 1.0,
+          "ess_bulk": 544.0
+        },
+        "num_priorities": {
+          "mean": -0.271,
+          "sd": 0.198,
+          "hdi_3%": -0.605,
+          "hdi_97%": 0.131,
+          "r_hat": 1.0,
+          "ess_bulk": 681.0
+        }
+      }
     },
     "1400": {
       "coefficients": {
-        "eval_gap": -2e-06,
-        "difficulty": -0.334773,
-        "safety_change": -0.00144,
-        "center_change": -0.025043,
-        "king_safety_change": -0.010157,
-        "development_change": 0.38499,
-        "mobility_change": -0.062635,
-        "material_change": 0.001626,
-        "opponent_pressure_change": -0.197163,
-        "is_capture": 1.0841,
-        "is_check": 2.802274,
-        "is_castling": 1.242652,
-        "num_preferred_tags": 0.332033,
-        "num_priorities": -0.44101
+        "eval_gap": 0.00022659553729459047,
+        "difficulty": -0.7370927963288557,
+        "safety_change": -0.0016456729978655946,
+        "center_change": -0.010241081021149461,
+        "king_safety_change": -0.08221109205091069,
+        "development_change": 1.2627895283659896,
+        "mobility_change": -0.11258922545709882,
+        "material_change": 0.004444495088728589,
+        "opponent_pressure_change": 1.3217720249887253,
+        "is_capture": 0.6372725874962327,
+        "is_check": -12.199940921641824,
+        "is_castling": 0.5619966879495629,
+        "num_preferred_tags": 0.5242180437569692,
+        "num_priorities": -0.3942782652221752
       },
-      "intercept": 0.794781
+      "intercept": 0.0,
+      "coefficients_stats": {
+        "eval_gap": {
+          "mean": 1.979,
+          "sd": 4.849,
+          "hdi_3%": -7.231,
+          "hdi_97%": 10.625,
+          "r_hat": 1.0,
+          "ess_bulk": 569.0
+        },
+        "difficulty": {
+          "mean": -0.785,
+          "sd": 0.306,
+          "hdi_3%": -1.294,
+          "hdi_97%": -0.146,
+          "r_hat": 1.0,
+          "ess_bulk": 610.0
+        },
+        "safety_change": {
+          "mean": -0.368,
+          "sd": 0.325,
+          "hdi_3%": -0.931,
+          "hdi_97%": 0.298,
+          "r_hat": 1.0,
+          "ess_bulk": 536.0
+        },
+        "center_change": {
+          "mean": -0.053,
+          "sd": 0.124,
+          "hdi_3%": -0.294,
+          "hdi_97%": 0.17,
+          "r_hat": 1.0,
+          "ess_bulk": 897.0
+        },
+        "king_safety_change": {
+          "mean": -0.319,
+          "sd": 0.172,
+          "hdi_3%": -0.618,
+          "hdi_97%": 0.02,
+          "r_hat": 1.0,
+          "ess_bulk": 657.0
+        },
+        "development_change": {
+          "mean": 0.408,
+          "sd": 0.186,
+          "hdi_3%": 0.079,
+          "hdi_97%": 0.762,
+          "r_hat": 1.0,
+          "ess_bulk": 705.0
+        },
+        "mobility_change": {
+          "mean": -0.549,
+          "sd": 0.217,
+          "hdi_3%": -0.904,
+          "hdi_97%": -0.118,
+          "r_hat": 1.0,
+          "ess_bulk": 662.0
+        },
+        "material_change": {
+          "mean": 0.373,
+          "sd": 0.186,
+          "hdi_3%": 0.044,
+          "hdi_97%": 0.722,
+          "r_hat": 1.0,
+          "ess_bulk": 384.0
+        },
+        "opponent_pressure_change": {
+          "mean": 3.048,
+          "sd": 2.189,
+          "hdi_3%": -0.188,
+          "hdi_97%": 7.245,
+          "r_hat": 1.0,
+          "ess_bulk": 433.0
+        },
+        "is_capture": {
+          "mean": 0.182,
+          "sd": 0.162,
+          "hdi_3%": -0.154,
+          "hdi_97%": 0.462,
+          "r_hat": 1.0,
+          "ess_bulk": 636.0
+        },
+        "is_check": {
+          "mean": -2.555,
+          "sd": 1.996,
+          "hdi_3%": -6.309,
+          "hdi_97%": 0.395,
+          "r_hat": 1.0,
+          "ess_bulk": 434.0
+        },
+        "is_castling": {
+          "mean": 0.057,
+          "sd": 0.145,
+          "hdi_3%": -0.219,
+          "hdi_97%": 0.317,
+          "r_hat": 1.0,
+          "ess_bulk": 869.0
+        },
+        "num_preferred_tags": {
+          "mean": 0.356,
+          "sd": 0.182,
+          "hdi_3%": 0.029,
+          "hdi_97%": 0.7,
+          "r_hat": 1.01,
+          "ess_bulk": 578.0
+        },
+        "num_priorities": {
+          "mean": -0.289,
+          "sd": 0.218,
+          "hdi_3%": -0.666,
+          "hdi_97%": 0.135,
+          "r_hat": 1.0,
+          "ess_bulk": 615.0
+        }
+      }
     },
     "1800": {
       "coefficients": {
-        "eval_gap": -0.000327,
-        "difficulty": -0.233634,
-        "safety_change": -0.001683,
-        "center_change": -0.009285,
-        "king_safety_change": -0.00082,
-        "development_change": 0.599745,
-        "mobility_change": -0.049614,
-        "material_change": 0.002636,
-        "opponent_pressure_change": -0.206197,
-        "is_capture": 0.52979,
-        "is_check": 2.992409,
-        "is_castling": 1.97796,
-        "num_preferred_tags": 0.251514,
-        "num_priorities": -0.048072
+        "eval_gap": 0.0003571151460184988,
+        "difficulty": -0.7132614926220443,
+        "safety_change": -0.004387431765965495,
+        "center_change": 0.008196972760005233,
+        "king_safety_change": -0.0002684957763777813,
+        "development_change": 0.7920032534626531,
+        "mobility_change": -0.059073632474555694,
+        "material_change": -0.0012265360115477362,
+        "opponent_pressure_change": -0.21690943759896963,
+        "is_capture": 2.1860469515381875,
+        "is_check": 3.064211190800535,
+        "is_castling": -0.14570616834517514,
+        "num_preferred_tags": 0.41895756021657227,
+        "num_priorities": -0.5169970624857251
       },
-      "intercept": 0.586565
+      "intercept": 0.0,
+      "coefficients_stats": {
+        "eval_gap": {
+          "mean": 2.832,
+          "sd": 4.832,
+          "hdi_3%": -6.096,
+          "hdi_97%": 11.788,
+          "r_hat": 1.0,
+          "ess_bulk": 884.0
+        },
+        "difficulty": {
+          "mean": -0.793,
+          "sd": 0.343,
+          "hdi_3%": -1.455,
+          "hdi_97%": -0.178,
+          "r_hat": 1.0,
+          "ess_bulk": 566.0
+        },
+        "safety_change": {
+          "mean": -1.121,
+          "sd": 0.424,
+          "hdi_3%": -1.985,
+          "hdi_97%": -0.41,
+          "r_hat": 1.0,
+          "ess_bulk": 550.0
+        },
+        "center_change": {
+          "mean": 0.046,
+          "sd": 0.135,
+          "hdi_3%": -0.173,
+          "hdi_97%": 0.323,
+          "r_hat": 1.0,
+          "ess_bulk": 871.0
+        },
+        "king_safety_change": {
+          "mean": -0.001,
+          "sd": 0.156,
+          "hdi_3%": -0.283,
+          "hdi_97%": 0.285,
+          "r_hat": 1.0,
+          "ess_bulk": 821.0
+        },
+        "development_change": {
+          "mean": 0.235,
+          "sd": 0.159,
+          "hdi_3%": -0.045,
+          "hdi_97%": 0.56,
+          "r_hat": 1.01,
+          "ess_bulk": 853.0
+        },
+        "mobility_change": {
+          "mean": -0.309,
+          "sd": 0.214,
+          "hdi_3%": -0.671,
+          "hdi_97%": 0.121,
+          "r_hat": 1.0,
+          "ess_bulk": 972.0
+        },
+        "material_change": {
+          "mean": -0.106,
+          "sd": 0.231,
+          "hdi_3%": -0.548,
+          "hdi_97%": 0.299,
+          "r_hat": 1.0,
+          "ess_bulk": 492.0
+        },
+        "opponent_pressure_change": {
+          "mean": -0.516,
+          "sd": 0.452,
+          "hdi_3%": -1.339,
+          "hdi_97%": 0.31,
+          "r_hat": 1.01,
+          "ess_bulk": 473.0
+        },
+        "is_capture": {
+          "mean": 0.633,
+          "sd": 0.167,
+          "hdi_3%": 0.312,
+          "hdi_97%": 0.935,
+          "r_hat": 1.01,
+          "ess_bulk": 469.0
+        },
+        "is_check": {
+          "mean": 0.67,
+          "sd": 0.447,
+          "hdi_3%": -0.154,
+          "hdi_97%": 1.442,
+          "r_hat": 1.01,
+          "ess_bulk": 477.0
+        },
+        "is_castling": {
+          "mean": -0.012,
+          "sd": 0.107,
+          "hdi_3%": -0.237,
+          "hdi_97%": 0.154,
+          "r_hat": 1.0,
+          "ess_bulk": 943.0
+        },
+        "num_preferred_tags": {
+          "mean": 0.258,
+          "sd": 0.185,
+          "hdi_3%": -0.08,
+          "hdi_97%": 0.592,
+          "r_hat": 1.01,
+          "ess_bulk": 621.0
+        },
+        "num_priorities": {
+          "mean": -0.37,
+          "sd": 0.19,
+          "hdi_3%": -0.709,
+          "hdi_97%": -0.031,
+          "r_hat": 1.01,
+          "ess_bulk": 772.0
+        }
+      }
     }
   },
   "model_b": {
-    "1000": {
-      "weights": {
-        "eval_gap": 0.026593,
-        "num_preferred_tags": 1.098942,
-        "num_priorities": -1.678558,
-        "safety_change": -0.013091,
-        "king_safety_change": 0.18862,
-        "center_change": 0.374852,
-        "opponent_pressure_change": -5.509894,
-        "difficulty": -4.991407
-      },
-      "intercept": 3.66433
-    },
-    "1400": {
-      "weights": {
-        "eval_gap": 0.005151,
-        "num_preferred_tags": 1.500837,
-        "num_priorities": -0.953703,
-        "safety_change": -0.004897,
-        "king_safety_change": 0.161198,
-        "center_change": 0.114468,
-        "opponent_pressure_change": 0.038647,
-        "difficulty": -2.092235
-      },
-      "intercept": 0.333518
-    },
     "1800": {
       "weights": {
-        "eval_gap": -1.4e-05,
-        "num_preferred_tags": 0.306069,
-        "num_priorities": -0.088084,
-        "safety_change": -0.001124,
-        "king_safety_change": 0.026719,
-        "center_change": 0.03897,
-        "opponent_pressure_change": 0.053181,
-        "difficulty": -0.195925
+        "eval_gap": -0.065,
+        "num_preferred_tags": 0.148,
+        "num_priorities": 0.014,
+        "safety_change": -0.255,
+        "king_safety_change": 0.112,
+        "center_change": 0.166,
+        "opponent_pressure_change": 0.151,
+        "difficulty": -0.197
       },
-      "intercept": -1.842144
+      "intercept": -2.073,
+      "intercept_sd": 0.021,
+      "weights_stats": {
+        "eval_gap": {
+          "mean": -0.065,
+          "sd": 0.029,
+          "hdi_3%": -0.118,
+          "hdi_97%": -0.011,
+          "r_hat": 1.0,
+          "ess_bulk": 1266.0
+        },
+        "num_preferred_tags": {
+          "mean": 0.148,
+          "sd": 0.023,
+          "hdi_3%": 0.109,
+          "hdi_97%": 0.194,
+          "r_hat": 1.0,
+          "ess_bulk": 1252.0
+        },
+        "num_priorities": {
+          "mean": 0.014,
+          "sd": 0.021,
+          "hdi_3%": -0.026,
+          "hdi_97%": 0.052,
+          "r_hat": 1.0,
+          "ess_bulk": 901.0
+        },
+        "safety_change": {
+          "mean": -0.255,
+          "sd": 0.025,
+          "hdi_3%": -0.302,
+          "hdi_97%": -0.208,
+          "r_hat": 1.0,
+          "ess_bulk": 1172.0
+        },
+        "king_safety_change": {
+          "mean": 0.112,
+          "sd": 0.021,
+          "hdi_3%": 0.074,
+          "hdi_97%": 0.151,
+          "r_hat": 1.0,
+          "ess_bulk": 1133.0
+        },
+        "center_change": {
+          "mean": 0.166,
+          "sd": 0.022,
+          "hdi_3%": 0.128,
+          "hdi_97%": 0.209,
+          "r_hat": 1.0,
+          "ess_bulk": 1390.0
+        },
+        "opponent_pressure_change": {
+          "mean": 0.151,
+          "sd": 0.018,
+          "hdi_3%": 0.116,
+          "hdi_97%": 0.18,
+          "r_hat": 1.0,
+          "ess_bulk": 1300.0
+        },
+        "difficulty": {
+          "mean": -0.197,
+          "sd": 0.022,
+          "hdi_3%": -0.236,
+          "hdi_97%": -0.153,
+          "r_hat": 1.0,
+          "ess_bulk": 1105.0
+        }
+      }
     }
   }
 }

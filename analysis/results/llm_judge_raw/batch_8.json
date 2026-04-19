@@ -1,0 +1,1052 @@
+[
+  {
+    "task_id": "495b9a6e5e0d8809",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "ff83158c3564d5d2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "7b50e43293b14671",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "bcc47d2fb6378b52",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "09e95269ea1abc02",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "566672ea86d7c65f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "40907418fbfc8e91",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "b8a5adbacc6968bb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "6fc6823a45ea2179",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "65ba5b10cb352ac0",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The warning confused me since it still said to play the move anyway."
+  },
+  {
+    "task_id": "75305d11652d00bf",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The warning was confusing when it still recommended the move."
+  },
+  {
+    "task_id": "ef66bda9cddf6193",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Strategic labels on alternatives help me understand what each move achieves."
+  },
+  {
+    "task_id": "a3b48affea161b2a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Asking about center control is something I can try; the numbers mean nothing."
+  },
+  {
+    "task_id": "f094b1f13bf85a21",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "f49f90432b55e75e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "2c5789556aacb21d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "d766c4f21db8b69a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "11162fe9afa0f370",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Strategic labels on alternatives help me understand what each move achieves."
+  },
+  {
+    "task_id": "6cf7aee1ddff0256",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "435189f52ac5b616",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "1fb8ee556ff9b29c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing alternatives labeled by theme helps me compare plans, not just numbers."
+  },
+  {
+    "task_id": "3c4deb71fd7501d3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Asking about center control is something I can try; the numbers mean nothing."
+  },
+  {
+    "task_id": "54835c1ad5be6dbf",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "f92aac1caeb63070",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "0f7f39051dc4a3e1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Developing pieces first is advice I understand; the numbers are meaningless."
+  },
+  {
+    "task_id": "c094ef6bd85235e7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "45c94ac6e3919887",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "ea0cb9586f18c2b1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A clear tip I can practice beats numbers I have no idea how to read."
+  },
+  {
+    "task_id": "24a3d52749b24bc2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "9010474aa8b6c4ab",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "889f71f5e197610d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A clear tip I can practice beats numbers I have no idea how to read."
+  },
+  {
+    "task_id": "0eac2e96be9ca64f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "b0342481cd39486f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "cbfce5182e2134b6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A clear tip I can practice beats numbers I have no idea how to read."
+  },
+  {
+    "task_id": "0bb93a8cd477921b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "8c181b3efec0fc1a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "eab6adff28308c7b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A clear tip I can practice beats numbers I have no idea how to read."
+  },
+  {
+    "task_id": "8f70c157698b437c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "97a27a43f99e6145",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "16534d2e1c43a87a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "23cfccf55f5ef8af",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "d2e0b3039c738c11",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "5e96f89ad7b87b50",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "a7427e03e4d025c4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "dd06436c41c39bd0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Strategic labels on alternatives help me understand what each move achieves."
+  },
+  {
+    "task_id": "eccf5de4d8fa3612",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Asking about center control is something I can try; the numbers mean nothing."
+  },
+  {
+    "task_id": "16bc9d89c3fb07aa",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "54587da09ff6cf1f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "c467957b2bc54d0c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "37e74319cc77853f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "5d6591030ea55a2a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Alternatives grouped by development vs other themes aids my planning."
+  },
+  {
+    "task_id": "31a752a71a839b30",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A clear tip I can practice beats numbers I have no idea how to read."
+  },
+  {
+    "task_id": "6a399586dddc859e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "ef5c1ef9b1b8aebb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "00c7dec63ae38fd2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "55971bbb69c799b6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "fb72509b31385c03",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Strategic labels on alternatives help me understand what each move achieves."
+  },
+  {
+    "task_id": "7bb6867f08a72a9f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Asking about center control is something I can try; the numbers mean nothing."
+  },
+  {
+    "task_id": "c2e610e39b21fe78",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "cb140652c4dfb237",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "84236aa8d33e326b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "8b93c9919e7e5bda",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "5cb80d4cc0b7d66d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "68709678a0ae147f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "d990dce68a053cd5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "6cd9a48e781c7632",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "96c6aae53e060eaa",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "66f9ec151daaaeac",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "555ebe6e83980634",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Strategic labels on alternatives help me understand what each move achieves."
+  },
+  {
+    "task_id": "26e94cec1d1a8987",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Asking about center control is something I can try; the numbers mean nothing."
+  },
+  {
+    "task_id": "5844e0ba9041f9da",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "507b39df246aed9f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "0c79bfc6329afea5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "a65b1a23ff9d72df",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "c8eaad8ec9583f1a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Strategic labels on alternatives help me understand what each move achieves."
+  },
+  {
+    "task_id": "7ea6770a75735793",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Simple words beat numbers I cannot read."
+  },
+  {
+    "task_id": "a8248cd73c09a4e0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I often miss threats, so the safety reminder is more practical."
+  },
+  {
+    "task_id": "754d615d91d22b21",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Linking moves to safety themes helps me prioritize in quiet positions."
+  },
+  {
+    "task_id": "7b750451f54b69ba",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The warning confused me since it still said to play the move anyway."
+  },
+  {
+    "task_id": "7a014d0beaeb5554",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The warning was confusing when it still recommended the move."
+  },
+  {
+    "task_id": "c1edfa7f1668bf32",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "87465986308f3c35",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "0e9d3807885f8efe",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "7cb2802377b2d2af",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "ed65407ad67b5987",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The warning confused me since it still said to play the move anyway."
+  },
+  {
+    "task_id": "1f590a96bed0c682",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The warning was confusing when it still recommended the move."
+  },
+  {
+    "task_id": "58ca9529db870be7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "491a489fcdd25e51",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "aedd2c73db3d4325",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "347f28626557529e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "7cd5e52ca5c64f3d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "475b2443cb60805e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "34b6a5bac2e231c0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "4687a00cf8aa6d3c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "99d26507fddc1d29",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "275da69306102949",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "a5fe67026a7bbb13",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "a35138d8917c445c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "dd549d0dbef1b80e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "a721ce48b725f358",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "439e15b9296949ad",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "a882df38be459571",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "41f54425bbf21e7e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The reminder to develop pieces gives me a plan I can follow."
+  },
+  {
+    "task_id": "cf277d66c9ca41c3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "68cf4e039581eaf0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "f2425d9e33b01dbb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Developing pieces first is advice I understand; the numbers are meaningless."
+  },
+  {
+    "task_id": "d615b9a048be610b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "73de5e6e806811d3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing alternatives labeled by theme helps me compare plans, not just numbers."
+  },
+  {
+    "task_id": "38a77a1397fc8286",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Developing pieces first is advice I understand; the numbers are meaningless."
+  },
+  {
+    "task_id": "aff4aab5d2080187",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "d80ed9dbede7db98",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Alternatives grouped by development vs other themes aids my planning."
+  },
+  {
+    "task_id": "5355318ffb07e14b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Developing pieces first is advice I understand; the numbers are meaningless."
+  },
+  {
+    "task_id": "b413c5bd3fbbc3a0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "165e258068f4c30f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Alternatives grouped by development vs other themes aids my planning."
+  },
+  {
+    "task_id": "95ae85af5a9fef53",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The reminder to develop pieces gives me a plan I can follow."
+  },
+  {
+    "task_id": "6263eb8995d6fd68",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "e83353253063e2d8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "f760aef790f1b65c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Developing pieces first is advice I understand; the numbers are meaningless."
+  },
+  {
+    "task_id": "ad9d979c6e8586c4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "dc0c3387a26e5cc7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing alternatives labeled by theme helps me compare plans, not just numbers."
+  },
+  {
+    "task_id": "60011822102552f0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "6503595b84142578",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "af0871b38a7642c2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Strategic labels on alternatives help me understand what each move achieves."
+  },
+  {
+    "task_id": "dd07d6395fba4e0f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "6af1872c9eb987c5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "dda7515bfc63b1be",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing alternatives labeled by theme helps me compare plans, not just numbers."
+  },
+  {
+    "task_id": "d994ba141de6a4bd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "c94d73d5cba892db",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "d5a52d7f008591e3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing each option relates to center or safety helps me choose wisely."
+  },
+  {
+    "task_id": "17afde9d3ba2e05a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Asking about center control is something I can try; the numbers mean nothing."
+  },
+  {
+    "task_id": "baac5a95d85276a7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "81b2166607995898",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "a4ab21c3d6dffbce",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Asking about center control is something I can try; the numbers mean nothing."
+  },
+  {
+    "task_id": "7071d1806e651f19",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "51cdb975f4bdef65",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing the tutor chose differently from the engine is useful context for me."
+  },
+  {
+    "task_id": "ea974e0107d3471a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Developing pieces first is advice I understand; the numbers are meaningless."
+  },
+  {
+    "task_id": "d584ee4b0f386a50",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "300ffb85e2a86d7a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing alternatives labeled by theme helps me compare plans, not just numbers."
+  },
+  {
+    "task_id": "fc73fcabaf1954e6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Improving my worst piece is a tip I can use; those numbers confuse me."
+  },
+  {
+    "task_id": "2d304d5de3c5b312",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Improving my worst piece is a concrete plan; eval numbers are not."
+  },
+  {
+    "task_id": "eed7d6be019e4b6d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Alternatives grouped by development vs other themes aids my planning."
+  },
+  {
+    "task_id": "257a7bbeede09901",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Developing pieces first is advice I understand; the numbers are meaningless."
+  },
+  {
+    "task_id": "52aef599b3634f4a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The development tip reinforces what I know but forget in games."
+  },
+  {
+    "task_id": "ed3a9a9fdae0ad0f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing alternatives labeled by theme helps me compare plans, not just numbers."
+  },
+  {
+    "task_id": "4e4a4b5c76aae4d3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A clear tip I can practice beats numbers I have no idea how to read."
+  },
+  {
+    "task_id": "6afdedea7e8f2ebb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need to know why a move is good, not just which one has the highest number."
+  },
+  {
+    "task_id": "9aa0c7c979921a9c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Strategic labels on alternatives help me understand what each move achieves."
+  },
+  {
+    "task_id": "3f0dc48de2110e6d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what centipawns are, but the center tip I can try."
+  },
+  {
+    "task_id": "ee2fdff4cdf4d177",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know about center control but need reminders; engine numbers don't help me plan."
+  },
+  {
+    "task_id": "a147f51c131e563b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing alternatives labeled by theme helps me compare plans, not just numbers."
+  }
+]

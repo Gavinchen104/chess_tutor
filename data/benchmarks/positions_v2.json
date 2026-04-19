@@ -4,24 +4,10 @@
     "theme": "development",
     "level_key": "600",
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "expected_tutor_properties": [
-      "improves_development",
-      "low_tactical_risk",
-      "not_too_complex"
-    ],
-    "acceptable_primary_themes": [
-      "development",
-      "center",
-      "king_safety"
-    ],
-    "forbidden_properties": [
-      "hangs_material",
-      "large_eval_drop",
-      "high_tactical_risk"
-    ],
-    "min_explanation_keywords": [
-      "development"
-    ],
+    "expected_tutor_properties": ["improves_development", "low_tactical_risk", "not_too_complex"],
+    "acceptable_primary_themes": ["development", "center", "king_safety"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["development"],
     "notes": "At 600, the tutor should prefer a simple developing move."
   },
   {
@@ -29,24 +15,10 @@
     "theme": "development",
     "level_key": "1000",
     "fen": "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1",
-    "expected_tutor_properties": [
-      "improves_center_control",
-      "low_tactical_risk",
-      "practical_for_level"
-    ],
-    "acceptable_primary_themes": [
-      "development",
-      "center",
-      "king_safety"
-    ],
-    "forbidden_properties": [
-      "hangs_material",
-      "large_eval_drop",
-      "high_tactical_risk"
-    ],
-    "min_explanation_keywords": [
-      "king"
-    ],
+    "expected_tutor_properties": ["improves_center_control", "low_tactical_risk", "practical_for_level"],
+    "acceptable_primary_themes": ["development", "center", "king_safety"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["king"],
     "notes": "At 1000, the tutor should still stay simple and principle-based."
   },
   {
@@ -54,24 +26,10 @@
     "theme": "king_safety",
     "level_key": "600",
     "fen": "r1bqk2r/pppp1ppp/2n2n2/4p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R w KQkq - 4 5",
-    "expected_tutor_properties": [
-      "improves_king_safety",
-      "low_tactical_risk",
-      "practical_for_level"
-    ],
-    "acceptable_primary_themes": [
-      "king_safety",
-      "development",
-      "center"
-    ],
-    "forbidden_properties": [
-      "ignores_king_safety",
-      "large_eval_drop",
-      "high_tactical_risk"
-    ],
-    "min_explanation_keywords": [
-      "safety"
-    ],
+    "expected_tutor_properties": ["improves_king_safety", "low_tactical_risk", "practical_for_level"],
+    "acceptable_primary_themes": ["king_safety", "development", "center"],
+    "forbidden_properties": ["ignores_king_safety", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["safety"],
     "notes": "White should strongly consider castling or another simple king-safety move."
   },
   {
@@ -79,24 +37,10 @@
     "theme": "king_safety",
     "level_key": "1000",
     "fen": "r1bqk2r/pppp1ppp/2n2n2/4p3/2B1P3/2NP1N2/PPP2PPP/R1BQK2R w KQkq - 4 5",
-    "expected_tutor_properties": [
-      "improves_king_safety",
-      "not_too_complex",
-      "practical_for_level"
-    ],
-    "acceptable_primary_themes": [
-      "king_safety",
-      "development",
-      "initiative"
-    ],
-    "forbidden_properties": [
-      "ignores_king_safety",
-      "large_eval_drop",
-      "high_tactical_risk"
-    ],
-    "min_explanation_keywords": [
-      "king"
-    ],
+    "expected_tutor_properties": ["improves_king_safety", "not_too_complex", "practical_for_level"],
+    "acceptable_primary_themes": ["king_safety", "development", "initiative"],
+    "forbidden_properties": ["ignores_king_safety", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["king"],
     "notes": "At 1000, king safety should still beat unnecessary ambition."
   },
   {
@@ -104,22 +48,10 @@
     "theme": "center",
     "level_key": "1000",
     "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
-    "expected_tutor_properties": [
-      "improves_center_control",
-      "practical_for_level"
-    ],
-    "acceptable_primary_themes": [
-      "center",
-      "development",
-      "activity"
-    ],
-    "forbidden_properties": [
-      "ignores_center",
-      "large_eval_drop"
-    ],
-    "min_explanation_keywords": [
-      "safety"
-    ],
+    "expected_tutor_properties": ["improves_center_control", "practical_for_level"],
+    "acceptable_primary_themes": ["center", "development", "activity"],
+    "forbidden_properties": ["ignores_center", "large_eval_drop"],
+    "min_explanation_keywords": ["safety"],
     "notes": "The tutor should favor a move that improves central control or clean development."
   },
   {
@@ -127,23 +59,10 @@
     "theme": "center",
     "level_key": "1400",
     "fen": "rnbqkb1r/pppp1ppp/5n2/4p3/4P3/5N2/PPPP1PPP/RNBQKB1R w KQkq - 2 3",
-    "expected_tutor_properties": [
-      "improves_center_control",
-      "keeps_initiative",
-      "practical_for_level"
-    ],
-    "acceptable_primary_themes": [
-      "center",
-      "initiative",
-      "activity"
-    ],
-    "forbidden_properties": [
-      "ignores_center",
-      "large_eval_drop"
-    ],
-    "min_explanation_keywords": [
-      "safety"
-    ],
+    "expected_tutor_properties": ["improves_center_control", "keeps_initiative", "practical_for_level"],
+    "acceptable_primary_themes": ["center", "initiative", "activity"],
+    "forbidden_properties": ["ignores_center", "large_eval_drop"],
+    "min_explanation_keywords": ["safety"],
     "notes": "At 1400, central pressure with activity is a reasonable teaching target."
   },
   {
@@ -151,24 +70,10 @@
     "theme": "safety",
     "level_key": "600",
     "fen": "4k3/8/8/8/4q3/8/4R2P/4K3 w - - 0 1",
-    "expected_tutor_properties": [
-      "low_tactical_risk",
-      "not_too_complex",
-      "practical_for_level"
-    ],
-    "acceptable_primary_themes": [
-      "safety",
-      "king_safety",
-      "tactics"
-    ],
-    "forbidden_properties": [
-      "hangs_material",
-      "large_eval_drop",
-      "high_tactical_risk"
-    ],
-    "min_explanation_keywords": [
-      "safety"
-    ],
+    "expected_tutor_properties": ["low_tactical_risk", "not_too_complex", "practical_for_level"],
+    "acceptable_primary_themes": ["safety", "king_safety", "tactics"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["safety"],
     "notes": "The tutor should favor immediate safety over fancy play."
   },
   {
@@ -176,24 +81,10 @@
     "theme": "safety",
     "level_key": "1000",
     "fen": "4k3/8/8/8/4q3/8/4R2P/4K3 w - - 0 1",
-    "expected_tutor_properties": [
-      "low_tactical_risk",
-      "not_too_complex",
-      "practical_for_level"
-    ],
-    "acceptable_primary_themes": [
-      "safety",
-      "tactics",
-      "king_safety"
-    ],
-    "forbidden_properties": [
-      "hangs_material",
-      "large_eval_drop",
-      "high_tactical_risk"
-    ],
-    "min_explanation_keywords": [
-      "safety"
-    ],
+    "expected_tutor_properties": ["low_tactical_risk", "not_too_complex", "practical_for_level"],
+    "acceptable_primary_themes": ["safety", "tactics", "king_safety"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["safety"],
     "notes": "At 1000, the tutor should still strongly prefer the safe practical option."
   },
   {
@@ -201,23 +92,10 @@
     "theme": "conversion",
     "level_key": "1000",
     "fen": "8/5pk1/3p2p1/2pP4/2P1P3/6P1/5P1P/6K1 w - - 0 1",
-    "expected_tutor_properties": [
-      "supports_conversion",
-      "low_tactical_risk",
-      "practical_for_level"
-    ],
-    "acceptable_primary_themes": [
-      "conversion",
-      "activity",
-      "king_safety"
-    ],
-    "forbidden_properties": [
-      "large_eval_drop",
-      "high_tactical_risk"
-    ],
-    "min_explanation_keywords": [
-      "king"
-    ],
+    "expected_tutor_properties": ["supports_conversion", "low_tactical_risk", "practical_for_level"],
+    "acceptable_primary_themes": ["conversion", "activity", "king_safety"],
+    "forbidden_properties": ["large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["king"],
     "notes": "When ahead in a simple endgame, the tutor should favor practical conversion."
   },
   {
@@ -225,22 +103,230 @@
     "theme": "initiative",
     "level_key": "1800",
     "fen": "r1bq1rk1/pppp1ppp/2n2n2/2b1p3/2B1P3/2NP1N2/PPP2PPP/R1BQ1RK1 w - - 6 7",
-    "expected_tutor_properties": [
-      "practical_for_level",
-      "low_tactical_risk"
-    ],
-    "acceptable_primary_themes": [
-      "initiative",
-      "activity",
-      "center"
-    ],
-    "forbidden_properties": [
-      "large_eval_drop",
-      "high_tactical_risk"
-    ],
-    "min_explanation_keywords": [
-      "safety"
-    ],
+    "expected_tutor_properties": ["practical_for_level", "low_tactical_risk"],
+    "acceptable_primary_themes": ["initiative", "activity", "center"],
+    "forbidden_properties": ["large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["safety"],
     "notes": "At 1800, the tutor can stay closer to active engine-like play."
+  },
+  {
+    "label": "Italian Game Development 600",
+    "theme": "development",
+    "level_key": "600",
+    "fen": "r1bqkbnr/pppp1ppp/2n5/4p3/2B1P3/5N2/PPPP1PPP/RNBQK2R b KQkq - 3 3",
+    "expected_tutor_properties": ["improves_development", "low_tactical_risk", "not_too_complex"],
+    "acceptable_primary_themes": ["development", "center", "king_safety"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["development"],
+    "notes": "Black should develop minor pieces and prepare to castle."
+  },
+  {
+    "label": "QGD Central Tension 1000",
+    "theme": "center",
+    "level_key": "1000",
+    "fen": "rnbqkb1r/ppp2ppp/4pn2/3p4/2PP4/2N5/PP2PPPP/R1BQKBNR w KQkq - 2 4",
+    "expected_tutor_properties": ["improves_center_control", "practical_for_level"],
+    "acceptable_primary_themes": ["center", "development", "activity"],
+    "forbidden_properties": ["ignores_center", "large_eval_drop"],
+    "min_explanation_keywords": ["development"],
+    "notes": "White should maintain central pawn tension and develop pieces."
+  },
+  {
+    "label": "Najdorf Development 1400",
+    "theme": "development",
+    "level_key": "1400",
+    "fen": "rnbqkb1r/1p2pppp/p2p1n2/8/3NP3/2N5/PPP1BPPP/R1BQK2R b KQkq - 1 6",
+    "expected_tutor_properties": ["improves_development", "practical_for_level"],
+    "acceptable_primary_themes": ["development", "center", "activity"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop"],
+    "min_explanation_keywords": ["development"],
+    "notes": "Black should develop with e5 or e6 and fight for central space."
+  },
+  {
+    "label": "Caro-Kann Center Fight 600",
+    "theme": "center",
+    "level_key": "600",
+    "fen": "rnbqkbnr/pp2pppp/2p5/3pP3/3P4/8/PPP2PPP/RNBQKBNR b KQkq - 0 3",
+    "expected_tutor_properties": ["improves_center_control", "low_tactical_risk", "not_too_complex"],
+    "acceptable_primary_themes": ["center", "development", "activity"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["development"],
+    "notes": "Black should undermine the center with c5 or develop with Bf5."
+  },
+  {
+    "label": "Fried Liver King Safety 600",
+    "theme": "king_safety",
+    "level_key": "600",
+    "fen": "r1bqkb1r/ppp2Npp/2n5/3np3/2B5/8/PPPP1PPP/RNBQK2R b KQkq - 0 6",
+    "expected_tutor_properties": ["improves_king_safety", "practical_for_level"],
+    "acceptable_primary_themes": ["king_safety", "safety", "tactics"],
+    "forbidden_properties": ["large_eval_drop"],
+    "min_explanation_keywords": ["king"],
+    "notes": "Black king is exposed after Nxf7; must find defensive resources."
+  },
+  {
+    "label": "Uncastled King 1000",
+    "theme": "king_safety",
+    "level_key": "1000",
+    "fen": "rnbqk2r/1p2bppp/p2p1n2/4p3/4P3/1NN5/PPP1BPPP/R1BQ1RK1 b kq - 3 8",
+    "expected_tutor_properties": ["improves_king_safety", "practical_for_level"],
+    "acceptable_primary_themes": ["king_safety", "development", "safety"],
+    "forbidden_properties": ["ignores_king_safety", "large_eval_drop"],
+    "min_explanation_keywords": ["king"],
+    "notes": "Black must castle quickly; king in the center is vulnerable."
+  },
+  {
+    "label": "Opposite Side Castling 1400",
+    "theme": "king_safety",
+    "level_key": "1400",
+    "fen": "rnbq1rk1/4bppp/p2p1n2/1p2p3/4P3/1NN1BP2/PPPQ2PP/2KR1B1R b - - 1 10",
+    "expected_tutor_properties": ["practical_for_level", "keeps_initiative"],
+    "acceptable_primary_themes": ["king_safety", "initiative", "activity"],
+    "forbidden_properties": ["large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["king"],
+    "notes": "Opposite-side castling; pawn storm timing and king safety both matter."
+  },
+  {
+    "label": "Moeller Attack Defense 1800",
+    "theme": "king_safety",
+    "level_key": "1800",
+    "fen": "r1bqk2r/pppp1ppp/2n5/8/2BP4/1Qb2N2/P4PPP/R1B2RK1 b kq - 1 10",
+    "expected_tutor_properties": ["practical_for_level"],
+    "acceptable_primary_themes": ["king_safety", "safety", "tactics", "development"],
+    "forbidden_properties": ["large_eval_drop"],
+    "min_explanation_keywords": ["king"],
+    "notes": "White has strong initiative; Black must defend precisely."
+  },
+  {
+    "label": "Scholar Mate Threat 600",
+    "theme": "safety",
+    "level_key": "600",
+    "fen": "rn1qkbnr/ppp2ppp/8/4p3/2B1P3/5Q2/PPP2PPP/RNB1K2R b KQkq - 1 6",
+    "expected_tutor_properties": ["low_tactical_risk", "not_too_complex", "practical_for_level"],
+    "acceptable_primary_themes": ["safety", "king_safety", "tactics"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop"],
+    "min_explanation_keywords": ["safety"],
+    "notes": "White threatens Qxf7#; Black must defend f7 immediately."
+  },
+  {
+    "label": "Ruy Lopez Tactics 1000",
+    "theme": "tactics",
+    "level_key": "1000",
+    "fen": "r2qkb1r/2p2ppp/p1n1b3/1p1pP3/4n3/1B3N2/PPP2PPP/RNBQ1RK1 w kq - 1 9",
+    "expected_tutor_properties": ["practical_for_level"],
+    "acceptable_primary_themes": ["tactics", "center", "activity", "initiative"],
+    "forbidden_properties": ["large_eval_drop"],
+    "min_explanation_keywords": ["safety"],
+    "notes": "Complex tactical position with fluid center; tutor should find practical play."
+  },
+  {
+    "label": "Semi-Slav Pin 1400",
+    "theme": "tactics",
+    "level_key": "1400",
+    "fen": "r1bq1rk1/p2nbppp/2p1pn2/1p4B1/3P4/2NBPN2/PP3PPP/2RQK2R b K - 1 10",
+    "expected_tutor_properties": ["practical_for_level"],
+    "acceptable_primary_themes": ["tactics", "center", "activity", "development"],
+    "forbidden_properties": ["large_eval_drop"],
+    "min_explanation_keywords": ["safety"],
+    "notes": "Tactical opportunities with the Bg5 pin; tutor should find level-appropriate response."
+  },
+  {
+    "label": "Najdorf Pin Exploitation 1800",
+    "theme": "tactics",
+    "level_key": "1800",
+    "fen": "r1b1k2r/1pqnbppp/p2ppn2/6B1/3NPP2/2N2Q2/PPP3PP/2KR1B1R w kq - 5 10",
+    "expected_tutor_properties": ["practical_for_level"],
+    "acceptable_primary_themes": ["tactics", "initiative", "activity", "center"],
+    "forbidden_properties": ["large_eval_drop"],
+    "min_explanation_keywords": ["safety"],
+    "notes": "White can exploit the pin on f6; advanced tactical play expected at 1800."
+  },
+  {
+    "label": "Italian Gambit Activity 1000",
+    "theme": "activity",
+    "level_key": "1000",
+    "fen": "r1bqk2r/pppp1ppp/2n2n2/8/1bBPP3/5N2/PP1N1PPP/R1BQK2R b KQkq - 2 7",
+    "expected_tutor_properties": ["practical_for_level"],
+    "acceptable_primary_themes": ["activity", "development", "center", "king_safety"],
+    "forbidden_properties": ["large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["development"],
+    "notes": "Pawn sacrifice for development lead; tutor should find active, practical play."
+  },
+  {
+    "label": "Nimzo Piece Activation 1400",
+    "theme": "activity",
+    "level_key": "1400",
+    "fen": "r2q1rk1/pbpn1ppp/1p1ppn2/6B1/2PP4/P1QBP3/1P2NPPP/R3K2R b KQ - 3 10",
+    "expected_tutor_properties": ["practical_for_level"],
+    "acceptable_primary_themes": ["activity", "development", "center", "initiative"],
+    "forbidden_properties": ["large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["safety"],
+    "notes": "Black should seize the e-file and activate rooks; coordination matters."
+  },
+  {
+    "label": "KID Closed Center 1800",
+    "theme": "initiative",
+    "level_key": "1800",
+    "fen": "r1bq1rk1/pppnnpbp/3p2p1/3Pp3/2P1P3/2N5/PP2BPPP/R1BQNRK1 w - - 3 10",
+    "expected_tutor_properties": ["practical_for_level", "keeps_initiative"],
+    "acceptable_primary_themes": ["initiative", "activity", "center"],
+    "forbidden_properties": ["large_eval_drop"],
+    "min_explanation_keywords": ["safety"],
+    "notes": "Closed center with plans on both flanks; strategic initiative matters."
+  },
+  {
+    "label": "Maroczy Bind Initiative 600",
+    "theme": "initiative",
+    "level_key": "600",
+    "fen": "rnbqkb1r/1p3p1p/p2ppnp1/8/2PNP3/3B4/PP3PPP/RNBQ1RK1 w kq - 0 8",
+    "expected_tutor_properties": ["low_tactical_risk", "not_too_complex", "practical_for_level"],
+    "acceptable_primary_themes": ["initiative", "center", "development", "activity"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["development"],
+    "notes": "White has extra central space; use it simply without overcomplicating."
+  },
+  {
+    "label": "Rook Endgame Conversion 600",
+    "theme": "conversion",
+    "level_key": "600",
+    "fen": "8/5pk1/6p1/8/8/6P1/5PK1/3R4 w - - 0 40",
+    "expected_tutor_properties": ["supports_conversion", "low_tactical_risk", "not_too_complex"],
+    "acceptable_primary_themes": ["conversion", "activity", "king_safety"],
+    "forbidden_properties": ["large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["king"],
+    "notes": "Simple rook endgame; activate rook and advance king."
+  },
+  {
+    "label": "Queen Endgame Passed Pawn 1400",
+    "theme": "conversion",
+    "level_key": "1400",
+    "fen": "3q4/5pk1/6p1/4Pp2/5P2/6P1/2Q3K1/8 w - - 0 50",
+    "expected_tutor_properties": ["supports_conversion", "practical_for_level"],
+    "acceptable_primary_themes": ["conversion", "activity", "initiative"],
+    "forbidden_properties": ["large_eval_drop"],
+    "min_explanation_keywords": ["king"],
+    "notes": "Queen endgame with passed e-pawn; use checks and advance."
+  },
+  {
+    "label": "Bishop Endgame Technique 1800",
+    "theme": "conversion",
+    "level_key": "1800",
+    "fen": "8/5k2/4b1p1/3p1p2/2pP1P2/2P1B1P1/6K1/8 w - - 0 45",
+    "expected_tutor_properties": ["supports_conversion", "practical_for_level"],
+    "acceptable_primary_themes": ["conversion", "activity"],
+    "forbidden_properties": ["large_eval_drop"],
+    "min_explanation_keywords": ["king"],
+    "notes": "Opposite-color bishop endgame; exploit fixed pawn structure."
+  },
+  {
+    "label": "Scholar Mate Punishment 600",
+    "theme": "safety",
+    "level_key": "600",
+    "fen": "r1bqkb1r/pppp1p1p/2n2np1/4p3/2B1P3/5Q2/PPPP1PPP/RNB1K1NR w KQkq - 2 5",
+    "expected_tutor_properties": ["low_tactical_risk", "not_too_complex", "practical_for_level"],
+    "acceptable_primary_themes": ["safety", "development", "center", "tactics"],
+    "forbidden_properties": ["hangs_material", "large_eval_drop", "high_tactical_risk"],
+    "min_explanation_keywords": ["development"],
+    "notes": "Black defended f7; White should retreat queen and develop normally."
   }
 ]
