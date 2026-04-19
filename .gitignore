@@ -27,4 +27,9 @@ others/
 .ipynb_checkpoints/
 *.log
 .streamlit/
-analysis/results/
+# LaTeX build artifacts
+*.aux
+*.bbl
+*.blg
+*.out
+*.synctex.gz

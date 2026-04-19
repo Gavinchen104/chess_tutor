@@ -484,35 +484,114 @@ class ReviewService:
 
 def finalize_candidate(candidate: CandidateMove, tutor_move: CandidateMove, level: LevelProfile) -> CandidateMove:
     theme_label = candidate.primary_theme.replace("_", " ")
+    is_tutor_pick = candidate.uci == tutor_move.uci
     better_alternative_reason = (
         "This is already the tutor-preferred move for this rating band."
-        if candidate.uci == tutor_move.uci
+        if is_tutor_pick
         else f"`{tutor_move.san}` is the cleaner teaching move because it more clearly supports {tutor_move.primary_theme.replace('_', ' ')}."
     )
 
-    teaching_sentence = f"{candidate.primary_reason} Main idea: {theme_label}."
-    habit_sentence = f"For {level.label}, remember this habit: {candidate.training_habit}"
-
-    if candidate.uci == tutor_move.uci:
-        practicality_sentence = (
-            f"For {level.label}, this move is practical because it keeps the main idea clear and stays easier to execute."
-        )
-    else:
-        practicality_sentence = (
-            f"For {level.label}, this move is playable, but {better_alternative_reason}"
-        )
-
-    explanation = " ".join(
-        sentence.strip()
-        for sentence in (teaching_sentence, habit_sentence, practicality_sentence)
-        if sentence.strip()
-    )
+    explanation = _build_level_explanation(candidate, tutor_move, level, theme_label, is_tutor_pick)
 
     return replace(
         candidate,
         better_alternative_reason=better_alternative_reason,
         player_friendly_explanation=explanation,
     )
+
+
+def _format_eval_friendly(score_cp: int) -> str:
+    """Convert centipawn score to a human-readable string."""
+    pawns = score_cp / 100
+    if abs(pawns) < 0.3:
+        return "roughly equal"
+    side = "White" if pawns > 0 else "Black"
+    return f"{side} is ahead by about {abs(pawns):.1f} pawns"
+
+
+def _build_level_explanation(
+    candidate: CandidateMove,
+    tutor_move: CandidateMove,
+    level: LevelProfile,
+    theme_label: str,
+    is_tutor_pick: bool,
+) -> str:
+    """Generate a position explanation whose depth adapts to the player's ELO."""
+    reason = candidate.primary_reason.strip()
+    level_key = int(level.key)
+
+    if level_key <= 600:
+        return _explain_600(candidate, reason, theme_label, is_tutor_pick, tutor_move)
+    if level_key <= 1000:
+        return _explain_1000(candidate, reason, theme_label, is_tutor_pick, tutor_move)
+    if level_key <= 1400:
+        return _explain_1400(candidate, reason, theme_label, is_tutor_pick, tutor_move)
+    return _explain_1800(candidate, reason, theme_label, is_tutor_pick, tutor_move)
+
+
+def _explain_600(cand: CandidateMove, reason: str, theme: str, is_pick: bool, tutor: CandidateMove) -> str:
+    parts = [f"{cand.san}: {reason}"]
+    parts.append(f"Focus on {theme}.")
+    if cand.training_habit:
+        parts.append(f"Habit to practice: {cand.training_habit}")
+    if not is_pick:
+        parts.append(f"A simpler choice is {tutor.san}.")
+    return " ".join(parts)
+
+
+def _explain_1000(cand: CandidateMove, reason: str, theme: str, is_pick: bool, tutor: CandidateMove) -> str:
+    parts = [f"{cand.san}: {reason}"]
+    parts.append(f"The key idea is {theme}.")
+    if cand.training_habit:
+        parts.append(f"Practice this habit: {cand.training_habit}")
+    if not is_pick:
+        gap = abs(cand.score_cp - tutor.score_cp)
+        if gap > 30:
+            parts.append(f"However, {tutor.san} is a stronger and more practical choice here.")
+        else:
+            parts.append(f"{tutor.san} is slightly better for learning at this level.")
+    return " ".join(parts)
+
+
+def _explain_1400(cand: CandidateMove, reason: str, theme: str, is_pick: bool, tutor: CandidateMove) -> str:
+    eval_text = _format_eval_friendly(cand.score_cp)
+    parts = [f"{cand.san} ({eval_text}): {reason}"]
+    parts.append(f"Strategically, this is about {theme}.")
+    if cand.priorities_addressed:
+        needs = ", ".join(p.replace("_", " ") for p in cand.priorities_addressed[:2])
+        parts.append(f"It also addresses: {needs}.")
+    if not is_pick:
+        gap = abs(cand.score_cp - tutor.score_cp)
+        tutor_eval = _format_eval_friendly(tutor.score_cp)
+        if gap > 50:
+            parts.append(
+                f"The recommended move {tutor.san} ({tutor_eval}) is significantly "
+                f"stronger and focuses on {tutor.primary_theme.replace('_', ' ')}."
+            )
+        else:
+            parts.append(
+                f"The recommended move {tutor.san} ({tutor_eval}) is a cleaner "
+                f"practical choice that emphasizes {tutor.primary_theme.replace('_', ' ')}."
+            )
+    return " ".join(parts)
+
+
+def _explain_1800(cand: CandidateMove, reason: str, theme: str, is_pick: bool, tutor: CandidateMove) -> str:
+    eval_pawns = cand.score_cp / 100
+    parts = [f"{cand.san} (eval {eval_pawns:+.2f}): {reason}"]
+    parts.append(f"Theme: {theme}.")
+    if cand.priorities_addressed:
+        needs = ", ".join(p.replace("_", " ") for p in cand.priorities_addressed[:2])
+        parts.append(f"Position priorities addressed: {needs}.")
+    if cand.eval_gap_cp > 0:
+        parts.append(f"Eval gap from best: {cand.eval_gap_cp} cp.")
+    if not is_pick:
+        tutor_pawns = tutor.score_cp / 100
+        parts.append(
+            f"Preferred: {tutor.san} (eval {tutor_pawns:+.2f}) — "
+            f"better balance of strength and {tutor.primary_theme.replace('_', ' ')}."
+        )
+    return " ".join(parts)
 
 
 def dedupe_candidates(candidates: list[CandidateMove]) -> list[CandidateMove]:

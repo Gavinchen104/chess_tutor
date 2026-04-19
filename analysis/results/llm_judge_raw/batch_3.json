@@ -1,0 +1,1052 @@
+[
+  {
+    "task_id": "3d7a873d6f1c6407",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "c4a28a2443f3afc9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "162a628ec74c6072",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "64d6dcc05ca5528d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "27476bad2e0ed78f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "c501be0cdb2f312f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "1b9a0002ad77c41f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "619f9304d853bbde",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "121d03f3c9c0b05c",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "4648797dedcedc27",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "09e5bafaa58feee5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "80f393807dc6bec1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "ee2701efcdada6a1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "545e2fbaed088f20",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "3c4233afe25c84b5",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "7b9c089877310c26",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "04b1d81dfbee87de",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "55a13da2edeebd3e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "62719354b17e48be",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "One move with a clear reason is all I need; I can't compare engine numbers anyway."
+  },
+  {
+    "task_id": "6e26139a5af8aad1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "4363988d4764f544",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I appreciate the practical framing but a full pawn sacrifice feels like too much to give up."
+  },
+  {
+    "task_id": "b093a87096c65842",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "fbd9336cc2efa531",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "e82f68225adba123",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "5bfa6f5211e840e4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "6a107820da76b120",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "8410f6bb56ae3e5e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "c019ec69bb8b333b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "b2b0860acb4a6400",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "4dd564fcfb3a124d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "82b6dfd73019d928",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "b268097eb92d2e19",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "47fa60dd3ace6e9f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why a slightly suboptimal move is practical at my level is exactly the coaching I want."
+  },
+  {
+    "task_id": "ba77a2ae736ac9e2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "67f4aad53794e631",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "d2d044670a07df89",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "60584e168062efbc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "3dc5425618a4633a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "ea1962454b080f68",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why a slightly suboptimal move is practical at my level is exactly the coaching I want."
+  },
+  {
+    "task_id": "13dbef62f24259cc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "3f0435b6ec1649bf",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "44669f35fb382630",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why a slightly suboptimal move is practical at my level is exactly the coaching I want."
+  },
+  {
+    "task_id": "2a1f2f529e37a265",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "f75816dfcc506f86",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "a4142dffc095f01b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "3a06375154208284",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "a382f46c821a9ff4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "0f977c4658f08fcd",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "d66ad7d8b7655464",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "b5c7701ee69b7713",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "e1148b415df37826",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "edabf2407b330d19",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "e971f28fadfaf25c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "fb7307bd87867337",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "e51d2af0e0e0413f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "ba1b18f246fedbad",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "c8ca0e99e11c2ddf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "4f3b9b3cc226838d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "b18b4c0c94496bc1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "d7d2a681bc0ec258",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "31fd80bd79e1b19f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "c7aee8372f2d7688",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "aacb27cf29edddcf",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "a03034dc39e865c5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "752601b329cbd39c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "1526886f0258dbfc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "20a4b79fdf8d29ab",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "854d70d9dc6eb1db",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "742b852f316a337c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why a slightly suboptimal move is practical at my level is exactly the coaching I want."
+  },
+  {
+    "task_id": "51cd3b75097d5568",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "397eef569908c1d3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "746d0ff8e379a973",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "c4fcf672ea6a9a78",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "995261a6eb17da66",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "b459273b766b8dff",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why a slightly suboptimal move is practical at my level is exactly the coaching I want."
+  },
+  {
+    "task_id": "e5fe7aedaca8b4db",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "14e752195c62e6dd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "5daa0f4995cf8e29",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "2ca4515392dcdd73",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "6aaf515247c58bc6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "6100ece5d6aab7d4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "3347993d5a3fea8b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "8992b315bc1cf501",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "abd766dbdec6a46f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "b662367aed0a1e47",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "ebb7e62f99cdf123",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "5a64e9a798571577",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "9b1e4ca08ee2daad",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "4a1d56acceb653c9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "9d94e0b2266bd7fd",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "0ddf1f1a272fe595",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "f320b40e353ffef3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "faa73ec27d5f5e8c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "4f94222d6ff6b618",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "016238dfbff59993",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "e3e1e0d6ee21bcee",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "e2a861d8ef0a8f74",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "A simple explanation of what to do beats a list of moves with scores I don't understand."
+  },
+  {
+    "task_id": "40c24fb607473045",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "d268af6a2f3cf2d3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Moves are nearly equal so the strategic reasoning is the tiebreaker I needed."
+  },
+  {
+    "task_id": "eb2d73ff6c81298f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "3634c433283b239d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "dfac4a154b2a2ef6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "bce3e03378c9e428",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "7695c701999de7e5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "af20c88e258f8c95",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "57528e38e79aeba1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "2d0e0c4f1b7e92cd",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "aa691ca5150bbcf9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "1f44c908899e2d31",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "a2f7e239ee4f127b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "9e1f6840e1606819",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "db07347f18bdf023",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "92a8e4fdc52fc75d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "f7ecfe9cded54ac0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "ce084eb7e9351f66",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "ec7fe00379987a70",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "54e62e46689ee6fe",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "daf6cb1b013f29fb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "9c3f6b0e9e5c1f80",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "c41afbb438faa748",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "cae66046ca0fc32d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "ffd71ecfd4aa7d24",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "d56789919b3d8310",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "0bfd1c1641fd3efe",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "f34a952973b4295e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "ef2dc33d1aff0ba9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "d92956d31e83fea0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "c9cc9e8f75baa8e2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "fae85724577d1014",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "1f5d715d9a86a207",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "5b5667036f254097",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "0b6505c97e120ac6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "788b54781b4dba2d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "0c91de351a12720c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "00f8b894149f7736",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "f37cff82d7b74394",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "cff1d3cfddafc294",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "bccc57199f818dea",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "ba2b8ec6b1a60c02",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "efbecd6145c9865a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "ed361d3aab710545",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "df1c189c9d95eb5c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "c449f4c1ecabfee6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Building a thinking habit matters more than finding the computer's top move at my level."
+  },
+  {
+    "task_id": "c05ce12e1643cf0b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  },
+  {
+    "task_id": "06fb4edbdd16b7be",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "54d07009d3919955",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "ac278cbc69c7cac4",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Good eval framing but saying 'activity' three times tells me nothing new about the plan."
+  },
+  {
+    "task_id": "3d4c9476ac23531e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need one move and a simple tip to remember, not numbers I can't read."
+  },
+  {
+    "task_id": "29839c0850337b47",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The habit tip gives me a thinking pattern to use in future games too."
+  },
+  {
+    "task_id": "b0e158b472a3c1e8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Eval in pawns plus strategic reasoning and alternatives gives me the full picture I need."
+  }
+]

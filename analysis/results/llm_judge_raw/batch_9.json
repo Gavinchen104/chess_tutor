@@ -1,0 +1,1052 @@
+[
+  {
+    "task_id": "72ac6ece95f44bcb",
+    "clearer": "tied",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Confusing that it says material is hanging but still tells me to play it, but the habit tip helps."
+  },
+  {
+    "task_id": "a7d1c8d0fabf08cc",
+    "clearer": "tied",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Mixed signal recommending a move that hangs material, but the scan habit is useful."
+  },
+  {
+    "task_id": "dd628ff741c03a3f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning about forcing responses plus the strategic context is very practical for me."
+  },
+  {
+    "task_id": "88127fe8a2efb0ac",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "5bf27fd023ec5f1b",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "e2783da34b1356d4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "641219911b7293e7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "6891c4c1a8afdb7f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "46949ae75a103095",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "4b514716c80aa4ab",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "377c6503d5904e52",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "2c6e38fb3b202ed7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "f8c69fb80390554f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "fb11952f280f12f6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "b68e6a01f0c90dcf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "c61c2f6eabc1cf66",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "619a5aa81f0043dc",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "1fd240d8297ea2fc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "99c1d519ac6b0d8e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "7085e831db636571",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "5ff7d684243b0f73",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "2d8f89864550fc18",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "704ebbddd062e7f2",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "3e3bc9bedd0f6db5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "c4d94790318032b3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "c5aac24014bd9e72",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "7558d15f9a8438e6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "e46ebb218e31defb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "It tells me the move has a problem which helps me think about development more."
+  },
+  {
+    "task_id": "0148656dd1d2d2b2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Honest feedback about the move's weakness helps me learn what to prioritize."
+  },
+  {
+    "task_id": "06249cfe3500b158",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "5959940a63a72f53",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "17f0b7702b176cc7",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "fa18e91a70379fab",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "a143c46761b37671",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't understand that I'm winning by 10 pawns but the tip tells me what to do."
+  },
+  {
+    "task_id": "745cc99aed2d5e68",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I can tell from the big number I'm winning but the advice feels too generic for this position."
+  },
+  {
+    "task_id": "b40bcb75578611e1",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I can see I'm totally winning but saying 'activity' doesn't capture the urgency of the position."
+  },
+  {
+    "task_id": "c59e9dfbc8cf0193",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "9153e4ea6ec954d9",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "39d28c9debf732e5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Saying 'roughly equal' tells me more than a raw number like +0.26 that I can barely interpret."
+  },
+  {
+    "task_id": "dce3eec131dc6a89",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't understand that I'm winning by 10 pawns but the tip tells me what to do."
+  },
+  {
+    "task_id": "c39fd1c97f10e82d",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I can tell from the big number I'm winning but the advice feels too generic for this position."
+  },
+  {
+    "task_id": "64154f1a5e9a70aa",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I can see I'm totally winning but saying 'activity' doesn't capture the urgency of the position."
+  },
+  {
+    "task_id": "2b16f6198739a8fc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "23cb9beb324e5abb",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "3685a19025e54137",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "b71d2daa6fbcdb90",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't understand that I'm winning by 10 pawns but the tip tells me what to do."
+  },
+  {
+    "task_id": "73ffff9a31ded85f",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I can tell from the big number I'm winning but the advice feels too generic for this position."
+  },
+  {
+    "task_id": "ed17f874421ec27a",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I can see I'm totally winning but saying 'activity' doesn't capture the urgency of the position."
+  },
+  {
+    "task_id": "8e919932dcbe1be5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "61393f3007e9fac3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "067da814e0512f1a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "b2276d319dd1145c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "772598e52d83a886",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "d4bab7e868500e18",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "05a5d73d70baca83",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning to watch out helps me think before moving, numbers are meaningless."
+  },
+  {
+    "task_id": "69780499dc4ab178",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning flag catches my attention and the habit tip reinforces good thinking."
+  },
+  {
+    "task_id": "ab0e95f25387f88f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning about forcing responses plus the strategic context is very practical for me."
+  },
+  {
+    "task_id": "6683a7e09fb146b0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "9c40102a54412a1c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "5318187f2e8c4b9d",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I can calculate checks at my level, so skipping a strong check feels wrong despite the coaching."
+  },
+  {
+    "task_id": "474978665574380c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning to watch out helps me think before moving, numbers are meaningless."
+  },
+  {
+    "task_id": "0999c3ddf812f146",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning flag catches my attention and the habit tip reinforces good thinking."
+  },
+  {
+    "task_id": "adec54b76d50f0a9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning about forcing responses plus the strategic context is very practical for me."
+  },
+  {
+    "task_id": "b07875a74e597404",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning to watch out helps me think before moving, numbers are meaningless."
+  },
+  {
+    "task_id": "5165260792f1fbe6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning flag catches my attention and the habit tip reinforces good thinking."
+  },
+  {
+    "task_id": "e5a457f77cb62b07",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning about forcing responses plus the strategic context is very practical for me."
+  },
+  {
+    "task_id": "8c56f8556d2ca6c6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "79db6ec1e4e28d41",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "a15a6775f1e3c337",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "25a4832d7aa32845",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "eb3f9b22ff7fa6ae",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "1748f2e73bcdedf0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "43bca3027f500f89",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "b27ad68daa797be0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "ea4ada8e095bb75d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "1d1299e2a0763368",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "fa9a913eed926dcf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "4aca7df51c39e6af",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "42d2922a4c6cceb2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "7721123062d0aa0f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "cbb498b3b77f0e84",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "bb88bb51a7be2dbb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "d4110f8496aa9324",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "8c6f9748f6b7b67e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "6a4778fcce16fb1e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "9de2397d2e227d2d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "4e21b65546f81f90",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "a741b0bbcd7089ce",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "dba981cdebdbff61",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "1748be04c7fdf38f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "78aa8aad16a141b4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "dcf95777127cc281",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "a5a3a70d77fa38b2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Saying 'roughly equal' tells me more than a raw number like +0.26 that I can barely interpret."
+  },
+  {
+    "task_id": "7c65689669e9fd51",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning to watch out helps me think before moving, numbers are meaningless."
+  },
+  {
+    "task_id": "957f6eb889f82b0a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning flag catches my attention and the habit tip reinforces good thinking."
+  },
+  {
+    "task_id": "6efd60d178e6a67c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning about forcing responses plus the strategic context is very practical for me."
+  },
+  {
+    "task_id": "8725e12760fa3ac0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "8df79788994c4527",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "9e184a485f51ac2f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Saying 'roughly equal' tells me more than a raw number like +0.26 that I can barely interpret."
+  },
+  {
+    "task_id": "398f7f798ccc598c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning to watch out helps me think before moving, numbers are meaningless."
+  },
+  {
+    "task_id": "732f45eef8767e11",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning flag catches my attention and the habit tip reinforces good thinking."
+  },
+  {
+    "task_id": "38636480dc7b2ddd",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning about forcing responses plus the strategic context is very practical for me."
+  },
+  {
+    "task_id": "0f4615c213fb0c52",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "4c968fb30fb65e6b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning helps me understand risk, the engine numbers don't mean anything to me."
+  },
+  {
+    "task_id": "7eff3aee194e3384",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "9ca70c5415b33e5f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "6d3ecc4f261cf248",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "8210d9add92e0ea2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "8ece85b499ea6d4b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "6b3e5e04adbd8029",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "e0683f67c13546e3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "108b1bc2080376a2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "9b2026e0a2e018a9",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "dd8508cd39e2eaeb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "74d84ba3168cd79a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "8d5bc65ed8fc788e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "b00bf633703502e7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "15b83446186b81cb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "9e2e9be0b0dd401f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "248948c4ef64427a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "3123495aee01d4a4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "0f8c2d61f5709f5c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "bd442aa3685f8a65",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "8d5cb62995e92687",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "9b5342778ffb675f",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "fc47d51ddf5680c4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "ff3d76abe690df0f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning to watch out helps me think before moving, numbers are meaningless."
+  },
+  {
+    "task_id": "2faf79cccf2a8a60",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning flag catches my attention and the habit tip reinforces good thinking."
+  },
+  {
+    "task_id": "7e8076db2e9c7d08",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning about forcing responses plus the strategic context is very practical for me."
+  },
+  {
+    "task_id": "4277817466f58340",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "8de596f37a0c9b0f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "81dad836a93f88a0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "9a9b7038e9e921ec",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "9eed3e7d205eeb59",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "681d24557ac297b8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "1041c2b55b450516",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "5ad04479995e4bfb",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "27ef7b332ddcff1b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "cf3f1427fe9a51b0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "c32129b4562622aa",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "69b58fc516f26ee6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  },
+  {
+    "task_id": "1066984c6874190c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "5a055fb6f0ca607c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "1ddd29e55c8cfc54",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I can calculate checks at my level, so skipping a strong check feels wrong despite the coaching."
+  },
+  {
+    "task_id": "fea62a9af76b70e4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The numbers mean nothing to me but the warning and habit tip are things I can remember."
+  },
+  {
+    "task_id": "4e08d17dcbf804c5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know basic principles so the coaching guidance connects better than raw eval numbers."
+  },
+  {
+    "task_id": "452a884b5299cf56",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Explaining why the practical move differs from engine best is exactly what I need."
+  },
+  {
+    "task_id": "9905e479ece7a5d4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or cp means but the habit tip tells me what to actually do."
+  },
+  {
+    "task_id": "979d5241ff7d99e0",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The habit tip helps but the advice feels generic; at least I know what to focus on."
+  },
+  {
+    "task_id": "fef1a51ba0b59290",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Telling me options are 'similar strength' is more useful than cp gaps I can't interpret."
+  }
+]

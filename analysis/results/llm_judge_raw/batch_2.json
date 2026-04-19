@@ -1,0 +1,1052 @@
+[
+  {
+    "task_id": "29415076052c976b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "c7a3f18066d5949e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "975e520c597fe3a0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Translating the eval to 'roughly equal' plus strategic labels is better than raw cp numbers."
+  },
+  {
+    "task_id": "b6c7a016374bf237",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "608fcb8e847bcb07",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "f374cc77df045f25",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "b1a0a336cafb8ce9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "f1179262c55e93a5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "fc63a6d2d9461c11",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "8757a676b152bdf4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip is easier to read than numbers, but calling a queen capture 'center' is odd."
+  },
+  {
+    "task_id": "9eda0c73cc0787ca",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I get that I should play this move, but it is clearly a capture not a center move."
+  },
+  {
+    "task_id": "46f18ac0e6889e04",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "94f5e9f741da2bbf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "fba7a8e4e824e4e7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "fc724bc9c115eba6",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "tied",
+    "reason": "Qb5 is defensive, not center control; the eval translation helps but the label misleads."
+  },
+  {
+    "task_id": "5f200c4e599127d9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The tip to scan for loose pieces makes sense, I understand checks are good."
+  },
+  {
+    "task_id": "656af4af915adff1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Telling me this improves safety and to scan for loose pieces is practical advice."
+  },
+  {
+    "task_id": "cc1617e35cfefa99",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "The eval and strategic context make the winning check clear, better than raw numbers."
+  },
+  {
+    "task_id": "5edfbdb08208798c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "bf5acaa4ae4e2d6e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "cfa01b86c0c8a582",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "86d0860af920d285",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "a147f40331a0cae9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "ae0b69e29bc9899d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "8a772e067a8dd6d0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "d28424abd8fe6437",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "be6a0bf04cfa4644",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "73379f26e5604bae",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not understand eval or centipawns, so the plain advice is less confusing."
+  },
+  {
+    "task_id": "77bc822b04c60b61",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I prefer the explanation, though the capture seems more about winning material than center."
+  },
+  {
+    "task_id": "8fd97cdfaa12a3b4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "8d1a7b01fd4781f3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning about hanging pieces is something I can look for on the board."
+  },
+  {
+    "task_id": "c8c3b17eb30a9180",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Warning me about loose pieces is practical advice I can act on right now."
+  },
+  {
+    "task_id": "22dba996f6e4aaa7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "8ba2b3bb1d0386e6",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "fca8f81b1d06fe36",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "93b0b7524d35d44e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "2c8050b0c5d52a3f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "b8ed9d09266ae7a8",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "a3fd83a3c73d893f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "fc687a981b1a665a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "3e4a26127a596ec8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "d563d4eca7c48bd8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "f8f765ce47d3cc83",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "613d0cc3ad28b5e1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "All moves are fine here so the coaching tip is more useful than seeing close numbers."
+  },
+  {
+    "task_id": "29f42bd6bb517e03",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "cfc14e0252c687e0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "553e1242323be90f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "29285572ea85e93b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "78f63fc0d5680640",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "0a8ba0bacda16a1e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "ec53d03d352f8a18",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "2dad0cf7c5b7f93e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "310f983d94935100",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "c55669f903796d40",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Translating the eval to 'roughly equal' plus strategic labels is better than raw cp numbers."
+  },
+  {
+    "task_id": "444cb1a05b1cc090",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "1fbbb2984212d5c1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "1922f7cc4e048f5c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "bdc056c27fd7103b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "aec49063d9cab24a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "917689b7976097fe",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Translating the eval to 'roughly equal' plus strategic labels is better than raw cp numbers."
+  },
+  {
+    "task_id": "154916b368d10e35",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "ca1106d26d91c0ab",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "48b733f305a20eae",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "3f58840ae737f33d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "7f3dde319d015166",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "All moves are fine here so the coaching tip is more useful than seeing close numbers."
+  },
+  {
+    "task_id": "30815e024a2a98ad",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "e27bcd95b75481b7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "a9fc69f141cf85f0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "691fbcaae5998245",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "8a353078d52e18f8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "999f35072ea0780a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "9ff8d77d2683477a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "b5f4c71b5db86bf2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "c2cdb83073654614",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "All moves are fine here so the coaching tip is more useful than seeing close numbers."
+  },
+  {
+    "task_id": "edbbb37c77e87fd5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "5cef70db75f75e10",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "a41018516aa2ffcb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "All moves are fine here so the coaching tip is more useful than seeing close numbers."
+  },
+  {
+    "task_id": "227b449dc90bd6ba",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Translating the eval to 'roughly equal' plus strategic labels is better than raw cp numbers."
+  },
+  {
+    "task_id": "9a940aec893b9c18",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "4bbf63977891fe43",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "All moves are fine here so the coaching tip is more useful than seeing close numbers."
+  },
+  {
+    "task_id": "7230b33a2c167aba",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "7c39dbb6d3cd1cdd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "ab79268618f89e15",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "035d02a595d2e611",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I appreciate the transparency but worry about giving up over a pawn for 'practicality'."
+  },
+  {
+    "task_id": "4d169de710bd4f3b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "688c84ef862ebadf",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "19079ee611ff1f6d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "e07f24556a60f409",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "c15b52f1a0beba2b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "All moves are fine here so the coaching tip is more useful than seeing close numbers."
+  },
+  {
+    "task_id": "0fd5909bce981faa",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "87aa8691ce01a02d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "59dcd82a0d0fac3f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "537075cea97d4f25",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "bffde1ef91ff9029",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "142f833ab1863b52",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "f7f65eca857604c7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "cf287f70c35f3908",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The warning about hanging pieces is something I can look for on the board."
+  },
+  {
+    "task_id": "01d9f002590fcb24",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Warning me about loose pieces is practical advice I can act on right now."
+  },
+  {
+    "task_id": "83980ece2de0d7b8",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I appreciate the transparency but worry about giving up over a pawn for 'practicality'."
+  },
+  {
+    "task_id": "0e9c77395d235cc0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "e72f81fc95d615b8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know castling is important and the tip reinforces that; the numbers just confuse me."
+  },
+  {
+    "task_id": "a0235ee1485d732e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "78482a00e61caa52",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning about hanging pieces is something I can look for on the board."
+  },
+  {
+    "task_id": "90f3da664c71f2cb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Warning me about loose pieces is practical advice I can act on right now."
+  },
+  {
+    "task_id": "e9044f5c26ebd944",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I appreciate the transparency but worry about giving up over a pawn for 'practicality'."
+  },
+  {
+    "task_id": "5acf7198358ad616",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "db79bb984d037211",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know castling is important and the tip reinforces that; the numbers just confuse me."
+  },
+  {
+    "task_id": "8eae388f1da44213",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "74ef75b1b664f1d5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know centipawns but the simple tip tells me to play that move."
+  },
+  {
+    "task_id": "6adec8627c7a4d65",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say Nxg3 but calling a pawn grab 'center control' is a bit misleading."
+  },
+  {
+    "task_id": "7f44ae2f7b513783",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "tied",
+    "reason": "Nxg3 wins material, not 'center control'; the translated eval is nice but the label is wrong."
+  },
+  {
+    "task_id": "d93e9f29b19e56c9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "a7f269199fad862a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "All moves are fine here so the coaching tip is more useful than seeing close numbers."
+  },
+  {
+    "task_id": "2d47caf08fcd2804",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Translating the eval to 'roughly equal' plus strategic labels is better than raw cp numbers."
+  },
+  {
+    "task_id": "aa2ededf44305972",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know centipawns but the simple tip tells me to play that move."
+  },
+  {
+    "task_id": "a1067128e4fd6b3f",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say Nxg3 but calling a pawn grab 'center control' is a bit misleading."
+  },
+  {
+    "task_id": "d55c74ee2cb6c180",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "tied",
+    "reason": "Nxg3 wins material, not 'center control'; the translated eval is nice but the label is wrong."
+  },
+  {
+    "task_id": "2a99dea2c06db56a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "1ce378881b6e23c3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "e156d9a11b069dfc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Showing both the engine pick and a practical recommendation with reasoning is ideal for me."
+  },
+  {
+    "task_id": "2ec6bc60697d3408",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know centipawns but the simple tip tells me to play that move."
+  },
+  {
+    "task_id": "80f7d4bbeae126f7",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say Nxg3 but calling a pawn grab 'center control' is a bit misleading."
+  },
+  {
+    "task_id": "632445397baca2f9",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "tied",
+    "reason": "Nxg3 wins material, not 'center control'; the translated eval is nice but the label is wrong."
+  },
+  {
+    "task_id": "ada5a00297e0effc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "d43f387cd1ab30c0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The move it suggests is fine and the coaching habit gives me something to practice."
+  },
+  {
+    "task_id": "c744371e4a8c971f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "597d70b08224b6eb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know centipawns but the simple tip tells me to play that move."
+  },
+  {
+    "task_id": "2d0d6a04c6ebbecd",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both say Nxg3 but calling a pawn grab 'center control' is a bit misleading."
+  },
+  {
+    "task_id": "8c6b9b3a14fe2bfb",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "tied",
+    "reason": "Nxg3 wins material, not 'center control'; the translated eval is nice but the label is wrong."
+  },
+  {
+    "task_id": "65b9f7debc213519",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "a177e4a17f83bb4d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "663bef9f5d43ad54",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "b0dadd17298291b2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "6274cdb92cc65a36",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "ad01840851b50fee",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "e1b43bd5f9449512",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not understand eval or centipawns, so the plain advice is less confusing."
+  },
+  {
+    "task_id": "912717745ad44942",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "I prefer the explanation, though the capture seems more about winning material than center."
+  },
+  {
+    "task_id": "3cd1f4d6647e7a87",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "3a377dfd4436849e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "4438d4fdc67e08ac",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "a949aa562b4d1f12",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "d78418d7a792dfe0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "78ad7e1484e2447c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "66a7db868aaa53bb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "d22ca4c088ec282c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I do not know what centipawns are, so the plain tip is the only thing I can use."
+  },
+  {
+    "task_id": "e6bdd60b20e9ee92",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I can see the eval bar go up or down but translating cp gaps into plans is beyond me."
+  },
+  {
+    "task_id": "618c36fcaf2cb296",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  },
+  {
+    "task_id": "44bf382cbb91e1f9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I cannot tell which move is better from numbers, so the simple tip is what I can use."
+  },
+  {
+    "task_id": "1ddb35f6cd30cdbc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know castling is important and the tip reinforces that; the numbers just confuse me."
+  },
+  {
+    "task_id": "5510e81aa6d748e9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "tied",
+    "reason": "Saying 'ahead by about X pawns' is clearer than raw eval; strategic labels help me plan."
+  }
+]

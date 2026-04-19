@@ -1,0 +1,1052 @@
+[
+  {
+    "task_id": "d9c824e182d6b5cb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "c5448fdb16d7d25b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "5742f818b0c88ca9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "6ec308302b527481",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "c51e5874b2c2c12e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "8edddfe36f6b4466",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "d44211d18550c6a8",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "8148d6bdb5c5bfec",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "ece1b37fcad86491",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "1d30e12a18bcec1c",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The warning is confusing but at least it uses words I understand, not scary numbers."
+  },
+  {
+    "task_id": "4e63003ea4a3db24",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "d42cf88af8aa35c6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "ef37357ed7d894e1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "eb209f5c52c9f319",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "dc3abac42cd23a1b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "14a2f4dcbdd8f4a5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "b02cc290687c4e7a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "fbcebd29eaf30bd2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "d5482aece900f8c3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "c2b95914e580e013",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "8a99a8b32579dff2",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "c66990ee976e1d9c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "18c9724ca2e03dab",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "c29d9a14b5b79bad",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "80757faecbe1c132",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "22e460cafb56225e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "d91b47d8314b85f2",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "5eba48fc46ff9ea2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "4e6a5e5c2432669e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "c0ee9f49e4e99d00",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "b86f7ebe9610f746",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "810befcc674eaab8",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "003382057d736abc",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "588546b7efcf252e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "f7cfc5016daf8283",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "abaaacbd45aa05cb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "8c676b8e9f1b85b1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "60d28d9e724f8e12",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "39a13d618a5b6fa1",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "f6e8e92389803ab2",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both say checkmate which I understand, but the numbers in the other one look scary."
+  },
+  {
+    "task_id": "47bb7c20cdade06c",
+    "clearer": "tied",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "I can see it is checkmate either way, but the huge numbers like 100057 cp are distracting."
+  },
+  {
+    "task_id": "db91c0915b397f06",
+    "clearer": "tied",
+    "more_useful": "tied",
+    "less_overwhelming": "tied",
+    "reason": "It is checkmate, I do not need coaching or engine lines for a mate-in-one."
+  },
+  {
+    "task_id": "b9e9139541930f3b",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The warning is confusing but at least it uses words I understand, not scary numbers."
+  },
+  {
+    "task_id": "17060d88825cac88",
+    "clearer": "tied",
+    "more_useful": "A",
+    "less_overwhelming": "B",
+    "reason": "Why recommend a move then warn me about it? The other one at least shows the best option."
+  },
+  {
+    "task_id": "8b617bf0c3d3cc01",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Recommending a move while warning about it is confusing; I prefer the straightforward ranking."
+  },
+  {
+    "task_id": "6c5d5ea82d47c604",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "def1ef260e44c458",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "a9135549616f9bd8",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "a419874cc61999b2",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The warning is confusing but at least it uses words I understand, not scary numbers."
+  },
+  {
+    "task_id": "2513f7728b5a3dc7",
+    "clearer": "tied",
+    "more_useful": "A",
+    "less_overwhelming": "B",
+    "reason": "Why recommend a move then warn me about it? The other one at least shows the best option."
+  },
+  {
+    "task_id": "a8ed1e83cf20f5cd",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Recommending a move while warning about it is confusing; I prefer the straightforward ranking."
+  },
+  {
+    "task_id": "af070948ea19b4bf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "5a8b2cc3d67c50d7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "c90167adaba7af74",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "499dc437f85813c1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "43b4b689f361df98",
+    "clearer": "tied",
+    "more_useful": "B",
+    "less_overwhelming": "A",
+    "reason": "Why recommend a move then warn me about it? The other one at least shows the best option."
+  },
+  {
+    "task_id": "f829bff94df77ce3",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Recommending a move while warning about it is confusing; I prefer the straightforward ranking."
+  },
+  {
+    "task_id": "15390d48a443a97b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "dadbac9fb7aedd3d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "48e24a4a7362ada5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "183185cc342602fe",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "546ba602fb1a10cb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "97f20f78eac66c4c",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "38f592c115ddeccc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "50875fc8f14c0700",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "618800d0cfdf357b",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "122e90de35ddf8db",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "d973fb0481401744",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "0a924ea1b06bc638",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "05f14a5bb3438bcc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "f194f81bb36cf6df",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "63e678801b400ad6",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "027c8b8c57ace37b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "ef4384c7ded88e59",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "5338e2fcfe1edb2b",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "ded457078f8c69d7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "4b3cead435271b59",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "70af6a9b4f00a1c8",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "934aae3f642ac8de",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "d5bb3484ccacec3b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "2c009b909cfaebd3",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "5b7496d245e7ef13",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "df9ed68a57a17508",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "9a7ce290032244a8",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "4b98a0c1a1e1e67e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "1d8facb28b5a1dde",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I cannot make sense of eval numbers so the explanation of the idea helps me more."
+  },
+  {
+    "task_id": "1af95d0a2035f6b2",
+    "clearer": "A",
+    "more_useful": "B",
+    "less_overwhelming": "A",
+    "reason": "The explanation is clear but sacrificing that much evaluation seems wrong even at my level."
+  },
+  {
+    "task_id": "6b393849755798d4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "b21725b38ce0905e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "1204cd352426dedf",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "31672ae5eddfeb64",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "f93c32e4b5839962",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "87bd49b78b12c7c9",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "6f998711a5986331",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "bad6bf537fade552",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "2bd7fa4dc5feb3cf",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "52d229202d43ccd2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "a168723178a9b462",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "409407b6596bbf16",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "2770d476609a341f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "e2e3941590b7b15c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "acdedf08d156e8be",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "4d72986cf9aa9bc3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "530283a86aff9664",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "b884b87083b732c3",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "1e56d77432fc0496",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "4b66caa2060afe95",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "bc5a347e86f9460d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "a8bbd9f15df0994d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "f2bfc7a45b46d7fe",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "23b8e362ead8ed3b",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "13be5bafec54da02",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "3250fd931d84d264",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "60d4d19457b283af",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "a3d45282a318d9c6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "737a2f86b67ccdcb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "489099d24f288562",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "e8b753f7bf6fc512",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "8167b4d9954ed561",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I cannot make sense of eval numbers so the explanation of the idea helps me more."
+  },
+  {
+    "task_id": "83305cf36422e75c",
+    "clearer": "B",
+    "more_useful": "A",
+    "less_overwhelming": "B",
+    "reason": "The explanation is clear but sacrificing that much evaluation seems wrong even at my level."
+  },
+  {
+    "task_id": "532b24930de286fd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "e0bacbd36aac63d0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "0c99612c7212e981",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "92f6022654a14317",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "66a8f0133445d6cb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "3a98069dc4f03b36",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "9ce05b238c861b52",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "85def30456b6cdc5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "ac874da06df542f4",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "a92214e107e3adc0",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "f789e17641b57717",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "ac45b8f9a398eeed",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "df09ee1f36a235a3",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "6cf493986d5bc31f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "4729ddce949103df",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "51543a588a71caef",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "684e23cbba461c13",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "53a5ac56e1d8faae",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "c7ced6a9d13b3ff2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "c42fc04f5bd1d245",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "50c8c02f4a9ed44b",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  },
+  {
+    "task_id": "70c28350f22372ce",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "555770410b8d7d6b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "bb5a8de927db8812",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "602bb8b29f1a832d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need someone to tell me what to play and why in simple words."
+  },
+  {
+    "task_id": "cc9e0747fb9e0d74",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I understand basic principles, the explained suggestion helps me think about the position."
+  },
+  {
+    "task_id": "1dd38723e50a5c9e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Knowing why the tutor picks a different move than the engine helps me understand practical play."
+  },
+  {
+    "task_id": "e36d98b0ee9d95d0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I don't know what eval or centipawns mean, the plain tip makes sense to me."
+  },
+  {
+    "task_id": "d8ffc3e0c453f9ca",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I know the basics but the habit tip reinforces what I should think about each turn."
+  },
+  {
+    "task_id": "8da5f3669e0f293d",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Both show the same move but the strategic labels help me understand what each alternative is about."
+  }
+]

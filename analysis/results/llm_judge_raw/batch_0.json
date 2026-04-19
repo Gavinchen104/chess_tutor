@@ -1,0 +1,1052 @@
+[
+  {
+    "task_id": "eee12336d2b5a8da",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "4eb65764cf786727",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "6427a0d463a0f2ba",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "36ed21f722aabc47",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "5079333716f6f8e9",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "6ab14d79862988e5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "b1a0a228ec3d1b19",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "7146391401f1b558",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "cae80a07db290748",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "3981bf28b34e896b",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Neither explains I'm winning the queen; the tutor talks about center, the engine gives numbers."
+  },
+  {
+    "task_id": "51817cad86ab5d16",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The tutor says center control but I can see it wins the queen; neither fully explains it."
+  },
+  {
+    "task_id": "662ed9882ae032de",
+    "clearer": "tied",
+    "more_useful": "A",
+    "less_overwhelming": "B",
+    "reason": "The +7.2 eval tells me this is winning; saying 'center control' misses that I'm capturing the queen."
+  },
+  {
+    "task_id": "ce08bf3c6729c8ad",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "ebbf39c50f3f518e",
+    "clearer": "tied",
+    "more_useful": "B",
+    "less_overwhelming": "A",
+    "reason": "The engine shows Kg2 is best and all moves are close; the tutor picked an inferior move."
+  },
+  {
+    "task_id": "84d2410cd6e63223",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "8f66e2f14f070a04",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "7b6626b3939fe072",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "309019000d9108bb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "2bbaba0b40ef927a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "dc54fbf6300c0c0d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "ff90d6a51456a05b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "7e4e980e0c352896",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "77d34d963ac018b9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "84e430415b6ffcbd",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "14de868584fa0678",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "3762094a8ac8bada",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "3c52cad92ff7bf42",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Both moves are close; the tutor explaining the engine's pick while suggesting Qa5 helps me learn."
+  },
+  {
+    "task_id": "133354240dbd7d16",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "4aba238589022f58",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "2a920dc382d95365",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "c904bcac0a0a6fb5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "bec9b02b1d20a912",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "f1c688db950c2f90",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "51d2f21646f8dc83",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "c225086d48ef91b9",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "5d1d18e2bd3ce26f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Castle now is practical advice at my level; knowing the engine prefers Nc6 is a useful bonus."
+  },
+  {
+    "task_id": "89b8a73e333ba99d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "da41a9610a594a84",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "690d1ba095cae842",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "0fe1d83b66049f85",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "c588ca95c5f4a121",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "Taking the rook is natural but the engine shows something much better that I can't understand."
+  },
+  {
+    "task_id": "1d38090905afed96",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "5dd5592f011ea0e6",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "806e707aeab1c614",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "Develop-first is good general advice, but Qd4 forking king and bishop seems important too."
+  },
+  {
+    "task_id": "0b4149d46c5ebf4e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing both options with the engine's preference explained helps me decide for myself."
+  },
+  {
+    "task_id": "b7f313da01663c50",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "e64b266a6bf9d2be",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "f19eb6980ebf930c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "436efd841de5e3fc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "87bea25434c74922",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "1aaa9467170198d1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "46261e283866e00d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "97ff5ed407419e80",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "79ddca9a7e86a65d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "e01f4af03531c027",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning that I missed a forcing move is super helpful coaching for me."
+  },
+  {
+    "task_id": "eed66dc385b836e5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Telling me I missed a forcing move is exactly the coaching feedback I need."
+  },
+  {
+    "task_id": "a8cae9c7bc1c1f4a",
+    "clearer": "tied",
+    "more_useful": "A",
+    "less_overwhelming": "B",
+    "reason": "Bxd2+ wins material with a check; recommending Kf8 as 'more practical' makes no sense at my level."
+  },
+  {
+    "task_id": "b47ef2ffd73eb32b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "90e78e5db8b108b4",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "6b18e62aa8b319ca",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "b8f4de379b8f9d6a",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "674ccdbbe054421d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "bbb91542d151669d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "07a21dba902d9aaa",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "b37f9a7ddbda6930",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "9bf12986dbbf851d",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "cbe728d00e2a8ce9",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "ed3d7921bc9cade5",
+    "clearer": "tied",
+    "more_useful": "A",
+    "less_overwhelming": "B",
+    "reason": "The engine shows Kg2 is best and all moves are close; the tutor picked an inferior move."
+  },
+  {
+    "task_id": "da8c1f7f34937e5f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "abd819ed17cae9b4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "0d9f5b8f54ae06cc",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "11656c795c1c2c6b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "bf8eb9431cce9631",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "176ebd7527a0316c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "a04e39fe87836a98",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "c2592569d81978fc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "5f7e2bfb1ba03046",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "3b8efad081e71b9a",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "35f1bb5d31530a3e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "3d908e4fb2d17185",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "2e32e17ddf55a2fc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "7a5043143b9b09da",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "bfc7dc7cf4eac912",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "5e7682a0da851a76",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "dbcc01dac64be64d",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "98658a70d3c09eb0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "653144fe0e4eb0b7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "4bea83a6ea2be669",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "5c9f67f8ed58d329",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "ce8b92d3370406df",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "54c54e36c38e0633",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "fe08abd0db8963f5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "a6436b8e5c996592",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "35ef5cfa6d9140eb",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "ac8fcf2d0c80490c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "8dc311927d4d9518",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "a014a81cf387d349",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "0b631d91be23554e",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "820989eec15d90da",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "8ca78ea0cee050ac",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "2608ce7ec075c1c0",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "56988cd607ea7aca",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "49be2fa31feac2b1",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "0066d6a76ddf62e6",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "e4f3e6293f4edafd",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "fdf60c9e9aa4aabc",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "0a465610c5b6efd3",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "259b49da0c5a04c7",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "250ced40b130f997",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "b54bd39696c8cbf3",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "5321518ea14dd0a4",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "4a4dd3e26b9b28d1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "1eb4705e96d5414f",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "a8838ba7ecc99a37",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "334ba7217e3319b2",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "505e51f48e0bd793",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "7fac543314d0dfeb",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "f6f1ac2a75c7d3e1",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "8acfc32055c872b8",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "c019714d8b261e08",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "d35955ad4a53bb50",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "c325d019e155365c",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "e4b537ebdf59686b",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "8777bb8f3ea18056",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "74dead577d21b262",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "9fcee077379ef9f5",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "bdd7b638376f5f67",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "2a6fc1506c812832",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "cdff1a51df4a39c7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "e5892509ec561379",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The warning helps me notice something I would have missed completely."
+  },
+  {
+    "task_id": "94d90b21f424c493",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "561d45be48811fe2",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "e3beb10f34e35128",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "bff29cf36763ec8e",
+    "clearer": "A",
+    "more_useful": "A",
+    "less_overwhelming": "A",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "91e03c6d30544062",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The strategy label and pawn-scale eval give me a plan; raw cp gaps are still unclear to me."
+  },
+  {
+    "task_id": "66297d4dd72ba8d8",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "18d910c35a0134c2",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "83652c3edb72c48f",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "1a283d3a7d5edc10",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "6434986e5a3c26d5",
+    "clearer": "A",
+    "more_useful": "tied",
+    "less_overwhelming": "A",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "1987f477a1329197",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "552f8c8b0fe88899",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "d0fb4a017fe79421",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "33d31691139d6d2c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "9795edd7b5acdce7",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I just need to know what to play and why; those numbers are confusing."
+  },
+  {
+    "task_id": "51fdb25d8dfc2dc5",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "The explanation and habit tip help me learn; the raw numbers don't tell me what to do."
+  },
+  {
+    "task_id": "4dd4ef6b85cab0d0",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  },
+  {
+    "task_id": "a4a58869810aa74c",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "I need someone to tell me what to do in simple words, not show me numbers."
+  },
+  {
+    "task_id": "6d4f0ce330ae14cd",
+    "clearer": "B",
+    "more_useful": "tied",
+    "less_overwhelming": "B",
+    "reason": "The coaching explanation is clearer, but I wish it also showed me the engine's best move."
+  },
+  {
+    "task_id": "c567b9d8bd41c82b",
+    "clearer": "B",
+    "more_useful": "B",
+    "less_overwhelming": "B",
+    "reason": "Seeing both the engine's pick and a practical alternative with reasoning helps me most."
+  }
+]
