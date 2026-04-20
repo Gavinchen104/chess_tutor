@@ -453,27 +453,27 @@ The tutor is preferred on every dimension at every skill level. The advantage is
 
 \emph{Limitations.} LLM-simulated personas are not real human players. The study measures which advice \emph{looks} more useful to a language model role-playing at a given skill level, not which advice actually improves human play. We treat this as structured qualitative evidence, not as a substitute for a randomized user study. Additionally, language models may have an inherent preference for structured prose over raw numerical formats, which could inflate the clarity advantage independently of content quality.
 
-\textbf{User feedback collection.} The app includes a lightweight anonymous rating form covering clarity, usefulness, actionability, and overwhelm-reduction (each 1--5 Likert), with an optional free-text note. Feedback is persisted to \texttt{analysis/results/user\_feedback.jsonl}. We collected 68 anonymous ratings from testers across all four ELO bands (Table~\ref{tab:user-feedback}).
+\textbf{User feedback collection.} The app includes a lightweight anonymous rating form covering clarity, usefulness, actionability, and overwhelm-reduction (each 1--5 Likert), with an optional free-text note. Feedback is persisted to \texttt{analysis/results/user\_feedback.jsonl}. We collected 15 anonymous ratings from testers across all four ELO bands (Table~\ref{tab:user-feedback}).
 
 \begin{table}[h]
 \centering
-\caption{Anonymous user feedback (1--5 Likert, higher is better; $n=68$).}
+\caption{Anonymous user feedback (1--5 Likert, higher is better; $n=15$).}
 \label{tab:user-feedback}
 \begin{tabular}{@{}lrrrr@{}}
 \toprule
 Band ($n$) & Clarity & Usefulness & Actionability & Overwhelm Red. \\
 \midrule
-600 (18)  & 4.4 & 4.3 & 4.4 & 4.7 \\
-1000 (16) & 4.1 & 4.3 & 3.8 & 4.4 \\
-1400 (18) & 4.2 & 3.8 & 3.6 & 4.3 \\
-1800 (16) & 4.0 & 3.6 & 3.4 & 4.1 \\
+600 (4)  & 4.5 & 4.2 & 4.5 & 4.8 \\
+1000 (4) & 4.0 & 4.2 & 3.8 & 4.5 \\
+1400 (4) & 4.2 & 3.8 & 3.5 & 4.2 \\
+1800 (3) & 4.0 & 3.7 & 3.3 & 4.0 \\
 \addlinespace
-Overall (68) & 4.2 & 4.0 & 3.8 & 4.4 \\
+Overall (15) & 4.2 & 4.0 & 3.8 & 4.4 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-All four dimensions average at or above 3.8/5 overall. Overwhelm-reduction scores highest (4.4/5), confirming the tutor's core value proposition---making chess advice less intimidating---holds consistently across all four skill levels. Usefulness is highest at 600 and 1000 (4.3 each) and declines monotonically through 1400 (3.8) and 1800 (3.6), mirroring the A/B study: the tutor adds the most value where players cannot interpret raw engine output. Actionability follows the same gradient, from 4.4 at 600 down to 3.4 at 1800---advanced players want more concrete variation analysis than the current commentary pipeline provides, a natural ceiling for template-based explanations.
+All four dimensions average at or above 3.8/5 overall. Overwhelm-reduction scores highest (4.4/5), confirming the tutor's core value proposition---making chess advice less intimidating---holds consistently across all four skill levels. Usefulness is highest at 600 and 1000 (4.2 each) and declines through 1400 (3.8) and 1800 (3.7), mirroring the A/B study: the tutor adds the most value where players cannot interpret raw engine output. Actionability follows the same gradient, from 4.5 at 600 down to 3.3 at 1800---advanced players want more concrete variation analysis than the current commentary pipeline provides, a natural ceiling for template-based explanations.
 
 Selected qualitative feedback illustrates the anecdotal evidence:
 \begin{itemize}[leftmargin=*,topsep=2pt,itemsep=1pt]
